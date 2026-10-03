@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 2 | Sistema Mecatrónico</title>
+  <meta name="description" content="Práctica 2: Sistema Mecatrónico - Compuertas lógicas y PLC - CECyT No. 2">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="page-eyebrow reveal">Prácticas · 02</span>
+    <h1 class="page-title reveal reveal-delay-1">PRÁCTICA 2</h1>
+    <p class="page-subtitle reveal reveal-delay-2">
+      Sistema Mecatrónico<br>
+      Compuertas Lógicas y PLC
+    </p>
+  </div>
+  <div class="page-hero-shape"></div>
+</header>
+
+<main>
+
+  <section class="section practice-content">
+    <div class="container container-narrow">
+
+      <!-- ===== PESTAÑAS ===== -->
+      <div class="tabs-wrapper">
+        <div class="tabs-scroll">
+          <button class="tab-btn active" data-tab="intro">Introducción</button>
+          <button class="tab-btn" data-tab="marco">Marco Teórico</button>
+          <button class="tab-btn" data-tab="clasificacion">Clasificación</button>
+          <button class="tab-btn" data-tab="mecanismos">Mecanismos y Actuadores</button>
+          <button class="tab-btn" data-tab="sensores">Sensores y Dispositivos</button>
+          <button class="tab-btn" data-tab="compuertas">Compuertas Lógicas</button>
+          <button class="tab-btn" data-tab="plc">PLC</button>
+          <button class="tab-btn" data-tab="infografias">Infografías</button>
+          <button class="tab-btn" data-tab="conclusion">Conclusión</button>
+          <button class="tab-btn" data-tab="biblio">Bibliografía</button>
+        </div>
+      </div>
+
+      <!-- ===== 01 INTRODUCCIÓN ===== -->
+      <div class="tab-panel active" id="intro">
+        <span class="content-label">Introducción</span>
+        <h2 class="content-title">¿De qué trata esta práctica?</h2>
+        <div class="content-body">
+          <p>En esta segunda práctica lo que hicimos fue investigar acerca de las <strong>compuertas lógicas</strong> y de los <strong>controladores lógicos programables (PLC)</strong>. Para facilitar la información se realizaron dos infografías en las que se destacaron las <strong>7 principales compuertas lógicas</strong> y un controlador lógico programable con sus partes y un ejemplo de conexión.</p>
+          <p>Esto con el fin de <em>"Caracterizar un sistema mecatrónico, de acuerdo con su funcionamiento y especificaciones de los fabricantes para determinar las normas aplicables en materia de gestión de la calidad, en forma integral, eficiente y eficaz".</em></p>
+        </div>
+      </div>
+
+      <!-- ===== 02 MARCO TEÓRICO ===== -->
+      <div class="tab-panel" id="marco">
+        <span class="content-label">Marco Teórico</span>
+        <h2 class="content-title">Sistemas Mecatrónicos</h2>
+
+        <div class="content-body">
+          <p>Todo proceso industrial se maneja bajo diversos sistemas: informáticos, eléctricos, neumáticos, electrónicos, mecánicos, etc. Por tanto, es necesario que en la empresa moderna se dominen todos los bloques involucrados en la producción, a fin de solventar las necesidades que se presenten.</p>
+
+          <div class="highlight-box">
+            <span class="highlight-tag">Definición</span>
+            <p>Un <strong>Sistema Mecatrónico</strong> es aquel sistema digital que recoge señales, las procesa y emite una respuesta por medio de actuadores, generando movimientos o acciones sobre el sistema en el que se va a actuar. Los sistemas mecánicos están integrados con <strong>sensores, microprocesadores y controladores</strong>.</p>
+          </div>
+
+          <p>Los robots, las máquinas controladas digitalmente, los vehículos guiados automáticamente, etc. se deben considerar como sistemas mecatrónicos.</p>
+
+          <h3 class="sub-title">La Mecatrónica</h3>
+          <p>Surge de la combinación sinérgica de distintas ramas de la ingeniería, entre las que destacan: la <strong>mecánica de precisión, la electrónica, la informática y los sistemas de control</strong>. Su principal propósito es el análisis y diseño de productos y de procesos de manufactura automatizados.</p>
+          <p>Un área muy desarrollada en la Mecatrónica es el <strong>control</strong>. Se tienen dos tendencias importantes: el uso de las técnicas más modernas de la teoría de control automático y el desarrollo de controles inteligentes, que busca mejorar la percepción del medio ambiente y obtener una mejor autonomía. Algunos avances importantes en el control automático son: redes neuronales, modos deslizantes, control de sistemas a eventos discretos, control adaptable, lógica difusa y control robusto.</p>
+        </div>
+      </div>
+
+      <!-- ===== 03 CLASIFICACIÓN ===== -->
+      <div class="tab-panel" id="clasificacion">
+        <span class="content-label">Clasificación</span>
+        <h2 class="content-title">Clases de sistemas mecatrónicos</h2>
+
+        <div class="clases-grid">
+          <article class="clase-card">
+            <span class="clase-num">Clase 01</span>
+            <h4>Productos principalmente mecánicos</h4>
+            <p>Con electrónica incorporada para aumentar la funcionalidad.</p>
+            <p class="clase-ejemplo"><strong>Ejemplos:</strong> máquinas-herramientas numéricamente controladas y velocidad variable manejada en la maquinaria industrial.</p>
+          </article>
+
+          <article class="clase-card">
+            <span class="clase-num">Clase 02</span>
+            <h4>Sistemas mecánicos tradicionales</h4>
+            <p>Con dispositivos internos tecnológicamente actualizados que incorporan sistemas electrónicos.</p>
+            <p class="clase-ejemplo"><strong>Ejemplos:</strong> máquina de coser moderna y sistemas automatizados de fábricas.</p>
+          </article>
+
+          <article class="clase-card">
+            <span class="clase-num">Clase 03</span>
+            <h4>Funcionalidad tradicional</h4>
+            <p>Mantienen la funcionalidad o el sistema mecánico tradicional, pero los mecanismos internos son reemplazados por la electrónica.</p>
+            <p class="clase-ejemplo"><strong>Ejemplo:</strong> el reloj digital.</p>
+          </article>
+
+          <article class="clase-card">
+            <span class="clase-num">Clase 04</span>
+            <h4>Integración sinérgica</h4>
+            <p>Productos diseñados con tecnologías mecánicas y electrónicas por integración sinérgica.</p>
+            <p class="clase-ejemplo"><strong>Ejemplos:</strong> fotocopiadoras, secadores inteligentes, cocinas de arroz, hornos automáticos.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== 04 MECANISMOS Y ACTUADORES ===== -->
+      <div class="tab-panel" id="mecanismos">
+        <span class="content-label">Mecanismos y Actuadores</span>
+        <h2 class="content-title">Componentes fundamentales</h2>
+
+        <h3 class="sub-title">Mecanismos</h3>
+        <div class="content-body">
+          <p>En el área de mecanismos, los principales problemas son <strong>reducción de complejidad, eliminación de mecanismos y síntesis de mecanismos mecatrónicos</strong>.</p>
+          <ul class="feature-list">
+            <li><strong>Reducción de la complejidad:</strong> reducir el número de elementos del mecanismo mediante el uso de control inteligente.</li>
+            <li><strong>Eliminación del mecanismo:</strong> uso directo de actuadores y de controles más sofisticados.</li>
+            <li><strong>Síntesis de mecanismos mecatrónicos:</strong> utilizar actuadores directamente en el mecanismo para mejorar su movimiento. Ejemplo: rodamientos con actuación magnética para eliminar la fricción.</li>
+          </ul>
+        </div>
+
+        <h3 class="sub-title">Actuadores</h3>
+        <div class="content-body">
+          <p>Todo mecanismo requiere de una fuente de potencia para operar. Inicialmente fue de origen animal, posteriormente la fuerza del aire o agua, después vapor, combustión interna y actualmente <strong>electricidad</strong>.</p>
+          <p>Si esta fuente de potencia es modulable o controlable, se tiene un <strong>actuador</strong>. Los principales desarrollos en Mecatrónica son: manejo directo (eliminando mecanismos), actuadores electromagnéticos, piezoeléctricos y ultrasónicos. También deben considerarse los actuadores neumáticos u oleo-hidráulicos.</p>
+
+          <div class="actuadores-grid">
+            <div class="actuador-card">
+              <span class="actuador-icon">💨</span>
+              <h5>Neumáticos</h5>
+              <p>Fuente de energía: <strong>aire a presión</strong></p>
+              <span class="actuador-ejem">Pistones, motores, válvulas</span>
+            </div>
+            <div class="actuador-card">
+              <span class="actuador-icon">💧</span>
+              <h5>Hidráulicos</h5>
+              <p>Fuente de energía: <strong>fluido</strong></p>
+              <span class="actuador-ejem">Pistones, motores, válvulas</span>
+            </div>
+            <div class="actuador-card">
+              <span class="actuador-icon">⚡</span>
+              <h5>Eléctricos</h5>
+              <p>Fuente de energía: <strong>electricidad</strong></p>
+              <span class="actuador-ejem">Motores AC/DC, paso a paso, servomotores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 05 SENSORES Y DISPOSITIVOS ===== -->
+      <div class="tab-panel" id="sensores">
+        <span class="content-label">Sensores y Dispositivos</span>
+        <h2 class="content-title">Elementos electromecánicos</h2>
+
+        <h3 class="sub-title">Sensores</h3>
+        <div class="content-body">
+          <p>Los <strong>sensores</strong> son dispositivos que permiten medir el estado del mecanismo o del medio ambiente. La incorporación de sensores a los mecanismos es el resultado de utilizar <strong>controles de lazo cerrado</strong>.</p>
+          <p>Un ejemplo muy desarrollado es el uso de la <strong>visión artificial</strong>, la cual se usa para determinar la posición y orientación del mecanismo, del ambiente o de las herramientas. Cuando no es posible medir directamente alguna variable, se estima su valor por medio de observadores del estado y filtros. También existe la <strong>fusión de sensores</strong> y los sistemas de posicionamiento global (GPS) para determinar posición y orientación en problemas de navegación.</p>
+        </div>
+
+        <h3 class="sub-title">Clasificación por principio de funcionamiento</h3>
+
+        <div class="dispositivos-grid">
+          <div class="dispositivo-card">
+            <span class="dispositivo-tag">Entrada</span>
+            <h4>Dispositivos de mando</h4>
+            <p>Traducen una pequeña señal física a una eléctrica de apertura o cierre.</p>
+            <ul>
+              <li>Botones pulsadores</li>
+              <li>Interruptores selectores</li>
+              <li>Interruptores de límite de carrera</li>
+              <li>Interruptores de proximidad</li>
+              <li>Interruptores de presión, nivel y temperatura</li>
+            </ul>
+          </div>
+
+          <div class="dispositivo-card">
+            <span class="dispositivo-tag">Lógica</span>
+            <h4>Dispositivos de control</h4>
+            <p>Traducen una pequeña señal eléctrica a una o más señales de apertura o cierre.</p>
+            <ul>
+              <li>Contactor manual / magnético</li>
+              <li>Relé de control electromagnético</li>
+              <li>Relé de tiempo</li>
+              <li>Relé de estado sólido</li>
+              <li>Potenziómetros y fotoceldas</li>
+            </ul>
+          </div>
+
+          <div class="dispositivo-card">
+            <span class="dispositivo-tag">Trabajo</span>
+            <h4>Dispositivos de fuerza</h4>
+            <p>Traducen una señal eléctrica de baja potencia a una señal de potencia.</p>
+            <ul>
+              <li>Lámparas</li>
+              <li>Motores eléctricos</li>
+              <li>Arrancadores electromecánicos</li>
+              <li>Servomotores</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Diagramas de control (normas DIN)</h3>
+        <div class="content-body">
+          <p>Las normas <strong>DIN</strong> son un conjunto de reglas que consisten en estándares técnicos para el aseguramiento de la calidad en productos industriales y científicos relacionados con la industria manufacturera-metalmecánica.</p>
+          <p>En los diagramas se distingue el <strong>control eléctrico</strong> (izquierda) y el <strong>control mecánico</strong> (derecha). Elementos como electroválvulas y actuadores son comunes en estos sistemas.</p>
+        </div>
+      </div>
+
+      <!-- ===== 06 COMPUERTAS LÓGICAS ===== -->
+      <div class="tab-panel" id="compuertas">
+        <span class="content-label">Compuertas Lógicas</span>
+        <h2 class="content-title">Las 7 principales compuertas</h2>
+
+        <p class="content-lead">Las compuertas lógicas son <strong>circuitos integrados</strong> que se crearon con el fin de obtener un comportamiento entre ellos. Están formados por transistores y, según su función, reciben diferentes nombres.</p>
+
+        <div class="compuertas-grid">
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">AND</span>
+            <h4>Compuerta AND</h4>
+            <p>Representada por una <strong>multiplicación</strong> en el Álgebra de Boole. Todas las entradas deben estar en <strong>1</strong> para que la salida sea 1. Si falta alguna, la salida permanece en 0.</p>
+            <p class="compuerta-exp">Q = A · B</p>
+            <p class="compuerta-aplic"><strong>Analogía:</strong> dos interruptores en serie.</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">OR</span>
+            <h4>Compuerta OR</h4>
+            <p>Se define como una <strong>suma booleana</strong>. Si al menos una entrada tiene valor <strong>1</strong>, la salida será 1. Si todas son 0, la salida será 0.</p>
+            <p class="compuerta-exp">Q = A + B</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">NOT</span>
+            <h4>Compuerta NOT (INV)</h4>
+            <p>Posee una entrada y una salida. Su propósito es producir una salida <strong>inversa</strong> a su entrada. Si la entrada es 1, salida 0 y viceversa.</p>
+            <p class="compuerta-exp">Q = Ā</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">NAND</span>
+            <h4>Compuerta NAND</h4>
+            <p>Es la combinación de AND + NOT. Su salida es <strong>0 solo cuando todas las entradas son 1</strong>. En cualquier otro caso, la salida es 1.</p>
+            <p class="compuerta-exp">Q = (A · B)′</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">NOR</span>
+            <h4>Compuerta NOR</h4>
+            <p>Es la combinación de OR + NOT. Su salida es <strong>1 solo cuando todas las entradas son 0</strong>. En cualquier otro caso, la salida es 0.</p>
+            <p class="compuerta-exp">Q = (A + B)′</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">XOR</span>
+            <h4>Compuerta XOR (OR exclusiva)</h4>
+            <p>Su salida es <strong>1 cuando las entradas son diferentes</strong> y 0 cuando son iguales.</p>
+            <p class="compuerta-exp">Q = A ⊕ B</p>
+          </article>
+
+          <article class="compuerta-card">
+            <span class="compuerta-simbolo">XNOR</span>
+            <h4>Compuerta XNOR</h4>
+            <p>Es la negación de XOR. Su salida es <strong>1 cuando las entradas son iguales</strong> y 0 cuando son diferentes.</p>
+            <p class="compuerta-exp">Q = (A ⊕ B)′</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== 07 PLC ===== -->
+      <div class="tab-panel" id="plc">
+        <span class="content-label">PLC</span>
+        <h2 class="content-title">Controlador Lógico Programable</h2>
+
+        <p class="content-lead">Un <strong>PLC (Programmable Logic Controller)</strong> es un computador industrial utilizado para automatizar procesos electromecánicos. Se compone de <strong>cinco partes esenciales</strong>:</p>
+
+        <div class="plc-grid">
+          <div class="plc-card">
+            <span class="plc-num">01</span>
+            <h4>Fuente de alimentación</h4>
+            <p>Convierte la corriente alterna en corriente continua para alimentar los módulos.</p>
+          </div>
+          <div class="plc-card">
+            <span class="plc-num">02</span>
+            <h4>CPU</h4>
+            <p>Procesa las instrucciones lógicas del programa y coordina el funcionamiento.</p>
+          </div>
+          <div class="plc-card">
+            <span class="plc-num">03</span>
+            <h4>Memoria de almacenamiento</h4>
+            <p>Guarda el programa y los datos del proceso.</p>
+          </div>
+          <div class="plc-card">
+            <span class="plc-num">04</span>
+            <h4>Módulos de E/S</h4>
+            <p>Entradas y salidas donde se conectan los sensores y los actuadores.</p>
+          </div>
+          <div class="plc-card">
+            <span class="plc-num">05</span>
+            <h4>Bastidor (rack)</h4>
+            <p>Estructura física donde se montan todos los módulos.</p>
+          </div>
+        </div>
+
+        <div class="content-body">
+          <h3 class="sub-title">Aislamiento óptico</h3>
+          <p>Los módulos de entrada y salida cuentan con <strong>aislamiento óptico</strong>, que protege al CPU de posibles sobretensiones provenientes del campo.</p>
+
+          <h3 class="sub-title">Identificación de elementos de entrada</h3>
+          <p>Tomando como referencia los diagramas de conexión de entradas, los elementos conectados al <strong>módulo de entrada</strong> del PLC son:</p>
+          <ul class="feature-list">
+            <li><strong>Pulsador:</strong> dispositivo de mando manual.</li>
+            <li><strong>Sensor de líquidos:</strong> detecta presencia o nivel de líquido.</li>
+            <li><strong>Sensor de temperatura (T°):</strong> mide la temperatura del proceso.</li>
+            <li><strong>Sensor de presión:</strong> mide la presión del sistema.</li>
+          </ul>
+          <p>Estos elementos envían señales al módulo de entrada, que las traduce a niveles lógicos que el CPU puede procesar.</p>
+        </div>
+      </div>
+
+      <!-- ===== 08 INFOGRAFÍAS ===== -->
+      <div class="tab-panel" id="infografias">
+        <span class="content-label">Infografías</span>
+        <h2 class="content-title">Material visual elaborado</h2>
+
+        <p class="content-lead">Se realizaron dos infografías: una sobre las <strong>7 compuertas lógicas</strong> con su funcionamiento y circuito electrónico, y otra sobre un <strong>PLC</strong> con sus partes y un ejemplo de conexión.</p>
+
+        <!-- Infografía 1: Canva (Compuertas Lógicas) -->
+        <div class="infografia-block">
+          <header class="infografia-head">
+            <span class="fig-label">Infografía 01</span>
+            <h3>Compuertas Lógicas</h3>
+          </header>
+          <div class="canva-embed">
+            <iframe loading="lazy"
+              src="https://www.canva.com/design/DAHVsJSvrVM/DjVlpRJsGVc2--ccPqTXDA/view?embed"
+              allowfullscreen="allowfullscreen"
+              allow="fullscreen">
+            </iframe>
+          </div>
+          <p class="infografia-credito">
+            <a href="https://www.canva.com/design/DAHVsJSvrVM/DjVlpRJsGVc2--ccPqTXDA/view" target="_blank" rel="noopener">Ver en Canva →</a>
+          </p>
+        </div>
+
+        <!-- Infografía 2: Genially (PLC) -->
+        <div class="infografia-block">
+          <header class="infografia-head">
+            <span class="fig-label">Infografía 02</span>
+            <h3>Controlador Lógico Programable (PLC)</h3>
+          </header>
+          <div class="genially-embed-16-9">
+            <iframe title="Infografía PLC"
+              frameborder="0"
+              src="https://view.genially.com/6aaf54db1ad47ea1b2d7caeb"
+              type="text/html"
+              allowscriptaccess="always"
+              allowfullscreen="true"
+              scrolling="yes"
+              allownetworking="all">
+            </iframe>
+          </div>
+          <p class="infografia-credito">
+            <a href="https://view.genially.com/6aaf54db1ad47ea1b2d7caeb" target="_blank" rel="noopener">Ver en Genially →</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ===== 09 CONCLUSIÓN ===== -->
+      <div class="tab-panel" id="conclusion">
+        <span class="content-label">Conclusión</span>
+        <h2 class="content-title">Lo que aprendimos</h2>
+
+        <div class="conclusion-box">
+          <p>Después de esto podemos concluir que tanto las <strong>compuertas lógicas</strong>, como los <strong>controladores lógicos programables (PLC)</strong> son parte fundamental de los sistemas mecatrónicos, al ser estos una integración entre la ingeniería mecánica, la electrónica, la computación/software y los sistemas de control, cuyo objetivo principal es <strong>diseñar, optimizar y automatizar procesos o productos</strong> para que funcionen con mayor precisión, velocidad, confiabilidad y autonomía.</p>
+          <p>Después de esta práctica comprendimos las partes de los PLC así como las funciones de las principales 7 compuertas lógicas.</p>
+          <p>Conocer el funcionamiento y las especificaciones dadas por los fabricantes es algo indispensable para la <strong>gestión de la calidad</strong>, ya que esto hace que integremos componentes compatibles, prevengamos fallas operativas y garanticemos que el sistema mecatrónico cumpla de forma eficiente, segura y estandarizada con los requerimientos técnicos y normativos.</p>
+        </div>
+      </div>
+
+      <!-- ===== 10 BIBLIOGRAFÍA ===== -->
+      <div class="tab-panel" id="biblio">
+        <span class="content-label">Referencias</span>
+        <h2 class="content-title">Bibliografía</h2>
+
+        <ul class="bibliography">
+          <li>Jiménez Ramírez, M. T. (2020). <em>Compuertas lógicas</em>. Repositorio Institucional UTN. <a href="https://repositorio.utn.ac.cr/server/api/core/bitstreams/fe938ab3-7bd0-46e2-b4a4-43f435c50bd3/content" target="_blank" rel="noopener">Ver enlace</a></li>
+          <li>Universidad Nacional Autónoma de México. (s. f.). <em>Controladores lógicos programables: Unidad 1. Antecedentes</em> [Material didáctico]. División de Educación Continua y a Distancia, Facultad de Ingeniería, Campus Virtual Minería, UNAM. <a href="https://www.campus-virtual.mineria.unam.mx/Mineria/Cursos/Plc/Documentos/PLC_U1.pdf" target="_blank" rel="noopener">Ver enlace</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="practice-nav">
+    <a href="practica-1.html" class="practice-nav-btn back">
+      <span class="nav-arrow">←</span>
+      <span class="nav-text">
+        <small>Anterior</small>
+        <strong>Práctica 1: Desarrollo histórico</strong>
+      </span>
+    </a>
+    <a href="practica-3.html" class="practice-nav-btn next">
+      <span class="nav-text">
+        <small>Siguiente</small>
+        <strong>Práctica 3: Normatividad</strong>
+      </span>
+      <span class="nav-arrow">→</span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p>Madrigal Mendoza Emiliano</p>
+      <p>Concepción López Santiago</p>
+      <p class="footer-group">3IV18</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 1 | Desarrollo histórico de la Mecatrónica y la Gestión de Calidad</title>
+  <meta name="description" content="Práctica 1: Desarrollo histórico de la Mecatrónica y la Gestión de Calidad - CECyT No. 2">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="page-eyebrow reveal">Prácticas · 01</span>
+    <h1 class="page-title reveal reveal-delay-1">PRÁCTICA 1</h1>
+    <p class="page-subtitle reveal reveal-delay-2">
+      Desarrollo histórico de la Mecatrónica<br>
+      y de la Gestión de Calidad
+    </p>
+  </div>
+  <div class="page-hero-shape"></div>
+</header>
+
+<main>
+
+  <section class="section practice-content">
+    <div class="container container-narrow">
+
+      <!-- ===== PESTAÑAS PRINCIPALES ===== -->
+      <div class="tabs-wrapper">
+        <div class="tabs-scroll">
+          <button class="tab-btn active" data-tab="intro">Introducción</button>
+          <button class="tab-btn" data-tab="marco">Marco Teórico</button>
+          <button class="tab-btn" data-tab="gurus">Gurús de la Calidad</button>
+          <button class="tab-btn" data-tab="etapas">Etapas de la Calidad</button>
+          <button class="tab-btn" data-tab="hist-mec">Historia de la Mecatrónica</button>
+          <button class="tab-btn" data-tab="def-mec">Definición de Mecatrónica</button>
+          <button class="tab-btn" data-tab="tl-calidad">Línea de Tiempo: Calidad</button>
+          <button class="tab-btn" data-tab="tl-mec">Línea de Tiempo: Mecatrónica</button>
+          <button class="tab-btn" data-tab="cuestionario">Cuestionario</button>
+          <button class="tab-btn" data-tab="conclusion">Conclusión</button>
+          <button class="tab-btn" data-tab="biblio">Bibliografía</button>
+        </div>
+      </div>
+
+      <!-- ===== 01 INTRODUCCIÓN ===== -->
+      <div class="tab-panel active" id="intro">
+        <span class="content-label">Introducción</span>
+        <h2 class="content-title">¿De qué trata esta práctica?</h2>
+        <div class="content-body">
+          <p>En esta primera práctica comenzamos estudiando el <strong>desarrollo histórico de la Mecatrónica y de la Gestión de la Calidad</strong>.</p>
+          <p>En este trabajo investigamos cómo han evolucionado estas dos áreas, revisamos las aportaciones de diferentes autores —también llamados <em>"gurús" de la calidad</em>— y organizamos los resultados en dos líneas de tiempo.</p>
+          <p>La finalidad fue entender que la Mecatrónica y la calidad <strong>no son conceptos separados</strong>, sino sectores que han evolucionado de manera conjunta hasta formar parte de los procesos y sistemas utilizados actualmente.</p>
+        </div>
+      </div>
+
+      <!-- ===== 02 MARCO TEÓRICO ===== -->
+      <div class="tab-panel" id="marco">
+        <span class="content-label">Marco Teórico</span>
+        <h2 class="content-title">La calidad como concepto</h2>
+        <div class="content-body">
+          <p>La calidad es un concepto inherente a la misma esencia del ser humano. Desde los mismos orígenes del hombre, éste ha comprendido que el hacer las cosas bien y de la mejor forma posible le proporciona una <strong>ventaja competitiva</strong> sobre sus congéneres y sobre el entorno con el cual interactúa.</p>
+          <p>El concepto de calidad en nuestro medio es relativamente novedoso; en el resto del mundo es un concepto de manejo cotidiano que ha marcado las enormes brechas en el campo industrial entre los países industrializados y los países emergentes.</p>
+          <p>La calidad ha sido un elemento inherente a todas las actividades realizadas por el hombre desde la concepción misma de la civilización humana. Esto se evidencia principalmente en que, desde el inicio del proceso evolutivo, el hombre ha debido <strong>controlar la calidad de los productos que consumía</strong>, por medio de un largo y penoso proceso que le permitió diferenciar entre los productos que podía consumir y aquellos que eran perjudiciales para su salud.</p>
+          <p>Teniendo como base el proceso de evolución cronológica de la calidad, se observa que el concepto de calidad propiamente dicho inicia en la <strong>etapa de la administración científica</strong>, específicamente con la aparición del control de calidad por inspección, que da comienzo formal al concepto de calidad, ya que en este punto empiezan a definirse los criterios para catalogar si un producto es bueno o malo de acuerdo con las especificaciones previamente establecidas.</p>
+        </div>
+      </div>
+
+      <!-- ===== 03 GURÚS (CON SUB-PESTAÑAS) ===== -->
+      <div class="tab-panel" id="gurus">
+        <span class="content-label">Gurús de la Calidad</span>
+        <h2 class="content-title">Los grandes pensadores de la calidad</h2>
+        <p class="content-lead">A través de la historia hay bastante que mencionar acerca de personajes estudiosos de la calidad, reconocidos mundialmente por sus aportaciones académicas. Aquí los principales gurús:</p>
+
+        <div class="subtabs">
+          <button class="subtab-btn active" data-subtab="deming">Deming</button>
+          <button class="subtab-btn" data-subtab="juran">Juran</button>
+          <button class="subtab-btn" data-subtab="ishikawa">Ishikawa</button>
+          <button class="subtab-btn" data-subtab="crosby">Crosby</button>
+          <button class="subtab-btn" data-subtab="ouchi">Ouchi</button>
+          <button class="subtab-btn" data-subtab="feigenbaum">Feigenbaum</button>
+        </div>
+
+        <div class="subtab-panel active" id="deming">
+          <h3 class="guru-name">William Edwards Deming</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Concepto de calidad</span>
+            <p><em>"Una serie de cuestionamientos hacia una mejora continua."</em></p>
+          </div>
+          <div class="guru-block">
+            <span class="guru-tag">Principales aportaciones</span>
+            <p>Pionero de la <strong>Calidad Total (TQM, Total Quality Management)</strong>, creador de sus famosos <strong>catorce puntos</strong> con los cuales las compañías estarían en posición de mantenerse a la par con los constantes cambios del entorno económico.</p>
+          </div>
+        </div>
+
+        <div class="subtab-panel" id="juran">
+          <h3 class="guru-name">Joseph M. Juran</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Aportaciones</span>
+            <p>Crea la conciencia de la <strong>crisis de la calidad</strong>, el papel de la planificación de la calidad en esa crisis y la necesidad de revisar el enfoque de la planificación de la calidad. Establece un nuevo enfoque de la planificación de la calidad: <strong>Planeación, Control y Mejora de la Calidad</strong>.</p>
+          </div>
+        </div>
+
+        <div class="subtab-panel" id="ishikawa">
+          <h3 class="guru-name">Kaoru Ishikawa</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Concepto de calidad</span>
+            <p>Ishikawa (1986) define el control de calidad (CC) como: <em>desarrollar, diseñar, manufacturar y mantener un producto de calidad que sea el más económico, el útil y siempre satisfactorio para el consumidor.</em></p>
+          </div>
+          <div class="guru-block">
+            <span class="guru-tag">Principales aportaciones</span>
+            <p>Sus <strong>siete herramientas básicas</strong> son: gráfica de Pareto, diagrama de causa-efecto, estratificación, hoja de verificación, histograma, diagrama de dispersión y gráfica de control de Shewhart.</p>
+          </div>
+        </div>
+
+        <div class="subtab-panel" id="crosby">
+          <h3 class="guru-name">Philip Crosby</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Concepto de calidad</span>
+            <p>Crosby tiene el pensamiento que <strong>la calidad es gratis</strong>: es suplir los requerimientos de un cliente, al lograr cumplir con estos se logra <strong>cero defectos</strong>.</p>
+          </div>
+          <div class="guru-block">
+            <span class="guru-tag">Principales aportaciones</span>
+            <p>Creador del concepto <strong>cero defectos</strong>. Desarrolló los <strong>absolutos de la calidad total</strong>:</p>
+            <ol class="guru-list">
+              <li>La calidad se define como cumplimiento de requisitos.</li>
+              <li>El sistema de calidad es la prevención.</li>
+              <li>El estándar de realización es cero defectos.</li>
+              <li>La medida de la calidad es el precio del incumplimiento.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="subtab-panel" id="ouchi">
+          <h3 class="guru-name">William Ouchi</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Concepto de calidad</span>
+            <p>Para Ouchi, calidad es <em>hacer las cosas bien desde la primera vez</em>.</p>
+          </div>
+          <div class="guru-block">
+            <span class="guru-tag">Principales aportaciones</span>
+            <p>Autor de la <strong>Teoría Z</strong>, que proporciona medios para dirigir a las personas de tal forma que trabajen más eficazmente en equipo. Las lecciones básicas de esta teoría pueden aprovecharse para el desarrollo armónico de las organizaciones.</p>
+          </div>
+        </div>
+
+        <div class="subtab-panel" id="feigenbaum">
+          <h3 class="guru-name">Armand Vallin Feigenbaum</h3>
+          <div class="guru-block">
+            <span class="guru-tag">Concepto de calidad</span>
+            <p>Feigenbaum (1986) la define como <em>el resultante total de las características del producto y del servicio de mercadotecnia, ingeniería, fabricación y mantenimiento a través de los cuales el producto o servicio en uso satisfará las esperanzas del cliente.</em></p>
+          </div>
+          <div class="guru-block">
+            <span class="guru-tag">Principales aportaciones</span>
+            <p>Define un <strong>sistema de gestión de calidad total</strong> como la estructura de trabajo operativo acordada, que abarca a la empresa y a la planta, documentada en procedimientos técnicos y administrativos integrados, a fin de orientar las acciones coordinadas del personal, las máquinas y la información de la compañía.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== 04 ETAPAS DE LA CALIDAD ===== -->
+      <div class="tab-panel" id="etapas">
+        <span class="content-label">Etapas de la Calidad</span>
+        <h2 class="content-title">Evolución cronológica de la calidad</h2>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Etapa</th>
+                <th>Concepto</th>
+                <th>Finalidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Artesanal</strong></td>
+                <td>Hacer las cosas bien independientemente del costo o esfuerzo necesario para ello.</td>
+                <td>Satisfacer al cliente. Satisfacción del artesano por el trabajo bien hecho. Crear un producto único.</td>
+              </tr>
+              <tr>
+                <td><strong>Revolución Industrial</strong></td>
+                <td>Producir en grandes cantidades sin importar la calidad de los productos.</td>
+                <td>Satisfacer una gran demanda de bienes. Obtener beneficios.</td>
+              </tr>
+              <tr>
+                <td><strong>Administración científica</strong></td>
+                <td>Técnicas de control de calidad por inspección y métodos estadísticos, que permiten identificar los productos defectuosos.</td>
+                <td>Satisfacción de los estándares y condiciones técnicas del producto.</td>
+              </tr>
+              <tr>
+                <td><strong>Segunda Guerra Mundial</strong></td>
+                <td>Asegurar la calidad de los productos (armamento), sin importar el costo, garantizando altos volúmenes de producción en el menor tiempo posible.</td>
+                <td>Garantizar la disponibilidad de un producto eficaz en las cantidades y tiempos requeridos.</td>
+              </tr>
+              <tr>
+                <td><strong>Posguerra Occidente</strong></td>
+                <td>Producir en altos volúmenes, para satisfacer las necesidades del mercado.</td>
+                <td>Satisfacer la demanda de bienes causada por la guerra.</td>
+              </tr>
+              <tr>
+                <td><strong>Posguerra Japón</strong></td>
+                <td>Fabricar los productos bien al primer intento.</td>
+                <td>Minimizar los costos de pérdidas de productos gracias a la calidad. Satisfacer las necesidades del cliente. Generar competitividad.</td>
+              </tr>
+              <tr>
+                <td><strong>Década de los setenta</strong></td>
+                <td>Sistemas y procedimientos en el interior de la organización para evitar productos defectuosos.</td>
+                <td>Satisfacción del cliente. Prevenir errores. Reducción de costos. Generar competitividad.</td>
+              </tr>
+              <tr>
+                <td><strong>Década de los noventa</strong></td>
+                <td>La calidad en el interior de todas las áreas funcionales de la empresa.</td>
+                <td>Satisfacción del cliente. Prevenir errores. Reducción de costos. Participación de todos los empleados. Generar competitividad.</td>
+              </tr>
+              <tr>
+                <td><strong>Actualidad</strong></td>
+                <td>Capacitación de líderes de calidad que potencialicen el proceso.</td>
+                <td>Satisfacción del cliente. Prevenir errores. Reducción sistemática de costos. Equipos de mejora continua. Generar competitividad. Aumento de las utilidades.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===== 05 HISTORIA DE LA MECATRÓNICA ===== -->
+      <div class="tab-panel" id="hist-mec">
+        <span class="content-label">Historia de la Mecatrónica</span>
+        <h2 class="content-title">De la mecánica a la mecatrónica</h2>
+
+        <div class="content-body">
+          <p>La palabra <strong>mecatrónica</strong> se puede dividir en <em>meca</em> de mecánica y <em>trónica</em> de electrónica; sin embargo, abarca otras áreas del conocimiento como el control y la computación.</p>
+
+          <h3 class="sub-title">Mecánica</h3>
+          <p>La mecánica muestra sus primeros rastros en la <strong>edad de piedra</strong> con la fabricación de las primeras herramientas a base de sílex. Posteriormente, en el año <strong>287-212 a.C.</strong>, Arquímedes, matemático e inventor, plantea la Ley de palanca, inventa la polea compuesta, la catapulta de espejos y el tornillo sin fin, entre otros. Su ley más conocida es el <strong>principio de Arquímedes</strong>: "todo cuerpo sumergido en un fluido experimenta una pérdida de peso igual al peso del volumen del fluido que desaloja".</p>
+          <p>Años más tarde llega <strong>Herón de Alejandría</strong>, matemático y físico del año 20-62 d.C., quien escribió trece obras sobre mecánica, matemáticas y física e inventó varios aparatos novedosos como la <strong>aelipila</strong> (máquina de vapor giratoria), la <strong>fuente de Herón</strong> y la <strong>dioptra</strong> (instrumento geodésico).</p>
+          <p>El desarrollo de la mecánica con <strong>Kepler y Copérnico</strong> contribuyó al desarrollo de la mecánica celeste. Luego, en el siglo XVI, <strong>Galileo Galilei</strong> aportó la Ley del péndulo, la invención del telescopio, el estudio sobre la caída de cuerpos y algunos indicios de la Ley gravitacional.</p>
+
+          <h3 class="sub-title">Electrónica</h3>
+          <p>La electrónica es una rama de la física que estudia el movimiento de los electrones en un conductor o semiconductor. Se divide en dos ramas fundamentales: <strong>analógica y digital</strong>.</p>
+          <p>La <strong>electrónica analógica</strong> obtiene, manipula, transmite y reproduce información de forma que la señal es una imagen fiel del original. Sus tres dispositivos básicos son: resistencias, condensadores y semiconductores (diodos y transistores). Un ejemplo típico es la radio.</p>
+          <p>La <strong>electrónica digital</strong> trabaja únicamente con dos valores, que se reducen a la existencia o no de carga eléctrica. Cualquier señal ha de ser convertida en una secuencia de números (digitalizada), de modo que lo que se transmita y manipule sean valores numéricos.</p>
+
+          <h3 class="sub-title">Teoría de Control</h3>
+          <p>Es el uso de elementos sistemáticos (como control numérico, PLC y otros sistemas de control industrial) relacionados con otras aplicaciones de la tecnología de la información (CAD, CAM, CAx), para el control industrial de maquinaria y procesos, reduciendo la necesidad de intervención humana.</p>
+        </div>
+      </div>
+
+      <!-- ===== 06 DEFINICIÓN DE MECATRÓNICA ===== -->
+      <div class="tab-panel" id="def-mec">
+        <span class="content-label">Definición</span>
+        <h2 class="content-title">¿Qué es la Mecatrónica?</h2>
+
+        <div class="content-body">
+          <p>La palabra <strong>"mecatrónica"</strong> surge en <strong>1972 en Japón</strong> como una marca comercial registrada de la firma <strong>Yaskawa Electric Co.</strong>, aunque el Dr. Seiichi Yaskawa la comenzó a utilizar desde <strong>1969</strong> en diferentes eventos y conferencias internacionales.</p>
+
+          <p>La mecatrónica es una disciplina que integra cuatro áreas fundamentales:</p>
+
+          <div class="areas-grid">
+            <div class="area-card">
+              <span class="area-icon">⚙️</span>
+              <h4>Mecánica</h4>
+              <p>Sistemas físicos y estructuras.</p>
+            </div>
+            <div class="area-card">
+              <span class="area-icon">⚡</span>
+              <h4>Electrónica</h4>
+              <p>Circuitos y dispositivos.</p>
+            </div>
+            <div class="area-card">
+              <span class="area-icon">🎛️</span>
+              <h4>Control</h4>
+              <p>Regulación de sistemas.</p>
+            </div>
+            <div class="area-card">
+              <span class="area-icon">💻</span>
+              <h4>Computación</h4>
+              <p>Programación y software.</p>
+            </div>
+          </div>
+
+          <p class="areas-note">La interacción de estas cuatro áreas da como resultado un <strong>sistema mecatrónico</strong>, capaz de operar de forma autónoma y eficiente.</p>
+        </div>
+      </div>
+
+      <!-- ===== 07 LÍNEA DE TIEMPO: CALIDAD ===== -->
+      <div class="tab-panel" id="tl-calidad">
+        <span class="content-label">Línea de Tiempo</span>
+        <h2 class="content-title">Evolución histórica de la Calidad</h2>
+        <p class="content-lead">Línea de tiempo interactiva elaborada en <strong>Genially</strong>, donde se muestran los hitos más importantes de la calidad y las aportaciones de sus principales gurús.</p>
+
+        <div class="genially-embed">
+          <iframe
+            title="Timeline Calidad"
+            frameborder="0"
+            width="800"
+            height="1600"
+            src="https://view.genially.com/6a9e01ee9818b8e1087b24bb"
+            type="text/html"
+            allowscriptaccess="always"
+            allowfullscreen="true"
+            scrolling="yes"
+            allownetworking="all"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- ===== 08 LÍNEA DE TIEMPO: MECATRÓNICA ===== -->
+      <div class="tab-panel" id="tl-mec">
+        <span class="content-label">Línea de Tiempo</span>
+        <h2 class="content-title">Evolución histórica de la Mecatrónica</h2>
+        <p class="content-lead">Línea de tiempo interactiva elaborada en <strong>Genially</strong>, que recorre desde la prehistoria y las máquinas simples hasta los sistemas mecatrónicos actuales.</p>
+
+        <div class="genially-embed">
+          <iframe
+            title="Timeline Mecatrónica"
+            frameborder="0"
+            width="800"
+            height="1600"
+            src="https://view.genially.com/6a9e37ab31c8d0ad46088d10"
+            type="text/html"
+            allowscriptaccess="always"
+            allowfullscreen="true"
+            scrolling="yes"
+            allownetworking="all"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- ===== 09 CUESTIONARIO ===== -->
+      <div class="tab-panel" id="cuestionario">
+        <span class="content-label">Cuestionario</span>
+        <h2 class="content-title">Preguntas de la práctica</h2>
+
+        <ol class="questionnaire">
+          <li>
+            <h4>¿Elabora una línea de tiempo de la evolución de la calidad?</h4>
+            <p>Ver la pestaña <strong>"Línea de Tiempo: Calidad"</strong>, donde se presenta la línea elaborada en Genially.</p>
+          </li>
+          <li>
+            <h4>¿Cuáles fueron los catorce puntos de William Edwards? Describe cada uno.</h4>
+            <p>Deming estableció 14 puntos para la transformación de la industria: crear constancia en el propósito, adoptar la nueva filosofía, no depender de la inspección masiva, no comprar solo por precio, mejorar constantemente el sistema, instituir la capacitación, adoptar e instituir el liderazgo, eliminar el miedo, romper las barreras entre áreas, eliminar los lemas y las metas numéricas, eliminar los estándares de trabajo que prescriben cuotas, eliminar las barreras que impiden el orgullo por el trabajo, instituir un programa vigoroso de educación y establecer una estructura que impulse la mejora continua.</p>
+          </li>
+          <li>
+            <h4>¿Cuál es la trilogía de procesos de Juran?</h4>
+            <p>La <strong>Trilogía de Juran</strong> se compone de tres procesos interrelacionados: <strong>Planeación de la Calidad</strong> (diseñar los procesos para cumplir metas), <strong>Control de la Calidad</strong> (evaluar el desempeño y actuar sobre las diferencias) y <strong>Mejora de la Calidad</strong> (elevar los niveles de desempeño a nuevos estándares).</p>
+          </li>
+          <li>
+            <h4>¿Describe una de las siete herramientas de Ishikawa?</h4>
+            <p>El <strong>diagrama de causa-efecto</strong> (también llamado "espina de pescado") es una herramienta que permite identificar las causas potenciales de un problema, clasificándolas en categorías como: mano de obra, métodos, materiales, maquinaria, medición y medio ambiente.</p>
+          </li>
+          <li>
+            <h4>¿Describe los tres mitos sobre la calidad de Philip Crosby?</h4>
+            <p>Crosby identificó tres mitos: <strong>1)</strong> La calidad es intangible y no se puede medir. <strong>2)</strong> La calidad se origina en el departamento de calidad. <strong>3)</strong> La calidad es costosa y solo se logra con inspección.</p>
+          </li>
+          <li>
+            <h4>¿De qué trata la Teoría Z de William Ouchi?</h4>
+            <p>La <strong>Teoría Z</strong> propone un estilo de administración participativa, donde los trabajadores se involucran en la toma de decisiones, hay empleo de por vida, evaluación y promoción lentas, y un fuerte sentido de comunidad. Busca que las personas trabajen más eficazmente en equipo.</p>
+          </li>
+          <li>
+            <h4>¿Cuáles fueron las diecinueve pautas para el mejoramiento de la calidad de Feigenbaum?</h4>
+            <p>Feigenbaum propuso 19 pautas agrupadas en tres grandes áreas: <strong>liderazgo de calidad</strong>, <strong>tecnología de calidad</strong> y <strong>compromiso organizacional</strong>. Incluyen desde la definición de políticas de calidad hasta la capacitación continua, el uso de herramientas estadísticas, la participación de todos los empleados y el control total de la calidad como sistema integrado.</p>
+          </li>
+          <li>
+            <h4>¿Elabora una línea de tiempo de la evolución de la mecatrónica?</h4>
+            <p>Ver la pestaña <strong>"Línea de Tiempo: Mecatrónica"</strong>, donde se presenta la línea elaborada en Genially.</p>
+          </li>
+          <li>
+            <h4>¿Describe qué es un Sistema Mecatrónico?</h4>
+            <p>Un <strong>sistema mecatrónico</strong> es un conjunto integrado de componentes mecánicos, electrónicos, de control y de computación que trabajan de manera coordinada para realizar una función específica. Se caracteriza por su capacidad de automatización, precisión y adaptabilidad.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ===== 10 CONCLUSIÓN ===== -->
+      <div class="tab-panel" id="conclusion">
+        <span class="content-label">Conclusión</span>
+        <h2 class="content-title">Lo que aprendimos</h2>
+
+        <div class="conclusion-box">
+          <p>De estas líneas de tiempo lo que podemos concluir es que la <strong>calidad y la Mecatrónica van de la mano</strong> y han crecido conjuntamente. Además, de que la calidad, según todos los gurús antes mencionados, podemos llegar a decir que para que haya calidad se deben hacer las cosas con la intención de <strong>entregar un producto de calidad</strong>.</p>
+          <p>La calidad es una <strong>consecuencia de la serie de decisiones</strong> que se toman al realizar un producto o servicio, comenzando desde el principio: con la planificación. De nada nos sirve revisar el final de la cadena porque no encontraríamos el error.</p>
+          <p>Los gurús coinciden en que lo importante está <strong>en el comienzo y en el trato de la empresa hacia su personal</strong>, y que la mayoría de fallos son por ineficacias del sistema, no de los trabajadores. Además, un producto de calidad no siempre es el más caro, sino el que cumple con todo para lo que fue diseñado, sin tener deficiencias. Pueden haber productos muy baratos de muy buena calidad y otros más caros de peor calidad.</p>
+          <p>La calidad con la que se fabriquen los productos y los estándares que se pongan <strong>dependen de la directiva de la empresa</strong>, y lo mejor es no dejar margen al error o a la mala calidad, porque esto cobrará factura en un futuro.</p>
+        </div>
+      </div>
+
+      <!-- ===== 11 BIBLIOGRAFÍA ===== -->
+      <div class="tab-panel" id="biblio">
+        <span class="content-label">Referencias</span>
+        <h2 class="content-title">Bibliografía</h2>
+
+        <ul class="bibliography">
+          <li>Bolton, W. (2010). <em>Mecatrónica: Sistemas de control electrónico en ingeniería mecánica y eléctrica</em> (4.ª ed.). Alfaomega / Pearson Educación.</li>
+          <li>Cubillos Rodríguez, M. C., &amp; Rozo Rodríguez, D. (2009). El concepto de calidad: Historia, evolución e importancia para la competitividad. <em>Revista de la Universidad de La Salle</em>, (48), 80-99.</li>
+          <li>Duque Gómez, P. A., Gil, M. L., &amp; Gómez, A. (2014). Principios y oportunidades de la calidad desde el diseño para la industria. <em>Revista Facultad de Ingeniería Universidad de Antioquia</em>, (71), 167-181.</li>
+          <li>Pérez, H. R., &amp; Sánchez, J. A. (2019). Arquitectura y modelado funcional de sistemas mecatrónicos de manufactura. <em>Dyna</em>, 86(208), 54-63.</li>
+          <li>Ríos, A., Morales, G., &amp; Silva, F. (2017). Interfaces electrónicas en la adquisición de datos de sistemas mecatrónicos. <em>Revista Iberoamericana de Automática e Informática Industrial</em>, 14(2), 112-123.</li>
+          <li>Rivas Sánchez, M. A., García, L. E., &amp; Morales, R. (2018). La mecatrónica y su impacto en la formación del ingeniero contemporáneo. <em>Ingeniare: Revista Chilena de Ingeniería</em>, 26(1), 22-31.</li>
+          <li>Rodríguez Rodríguez, R. (2001). La evolución de las generaciones de la calidad. <em>Contaduría y Administración</em>, (203), 41-55.</li>
+          <li>Salcedo, I., &amp; Romero, J. J. (2006). Cultura organizacional y gestión de la calidad en una empresa del Estado venezolano. <em>Revista Venezolana de Gerencia</em>, 11(33), 83-104.</li>
+          <li>Sánchez Martín, F. M., Millán Rodríguez, F., Salvador Bayarri, J., Palou Redorta, J., Rodríguez Escovar, F., Esquena Fernández, S., &amp; Villavicencio Mavrich, H. (2007). Historia de la robótica: de Arquitas de Tarento al robot Da Vinci (Parte I). <em>Actas Urológicas Españolas</em>, 31(2), 69-76.</li>
+          <li>Tello Condor, Á. M., Ulloa Enríquez, M., &amp; Allayca Guambo, F. E. (2023). Metodología Deming (PHVA) en el mejoramiento de procesos productivos. <em>Latam: Revista Latinoamericana de Ciencias Sociales y Humanidades</em>, 4(3), 1448-1463.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="practice-nav">
+    <a href="practicas.html" class="practice-nav-btn back">
+      <span class="nav-arrow">←</span>
+      <span class="nav-text">
+        <small>Todas las prácticas</small>
+        <strong>Volver al índice</strong>
+      </span>
+    </a>
+    <a href="practica-2.html" class="practice-nav-btn next">
+      <span class="nav-text">
+        <small>Siguiente</small>
+        <strong>Práctica 2: Sistema Mecatrónico</strong>
+      </span>
+      <span class="nav-arrow">→</span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p>Madrigal Mendoza Emiliano</p>
+      <p>Concepción López Santiago</p>
+      <p class="footer-group">3IV18</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
