@@ -21,16 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Partículas */
   const particlesBox = document.getElementById('particles');
   if (particlesBox) {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 18; i++) {
       const p = document.createElement('span');
       p.className = 'particle';
-      const size = Math.random() * 4 + 1;
+      const size = Math.random() * 3 + 1;
       p.style.width = size + 'px';
       p.style.height = size + 'px';
       p.style.left = Math.random() * 100 + '%';
       p.style.bottom = '-' + (Math.random() * 20) + 'px';
-      p.style.animationDuration = (Math.random() * 15 + 10) + 's';
-      p.style.animationDelay = (Math.random() * 15) + 's';
+      p.style.animationDuration = (Math.random() * 20 + 25) + 's';
+      p.style.animationDelay = (Math.random() * 20) + 's';
+      p.style.opacity = (Math.random() * 0.5 + 0.3).toFixed(2);
       particlesBox.appendChild(p);
     }
   }
@@ -70,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-      /* ===== PESTAÑAS PRINCIPALES (TABS) ===== */
+
+  /* ===== PESTAÑAS ===== */
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -78,10 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.dataset.tab;
-
         tabButtons.forEach(b => b.classList.remove('active'));
         tabPanels.forEach(p => p.classList.remove('active'));
-
         btn.classList.add('active');
         const targetPanel = document.getElementById(targetId);
         if (targetPanel) {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== SUB-PESTAÑAS (GURÚS) ===== */
+  /* ===== SUB-PESTAÑAS ===== */
   const subtabButtons = document.querySelectorAll('.subtab-btn');
   const subtabPanels = document.querySelectorAll('.subtab-panel');
 
@@ -101,17 +101,16 @@ document.addEventListener('DOMContentLoaded', () => {
     subtabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.dataset.subtab;
-
         subtabButtons.forEach(b => b.classList.remove('active'));
         subtabPanels.forEach(p => p.classList.remove('active'));
-
         btn.classList.add('active');
         const targetPanel = document.getElementById(targetId);
         if (targetPanel) targetPanel.classList.add('active');
       });
     });
   }
-    /* ===== MODAL INTERACTIVO ===== */
+
+  /* ===== MODAL ===== */
   const overlay = document.getElementById('modalOverlay');
   const modalBody = document.getElementById('modalBody');
   const modalClose = document.getElementById('modalClose');
@@ -119,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(sourceId) {
     const source = document.getElementById(sourceId);
     if (!source || !overlay || !modalBody) return;
-
     modalBody.innerHTML = source.innerHTML;
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
@@ -134,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { if (modalBody) modalBody.innerHTML = ''; }, 300);
   }
 
-  // Click en cualquier elemento con data-modal
   document.querySelectorAll('[data-modal]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
@@ -142,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cerrar con X, click fuera, o ESC
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (overlay) {
     overlay.addEventListener('click', (e) => {
@@ -154,28 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
-    /* ============================================================
-     PRACTICA 4: SOPA DE LETRAS INTERACTIVA
-     ============================================================ */
+
+  /* ===== SOPA DE LETRAS ===== */
   const sopaGrid = document.getElementById('sopaGrid');
   if (sopaGrid) {
-    // Grid 12x12 con palabras escondidas horizontalmente
     const gridRows = [
-      "LIDERAZGOABC",
-      "DEFGHIJKLMNO",
-      "MEJORAPQRSTU",
-      "VWXYZABCDEFG",
-      "CLIENTEHIJKL",
-      "MNOPQRSTUVWX",
-      "PROCESOSYZAB",
-      "CDEFGHIJKLMN",
-      "HECHOSOPQRST",
-      "UVWXYZABCDEF",
-      "PERSONALGHIJ",
-      "RELACIONESKL"
+      "LIDERAZGOABC", "DEFGHIJKLMNO", "MEJORAPQRSTU", "VWXYZABCDEFG",
+      "CLIENTEHIJKL", "MNOPQRSTUVWX", "PROCESOSYZAB", "CDEFGHIJKLMN",
+      "HECHOSOPQRST", "UVWXYZABCDEF", "PERSONALGHIJ", "RELACIONESKL"
     ];
 
-    // Posiciones de cada palabra (índice = fila * 12 + columna)
     const wordPositions = {
       liderazgo:  [0,1,2,3,4,5,6,7,8],
       mejora:     [24,25,26,27,28,29],
@@ -186,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
       relaciones: [132,133,134,135,136,137,138,139,140,141]
     };
 
-    // Renderizar celdas
     let cellIndex = 0;
     gridRows.forEach(row => {
       for (let i = 0; i < row.length; i++) {
@@ -199,18 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Botones de palabras
     const wordButtons = document.querySelectorAll('.sopa-word');
     wordButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const word = btn.dataset.word;
         const isActive = btn.classList.contains('active');
-
-        // Limpiar todo
         document.querySelectorAll('.sopa-cell.highlight').forEach(c => c.classList.remove('highlight'));
         wordButtons.forEach(b => b.classList.remove('active'));
-
-        // Si no estaba activo, activar
         if (!isActive && wordPositions[word]) {
           btn.classList.add('active');
           wordPositions[word].forEach(idx => {
@@ -221,7 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-    /* Soporte para data-fill (equivalente a data-modal) */
+
+  /* ===== DATA-FILL ===== */
   document.querySelectorAll('[data-fill]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
