@@ -303,287 +303,283 @@
         </div>
       </div>
 
-      <!-- ===== 09 INFOGRAFÍAS INTERACTIVAS ===== -->
-      <div class="tab-panel" id="infografias">
-        <span class="content-label">Infografías Interactivas</span>
-        <h2 class="content-title">Haz clic en cada elemento</h2>
-        <p class="content-lead">Cada tarjeta tiene información oculta. <strong>Haz clic</strong> sobre cualquier elemento para ver más detalles en una ventana emergente.</p>
+     <!-- ===== 09 INFOGRAFÍAS ===== -->
+<div class="tab-panel" id="infografias">
+  <span class="content-label">Infografías</span>
+  <h2 class="content-title">Las 4 infografías visuales</h2>
 
-        <!-- INFO 1: ISO 9001 -->
-        <div class="info-block info-dark">
-          <header class="info-head">
-            <span class="info-tag">Infografía 01</span>
-            <h3>ISO 9001 · Apartados</h3>
-            <span class="click-hint-badge">👆 Haz clic en cada número</span>
-          </header>
+  <!-- ============ INFO 1: ISO 9001 (RUEDA RADIAL) ============ -->
+  <div class="infografia visual-1">
+    <header class="info-head-v2">
+      <span class="info-tag-v2">Infografía 01</span>
+      <h3>ISO 9001 · Los 10 apartados</h3>
+      <p class="info-sub">Sistema de Gestión de la Calidad</p>
+    </header>
 
-          <div class="iso-timeline">
-            <div class="iso-line"></div>
+    <div class="iso-wheel">
+      <!-- SVG de fondo para líneas conectoras -->
+      <svg class="iso-wheel-lines" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+        <circle cx="300" cy="300" r="230" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="2" stroke-dasharray="6 8"/>
+        <circle cx="300" cy="300" r="150" fill="none" stroke="rgba(155,89,182,0.25)" stroke-width="2"/>
+        <!-- Líneas radiales -->
+        <g stroke="rgba(155,89,182,0.4)" stroke-width="1.5">
+          <line x1="300" y1="300" x2="300" y2="70"/>
+          <line x1="300" y1="300" x2="440" y2="120"/>
+          <line x1="300" y1="300" x2="530" y2="240"/>
+          <line x1="300" y1="300" x2="530" y2="400"/>
+          <line x1="300" y1="300" x2="440" y2="500"/>
+          <line x1="300" y1="300" x2="300" y2="540"/>
+          <line x1="300" y1="300" x2="160" y2="500"/>
+          <line x1="300" y1="300" x2="70" y2="400"/>
+          <line x1="300" y1="300" x2="70" y2="240"/>
+          <line x1="300" y1="300" x2="160" y2="120"/>
+        </g>
+      </svg>
 
-            <button class="iso-item left" data-modal="iso-1">
-              <div class="iso-dot">1</div>
-              <div class="iso-content">
-                <span class="iso-icon">📖</span>
-                <h4>Objeto y campo</h4>
-                <p>Define qué organizaciones pueden aplicar la norma.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item right" data-modal="iso-2">
-              <div class="iso-dot">2</div>
-              <div class="iso-content">
-                <span class="iso-icon">📚</span>
-                <h4>Referencias normativas</h4>
-                <p>Documentos relacionados necesarios.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item left" data-modal="iso-3">
-              <div class="iso-dot">3</div>
-              <div class="iso-content">
-                <span class="iso-icon">📝</span>
-                <h4>Términos y definiciones</h4>
-                <p>Vocabulario técnico de la norma.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item right" data-modal="iso-4">
-              <div class="iso-dot">4</div>
-              <div class="iso-content">
-                <span class="iso-icon">🏢</span>
-                <h4>Contexto de la organización</h4>
-                <p>Análisis interno y externo de la empresa.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item left" data-modal="iso-5">
-              <div class="iso-dot">5</div>
-              <div class="iso-content">
-                <span class="iso-icon">👔</span>
-                <h4>Liderazgo</h4>
-                <p>Compromiso de la alta dirección.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item right" data-modal="iso-6">
-              <div class="iso-dot">6</div>
-              <div class="iso-content">
-                <span class="iso-icon">🎯</span>
-                <h4>Planificación</h4>
-                <p>Objetivos y gestión de riesgos.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item left" data-modal="iso-7">
-              <div class="iso-dot">7</div>
-              <div class="iso-content">
-                <span class="iso-icon">🛠️</span>
-                <h4>Apoyo</h4>
-                <p>Recursos, competencia y documentación.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item right" data-modal="iso-8">
-              <div class="iso-dot">8</div>
-              <div class="iso-content">
-                <span class="iso-icon">⚙️</span>
-                <h4>Operación</h4>
-                <p>Control de producción y servicio.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item left" data-modal="iso-9">
-              <div class="iso-dot">9</div>
-              <div class="iso-content">
-                <span class="iso-icon">📊</span>
-                <h4>Evaluación del desempeño</h4>
-                <p>Seguimiento, medición y auditoría.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-
-            <button class="iso-item right" data-modal="iso-10">
-              <div class="iso-dot">10</div>
-              <div class="iso-content">
-                <span class="iso-icon">🚀</span>
-                <h4>Mejora</h4>
-                <p>Acciones correctivas y mejora continua.</p>
-                <span class="click-hint">+</span>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        <!-- INFO 2: CENAM -->
-        <div class="info-block info-warm">
-          <header class="info-head">
-            <span class="info-tag">Infografía 02</span>
-            <h3>CENAM · Centro Nacional de Metrología</h3>
-            <span class="click-hint-badge">👆 Haz clic en las polaroids y áreas</span>
-          </header>
-
-          <div class="cenam-scene">
-            <div class="cenam-deco d1">🧪</div>
-            <div class="cenam-deco d2">📐</div>
-            <div class="cenam-deco d3">⚗️</div>
-
-            <div class="cenam-header">
-              <span class="cenam-logo">CENAM</span>
-              <p>Institución líder en la <strong>ciencia de las mediciones</strong> en México.</p>
-            </div>
-
-            <div class="cenam-polaroids">
-              <button class="polaroid p-rotate-1" data-modal="cenam-mision">
-                <div class="polaroid-photo">🎯</div>
-                <div class="polaroid-caption">
-                  <span class="polaroid-tag">Misión</span>
-                  <p>Ser la institución líder en la ciencia de las mediciones, contribuyendo al bienestar de la población.</p>
-                </div>
-                <span class="click-hint">+</span>
-              </button>
-
-              <button class="polaroid p-rotate-2" data-modal="cenam-vision">
-                <div class="polaroid-photo">🔭</div>
-                <div class="polaroid-caption">
-                  <span class="polaroid-tag">Visión</span>
-                  <p>Consolidar esta posición con personal competente y soluciones innovadoras basadas en la ciencia.</p>
-                </div>
-                <span class="click-hint">+</span>
-              </button>
-            </div>
-
-            <h4 class="cenam-sub">4 Áreas Técnicas</h4>
-            <div class="cenam-areas">
-              <button class="cenam-area" style="--c:#f39c12" data-modal="cenam-electrica"><span>⚡</span>Eléctrica<span class="click-hint">+</span></button>
-              <button class="cenam-area" style="--c:#3498db" data-modal="cenam-fisica"><span>🔬</span>Física<span class="click-hint">+</span></button>
-              <button class="cenam-area" style="--c:#e91e63" data-modal="cenam-materiales"><span>🧱</span>Materiales<span class="click-hint">+</span></button>
-              <button class="cenam-area" style="--c:#27ae60" data-modal="cenam-mecanica"><span>⚙️</span>Mecánica<span class="click-hint">+</span></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- INFO 3: UNIDADES SI -->
-        <div class="info-block info-pink">
-          <header class="info-head">
-            <span class="info-tag">Infografía 03</span>
-            <h3>El Sistema Internacional de Unidades (SI)</h3>
-            <span class="click-hint-badge">👆 Haz clic en cada unidad</span>
-          </header>
-
-          <div class="si-scene">
-            <div class="si-deco d1">🔍</div>
-            <div class="si-deco d2">✏️</div>
-            <div class="si-deco d3">⚙️</div>
-            <div class="si-deco d4">🧬</div>
-            <div class="si-deco d5">🧪</div>
-            <div class="si-deco d6">📊</div>
-            <div class="si-deco d7">💡</div>
-            <div class="si-deco d8">🔗</div>
-
-            <p class="si-intro">El SI es el sistema métrico moderno establecido en 1960 por la CGPM. Sus <strong>7 unidades base</strong> permiten construir todas las demás unidades de medida.</p>
-
-            <div class="si-polaroids">
-              <button class="si-p" style="--r:-4deg" data-modal="si-metro">
-                <div class="si-p-photo" style="--c:#e74c3c">📏</div>
-                <h4>Metro</h4>
-                <span class="si-p-sym">m</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:3deg" data-modal="si-kg">
-                <div class="si-p-photo" style="--c:#f39c12">⚖️</div>
-                <h4>Kilogramo</h4>
-                <span class="si-p-sym">kg</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:-2deg" data-modal="si-seg">
-                <div class="si-p-photo" style="--c:#3498db">⏱️</div>
-                <h4>Segundo</h4>
-                <span class="si-p-sym">s</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:4deg" data-modal="si-ampere">
-                <div class="si-p-photo" style="--c:#9b59b6">⚡</div>
-                <h4>Ampere</h4>
-                <span class="si-p-sym">A</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:-3deg" data-modal="si-kelvin">
-                <div class="si-p-photo" style="--c:#1abc9c">🌡️</div>
-                <h4>Kelvin</h4>
-                <span class="si-p-sym">K</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:2deg" data-modal="si-mol">
-                <div class="si-p-photo" style="--c:#e67e22">🧪</div>
-                <h4>Mol</h4>
-                <span class="si-p-sym">mol</span>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="si-p" style="--r:-5deg" data-modal="si-candela">
-                <div class="si-p-photo" style="--c:#16a085">💡</div>
-                <h4>Candela</h4>
-                <span class="si-p-sym">cd</span>
-                <span class="click-hint">+</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- INFO 4: ORGANISMOS -->
-        <div class="info-block info-color">
-          <header class="info-head">
-            <span class="info-tag">Infografía 04</span>
-            <h3>Organismos Internacionales de Normalización</h3>
-            <span class="click-hint-badge">👆 Haz clic en cada burbuja</span>
-          </header>
-
-          <div class="orgs-scene">
-            <div class="orgs-big-grid">
-              <button class="org-bubble ob-1" data-modal="org-iso">
-                <div class="org-bubble-inner">
-                  <span class="org-bubble-siglas">ISO</span>
-                  <p>International Organization for Standardization</p>
-                </div>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="org-bubble ob-2" data-modal="org-iec">
-                <div class="org-bubble-inner">
-                  <span class="org-bubble-siglas">IEC</span>
-                  <p>International Electrotechnical Commission</p>
-                </div>
-                <span class="click-hint">+</span>
-              </button>
-              <button class="org-bubble ob-3" data-modal="org-itu">
-                <div class="org-bubble-inner">
-                  <span class="org-bubble-siglas">ITU</span>
-                  <p>International Telecommunication Union</p>
-                </div>
-                <span class="click-hint">+</span>
-              </button>
-            </div>
-
-            <h4 class="orgs-sub">Otros organismos importantes</h4>
-            <div class="orgs-pills">
-              <button class="org-pill" style="--c:#3498db" data-modal="org-ieee">IEEE · Eléctrica</button>
-              <button class="org-pill" style="--c:#e74c3c" data-modal="org-ansi">ANSI · EE.UU.</button>
-              <button class="org-pill" style="--c:#f39c12" data-modal="org-din">DIN · Alemania</button>
-              <button class="org-pill" style="--c:#9b59b6" data-modal="org-bsi">BSI · Reino Unido</button>
-              <button class="org-pill" style="--c:#16a085" data-modal="org-afnor">AFNOR · Francia</button>
-              <button class="org-pill" style="--c:#e67e22" data-modal="org-cen">CEN · Europa</button>
-            </div>
-          </div>
-        </div>
-
+      <!-- Centro -->
+      <div class="iso-wheel-center">
+        <span class="iso-wheel-logo">ISO</span>
+        <span class="iso-wheel-num">9001</span>
+        <span class="iso-wheel-sub">Gestión de la Calidad</span>
       </div>
 
+      <!-- Nodos alrededor (posicionados absolutos) -->
+      <button class="iso-node pos-1" data-modal="iso-1">
+        <span class="iso-node-num">1</span>
+        <span class="iso-node-icon">📖</span>
+        <span class="iso-node-title">Objeto</span>
+      </button>
+      <button class="iso-node pos-2" data-modal="iso-2">
+        <span class="iso-node-num">2</span>
+        <span class="iso-node-icon">📚</span>
+        <span class="iso-node-title">Referencias</span>
+      </button>
+      <button class="iso-node pos-3" data-modal="iso-3">
+        <span class="iso-node-num">3</span>
+        <span class="iso-node-icon">📝</span>
+        <span class="iso-node-title">Términos</span>
+      </button>
+      <button class="iso-node pos-4" data-modal="iso-4">
+        <span class="iso-node-num">4</span>
+        <span class="iso-node-icon">🏢</span>
+        <span class="iso-node-title">Contexto</span>
+      </button>
+      <button class="iso-node pos-5" data-modal="iso-5">
+        <span class="iso-node-num">5</span>
+        <span class="iso-node-icon">👔</span>
+        <span class="iso-node-title">Liderazgo</span>
+      </button>
+      <button class="iso-node pos-6" data-modal="iso-6">
+        <span class="iso-node-num">6</span>
+        <span class="iso-node-icon">🎯</span>
+        <span class="iso-node-title">Planificación</span>
+      </button>
+      <button class="iso-node pos-7" data-modal="iso-7">
+        <span class="iso-node-num">7</span>
+        <span class="iso-node-icon">🛠️</span>
+        <span class="iso-node-title">Apoyo</span>
+      </button>
+      <button class="iso-node pos-8" data-modal="iso-8">
+        <span class="iso-node-num">8</span>
+        <span class="iso-node-icon">⚙️</span>
+        <span class="iso-node-title">Operación</span>
+      </button>
+      <button class="iso-node pos-9" data-modal="iso-9">
+        <span class="iso-node-num">9</span>
+        <span class="iso-node-icon">📊</span>
+        <span class="iso-node-title">Evaluación</span>
+      </button>
+      <button class="iso-node pos-10" data-modal="iso-10">
+        <span class="iso-node-num">10</span>
+        <span class="iso-node-icon">🚀</span>
+        <span class="iso-node-title">Mejora</span>
+      </button>
+    </div>
+    <p class="info-hint">👆 Haz clic en cada número para ver su explicación</p>
+  </div>
+
+  <!-- ============ INFO 2: CENAM (DIAGRAMA RADIAL) ============ -->
+  <div class="infografia visual-2">
+    <header class="info-head-v2 warm">
+      <span class="info-tag-v2 warm">Infografía 02</span>
+      <h3>CENAM · Centro Nacional de Metrología</h3>
+      <p class="info-sub">La ciencia de las mediciones en México</p>
+    </header>
+
+    <!-- Misión y Visión como banners laterales -->
+    <div class="cenam-banners">
+      <div class="cenam-banner mision">
+        <span class="banner-label">🎯 Misión</span>
+        <p>Ser la institución del Estado Mexicano líder en la ciencia de las mediciones, contribuyendo al bienestar de la población.</p>
+      </div>
+      <div class="cenam-banner vision">
+        <span class="banner-label">🔭 Visión</span>
+        <p>Consolidar esta posición con personal competente y soluciones innovadoras basadas en la ciencia y la tecnología.</p>
+      </div>
+    </div>
+
+    <!-- Diagrama radial de áreas -->
+    <div class="cenam-radial">
+      <svg class="cenam-lines" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+        <circle cx="250" cy="250" r="180" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="4 6"/>
+        <line x1="250" y1="250" x2="250" y2="70" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+        <line x1="250" y1="250" x2="430" y2="250" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+        <line x1="250" y1="250" x2="250" y2="430" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+        <line x1="250" y1="250" x2="70" y2="250" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+      </svg>
+
+      <div class="cenam-center">
+        <span class="cenam-center-icon">🔬</span>
+        <span class="cenam-center-text">CENAM</span>
+      </div>
+
+      <button class="cenam-node node-top" data-modal="cenam-electrica">
+        <span class="cenam-node-icon">⚡</span>
+        <span class="cenam-node-title">Metrología Eléctrica</span>
+      </button>
+      <button class="cenam-node node-right" data-modal="cenam-fisica">
+        <span class="cenam-node-icon">🔬</span>
+        <span class="cenam-node-title">Metrología Física</span>
+      </button>
+      <button class="cenam-node node-bottom" data-modal="cenam-materiales">
+        <span class="cenam-node-icon">🧱</span>
+        <span class="cenam-node-title">Metrología de Materiales</span>
+      </button>
+      <button class="cenam-node node-left" data-modal="cenam-mecanica">
+        <span class="cenam-node-icon">⚙️</span>
+        <span class="cenam-node-title">Metrología Mecánica</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ INFO 3: SI UNITS (TABLA PERIÓDICA) ============ -->
+  <div class="infografia visual-3">
+    <header class="info-head-v2 pink">
+      <span class="info-tag-v2 pink">Infografía 03</span>
+      <h3>El Sistema Internacional de Unidades</h3>
+      <p class="info-sub">Las 7 unidades base establecidas en 1960 por la CGPM</p>
+    </header>
+
+    <div class="si-periodic">
+      <button class="si-tile tile-red" data-modal="si-metro">
+        <span class="si-tile-pos">1</span>
+        <span class="si-tile-icon">📏</span>
+        <span class="si-tile-sym">m</span>
+        <span class="si-tile-name">Metro</span>
+        <span class="si-tile-mag">Longitud</span>
+      </button>
+      <button class="si-tile tile-orange" data-modal="si-kg">
+        <span class="si-tile-pos">2</span>
+        <span class="si-tile-icon">⚖️</span>
+        <span class="si-tile-sym">kg</span>
+        <span class="si-tile-name">Kilogramo</span>
+        <span class="si-tile-mag">Masa</span>
+      </button>
+      <button class="si-tile tile-blue" data-modal="si-seg">
+        <span class="si-tile-pos">3</span>
+        <span class="si-tile-icon">⏱️</span>
+        <span class="si-tile-sym">s</span>
+        <span class="si-tile-name">Segundo</span>
+        <span class="si-tile-mag">Tiempo</span>
+      </button>
+      <button class="si-tile tile-purple" data-modal="si-ampere">
+        <span class="si-tile-pos">4</span>
+        <span class="si-tile-icon">⚡</span>
+        <span class="si-tile-sym">A</span>
+        <span class="si-tile-name">Ampere</span>
+        <span class="si-tile-mag">Corriente</span>
+      </button>
+      <button class="si-tile tile-teal" data-modal="si-kelvin">
+        <span class="si-tile-pos">5</span>
+        <span class="si-tile-icon">🌡️</span>
+        <span class="si-tile-sym">K</span>
+        <span class="si-tile-name">Kelvin</span>
+        <span class="si-tile-mag">Temperatura</span>
+      </button>
+      <button class="si-tile tile-pink" data-modal="si-mol">
+        <span class="si-tile-pos">6</span>
+        <span class="si-tile-icon">🧪</span>
+        <span class="si-tile-sym">mol</span>
+        <span class="si-tile-name">Mol</span>
+        <span class="si-tile-mag">Cantidad de sustancia</span>
+      </button>
+      <button class="si-tile tile-yellow" data-modal="si-candela">
+        <span class="si-tile-pos">7</span>
+        <span class="si-tile-icon">💡</span>
+        <span class="si-tile-sym">cd</span>
+        <span class="si-tile-name">Candela</span>
+        <span class="si-tile-mag">Intensidad luminosa</span>
+      </button>
+    </div>
+
+    <p class="si-formula">Base del <strong>Sistema General de Unidades de Medida</strong> · NOM-008-SE-2021</p>
+  </div>
+
+  <!-- ============ INFO 4: ORGANISMOS (RED) ============ -->
+  <div class="infografia visual-4">
+    <header class="info-head-v2 dark">
+      <span class="info-tag-v2 dark">Infografía 04</span>
+      <h3>Organismos Internacionales</h3>
+      <p class="info-sub">Los que escriben las reglas del juego global</p>
+    </header>
+
+    <div class="orgs-network">
+      <svg class="orgs-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+        <!-- Líneas desde ISO/IEC/ITU a los secundarios -->
+        <g stroke="rgba(34,114,255,0.35)" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+          <line x1="400" y1="250" x2="150" y2="100"/>
+          <line x1="400" y1="250" x2="650" y2="100"/>
+          <line x1="400" y1="250" x2="150" y2="400"/>
+          <line x1="400" y1="250" x2="650" y2="400"/>
+          <line x1="400" y1="250" x2="100" y2="250"/>
+          <line x1="400" y1="250" x2="700" y2="250"/>
+        </g>
+      </svg>
+
+      <!-- Los 3 grandes -->
+      <button class="org-main org-main-iso" data-modal="org-iso">
+        <span class="org-main-siglas">ISO</span>
+        <span class="org-main-full">International Organization for Standardization</span>
+      </button>
+
+      <button class="org-main org-main-iec" data-modal="org-iec">
+        <span class="org-main-siglas">IEC</span>
+        <span class="org-main-full">International Electrotechnical Commission</span>
+      </button>
+
+      <button class="org-main org-main-itu" data-modal="org-itu">
+        <span class="org-main-siglas">ITU</span>
+        <span class="org-main-full">International Telecommunication Union</span>
+      </button>
+
+      <!-- Los 6 secundarios -->
+      <button class="org-small node-tl" data-modal="org-ieee">
+        <span class="org-small-siglas">IEEE</span>
+        <span class="org-small-country">Ingeniería eléctrica</span>
+      </button>
+      <button class="org-small node-tr" data-modal="org-ansi">
+        <span class="org-small-siglas">ANSI</span>
+        <span class="org-small-country">Estados Unidos</span>
+      </button>
+      <button class="org-small node-bl" data-modal="org-bsi">
+        <span class="org-small-siglas">BSI</span>
+        <span class="org-small-country">Reino Unido</span>
+      </button>
+      <button class="org-small node-br" data-modal="org-din">
+        <span class="org-small-siglas">DIN</span>
+        <span class="org-small-country">Alemania</span>
+      </button>
+      <button class="org-small node-ml" data-modal="org-afnor">
+        <span class="org-small-siglas">AFNOR</span>
+        <span class="org-small-country">Francia</span>
+      </button>
+      <button class="org-small node-mr" data-modal="org-cen">
+        <span class="org-small-siglas">CEN</span>
+        <span class="org-small-country">Europa</span>
+      </button>
+    </div>
+  </div>
+</div>
       <!-- ===== 10 CONCLUSIÓN ===== -->
       <div class="tab-panel" id="conclusion">
         <span class="content-label">Conclusión</span>
