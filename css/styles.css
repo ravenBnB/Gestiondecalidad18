@@ -2361,4 +2361,214 @@ img { max-width: 100%; display: block; }
   font-size: 3rem;
   opacity: 0.22;
 }
+/* ============================================================
+   CENTRADO GLOBAL DE CONTENIDO DE PRÁCTICAS
+   ============================================================ */
+
+.practice-content {
+  padding: 4rem 0 5rem;
+}
+
+.container-narrow {
+  width: min(960px, 94%);
+}
+
+/* Encabezado centrado */
+.content-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-header .content-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.content-header .content-title {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.content-header .lead-question {
+  max-width: 640px;
+  margin-inline: auto !important;
+}
+
+/* Centrar títulos y párrafos de todo el content-body */
+.content-body {
+  text-align: center;
+}
+
+.content-body p {
+  max-width: 780px;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.content-body p strong {
+  color: var(--neon-bright);
+  font-weight: 600;
+}
+
+/* Subtítulos con línea decorativa centrada */
+.sub-title-center {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--neon-bright);
+  font-weight: 700;
+  margin: 2.5rem auto 1rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  display: block;
+  max-width: fit-content;
+}
+
+.sub-title-center::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--neon);
+  border-radius: 2px;
+  box-shadow: 0 0 12px var(--neon-glow);
+}
+
+/* Chips row centrada */
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1.5rem auto 2rem;
+  max-width: 700px;
+}
+
+/* Highlight centrado (segunda generación) */
+.highlight-center {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(34,114,255,0.1), rgba(34,114,255,0.02));
+  border: 2px solid var(--neon);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 0 30px var(--neon-glow);
+  text-align: left;
+}
+
+.highlight-center-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--neon);
+  text-shadow: 0 0 25px var(--neon-glow);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.highlight-center p {
+  margin: 0;
+  text-align: left;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.highlight-center p strong { color: var(--neon-bright); }
+
+/* Quote-block centrado */
+.quote-block {
+  max-width: 720px;
+  margin: 2.5rem auto;
+  text-align: left;
+}
+
+.quote-block p {
+  text-align: left;
+  margin: 0;
+}
+
+/* Callouts centrados */
+.callout {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* Sub-títulos generales de otras pestañas - centrar */
+.tab-panel > .content-label,
+.tab-panel > .content-title,
+.tab-panel > .content-lead {
+  text-align: center;
+  display: block;
+  margin-inline: auto;
+}
+
+.tab-panel > .content-title {
+  max-width: 700px;
+}
+
+.tab-panel > .content-lead {
+  max-width: 640px;
+}
+
+/* Giant number centrado */
+.giant-number {
+  text-align: center;
+  margin-inline: auto;
+  display: block;
+}
+
+/* Tarjetas y grids: centrar contenido interno */
+.cuestionario-grid,
+.cases-grid,
+.fill-grid {
+  justify-items: center;
+}
+
+/* Subtítulos dentro de modales */
+.modal-subtitle {
+  text-align: center;
+}
+
+/* VS Layout */
+.vs-layout {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Excepción: dentro de callouts y cards, el texto sigue alineado a la izquierda */
+.callout p,
+.vs-card li,
+.fill-card h4,
+.fill-preview,
+.case-tagline {
+  text-align: left;
+}
+
+/* Títulos de las tarjetas cuestionario */
+.cuestionario-card h4 {
+  text-align: left;
+}
+
+/* En pantallas chicas */
+@media (max-width: 800px) {
+  .highlight-center {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+  .highlight-center p {
+    text-align: center;
+  }
+}
 }
