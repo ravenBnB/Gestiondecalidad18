@@ -9,23 +9,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo local para centrar la última fila de tarjetas */
+    .practices-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .practice-card {
+      width: 100%;
+      max-width: 320px; /* Tamaño fijo para que se vean simétricas */
+    }
+  </style>
 </head>
 <body>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- ===== NAV FIJO ===== -->
 <nav class="top-nav">
   <div class="container">
     <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
     <div class="links">
       <a href="index.html">Inicio</a>
-      <a href="practicas.html">PRACTICAS</a>
+      <a href="practicas.html" class="active">PRACTICAS</a>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO SIMPLE ===== -->
 <header class="page-hero">
   <div class="container">
     <span class="page-eyebrow reveal">Portafolio · Prácticas</span>
@@ -39,11 +51,8 @@
 </header>
 
 <main>
-
-  <!-- ===== GRID DE PRÁCTICAS ===== -->
   <section class="section practices-section">
     <div class="container">
-
       <div class="practices-grid">
 
         <!-- PRÁCTICA 1 -->
@@ -89,7 +98,19 @@
             <span class="practice-img-tag">PRÁCTICA 4</span>
           </div>
           <div class="practice-body">
-            <h3>Gestión y Control de Calidad</h3>
+            <h3>Gestión y Control de Calidad (Parte I)</h3>
+            <span class="practice-link">Ver práctica →</span>
+          </div>
+        </a>
+
+        <!-- PRÁCTICA 5 (NUEVA) -->
+        <a href="practica-5.html" class="practice-card reveal reveal-delay-3">
+          <div class="practice-img practice-img-blue" style="background: linear-gradient(135deg, rgba(0, 240, 255, 0.15) 0%, rgba(233, 30, 99, 0.15) 100%);">
+            <span class="practice-img-icon">📈</span>
+            <span class="practice-img-tag">PRÁCTICA 5</span>
+          </div>
+          <div class="practice-body">
+            <h3>Gestión y Control de Calidad (Parte II)</h3>
             <span class="practice-link">Ver práctica →</span>
           </div>
         </a>
@@ -97,10 +118,8 @@
       </div>
     </div>
   </section>
-
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-left">
@@ -116,7 +135,6 @@
 </footer>
 
 <button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
-
 <script src="js/main.js"></script>
 </body>
 </html>
