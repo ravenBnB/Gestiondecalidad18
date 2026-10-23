@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 5 | Gestión y Control de Calidad Parte II</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="practica-5-body">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PANTALLA DE SELECCIÓN ===== -->
+<div class="selection-screen" id="selectionScreen">
+  <div class="selection-bg-grid"></div>
+  <div class="selection-content">
+    <span class="page-eyebrow">Práctica 05 · Individual</span>
+    <h1 class="selection-title">¿Quién está consultando?</h1>
+    <p class="selection-subtitle">Selecciona tu nombre para acceder al análisis estadístico completo.</p>
+    
+    <div class="selection-cards">
+      <button class="selection-card card-emiliano" onclick="selectStudent('emiliano')">
+        <span class="selection-icon">⚙️</span>
+        <h3>Emiliano</h3>
+        <p>Madrigal Mendoza</p>
+        <span class="selection-role">Tema: Cian / Azul Neón</span>
+      </button>
+      
+      <button class="selection-card card-concepcion" onclick="selectStudent('concepcion')">
+        <span class="selection-icon">📊</span>
+        <h3>Concepción</h3>
+        <p>López Santiago</p>
+        <span class="selection-role">Tema: Rosa / Magenta Neón</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: EMILIANO (Tema Cian)
+     ============================================================ -->
+<div class="view-content theme-emiliano" id="view-emiliano" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 5 · Emiliano</span>
+      <h1 class="page-title reveal reveal-delay-1">CALIDAD <span class="subtitle-accent">PARTE II</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Análisis Estadístico y Control de Procesos</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="emi-intro">Introducción</button>
+            <button class="tab-btn" data-tab="emi-calidad">Definición Calidad</button>
+            <button class="tab-btn" data-tab="emi-control">Control de Calidad</button>
+            <button class="tab-btn" data-tab="emi-areas">Áreas Responsables</button>
+            <button class="tab-btn" data-tab="emi-datos">Datos</button>
+            <button class="tab-btn" data-tab="emi-calculos">Cálculos</button>
+            <button class="tab-btn" data-tab="emi-grafica">Gráfica</button>
+            <button class="tab-btn" data-tab="emi-conclusion">Conclusión</button>
+          </div>
+        </div>
+
+        <!-- EMI: INTRO -->
+        <div class="tab-panel active" id="emi-intro">
+          <div class="giant-number reveal">05</div>
+          <span class="content-label">Objetivo Técnico</span>
+          <h2 class="content-title">Análisis de Procesos Industriales</h2>
+          <div class="content-body">
+            <p>El propósito de esta práctica es identificar los parámetros de un proceso de gestión de calidad mediante la aplicación de herramientas estadísticas. En mi caso, me enfocaré en la <strong>interpretación matemática del control de calidad</strong>, analizando cómo las variaciones numéricas afectan la estabilidad de un sistema productivo.</p>
+            <p>Utilizaremos datos reales de pesaje para determinar si un proceso se mantiene dentro de los límites aceptables o si requiere ajustes mecánicos inmediatos.</p>
+          </div>
+        </div>
+
+        <!-- EMI: DEFINICIÓN -->
+        <div class="tab-panel" id="emi-calidad">
+          <span class="content-label">Marco Teórico</span>
+          <h2 class="content-title">Definición Cuantitativa de Calidad</h2>
+          <div class="content-body">
+            <p>La norma ISO 9000 define la calidad como el grado en el que las características inherentes de un producto cumplen con los requisitos. Desde una perspectiva técnica, esto se traduce en la siguiente relación matemática:</p>
+            
+            <div class="formula-card emi-formula reveal" style="text-align: center;">
+              <div class="math-display">
+                \[ Q = \frac{P}{E} \]
+              </div>
+              <ul class="formula-legend" style="text-align: left;">
+                <li><strong>Q:</strong> Índice de Calidad</li>
+                <li><strong>P:</strong> Desempeño medido del producto</li>
+                <li><strong>E:</strong> Expectativas o especificaciones requeridas</li>
+              </ul>
+            </div>
+
+            <p>Para que un proceso sea considerado de calidad, el índice \(Q\) debe ser mayor o igual a 1.0. Esto significa que las mediciones de nuestros instrumentos (como básculas o sensores) deben reflejar un desempeño que cumpla o supere la tolerancia especificada en el plano o manual.</p>
+          </div>
+        </div>
+
+        <!-- EMI: CONTROL -->
+        <div class="tab-panel" id="emi-control">
+          <span class="content-label">Control de Calidad</span>
+          <h2 class="content-title">Etapas del Control Operativo</h2>
+          <div class="content-body">
+            <p>El control de calidad operativo implica una secuencia lógica de verificación para asegurar que el producto final no presente fallas:</p>
+            
+            <!-- Timeline Vertical en lugar de Grid -->
+            <div class="steps-timeline emi-timeline">
+              <div class="step-item reveal">
+                <div class="step-num">1</div>
+                <div class="step-text">Definir las especificaciones técnicas necesarias.</div>
+              </div>
+              <div class="step-item reveal delay-1">
+                <div class="step-num">2</div>
+                <div class="step-text">Diseñar el producto con tolerancias claras.</div>
+              </div>
+              <div class="step-item reveal delay-2">
+                <div class="step-num">3</div>
+                <div class="step-text">Ejecutar la producción bajo los estándares.</div>
+              </div>
+              <div class="step-item reveal delay-3">
+                <div class="step-num">4</div>
+                <div class="step-text">Inspeccionar mediante muestreo estadístico.</div>
+              </div>
+              <div class="step-item reveal delay-4">
+                <div class="step-num">5</div>
+                <div class="step-text">Analizar el uso y retroalimentar el sistema.</div>
+              </div>
+              <div class="step-item reveal delay-5">
+                <div class="step-num">6</div>
+                <div class="step-text">Ajustar las especificaciones si es necesario.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: AREAS -->
+        <div class="tab-panel" id="emi-areas">
+          <span class="content-label">Responsabilidad</span>
+          <h2 class="content-title">Áreas Involucradas en el Ciclo</h2>
+          <p class="content-lead" style="text-align: center;">Haz clic en cada área para ver su función específica en el proceso.</p>
+
+          <div class="cycle-diagram emi-cycle">
+            <div class="cycle-center">
+              <span class="cycle-icon">🔄</span>
+              <h4>Ciclo de la<br>Calidad</h4>
+            </div>
+            <button class="cycle-node c-node-1" data-modal="area-cliente"><span>Cliente</span></button>
+            <button class="cycle-node c-node-2" data-modal="area-ventas"><span>Ventas</span></button>
+            <button class="cycle-node c-node-3" data-modal="area-ingenieria"><span>Ing. de Diseño</span></button>
+            <button class="cycle-node c-node-4" data-modal="area-adquisiciones"><span>Adquisiciones</span></button>
+            <button class="cycle-node c-node-5" data-modal="area-procesos"><span>Diseño de Procesos</span></button>
+            <button class="cycle-node c-node-6" data-modal="area-produccion"><span>Producción</span></button>
+            <button class="cycle-node c-node-7" data-modal="area-inspeccion"><span>Inspección</span></button>
+            <button class="cycle-node c-node-8" data-modal="area-empaque"><span>Empaque</span></button>
+            <button class="cycle-node c-node-9" data-modal="area-servicio"><span>Servicio</span></button>
+            
+            <svg class="cycle-lines" viewBox="0 0 600 600">
+              <circle cx="300" cy="300" r="220" fill="none" stroke="rgba(0, 240, 255, 0.3)" stroke-width="2" stroke-dasharray="8 8"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- EMI: DATOS -->
+        <div class="tab-panel" id="emi-datos">
+          <span class="content-label">Análisis de Datos</span>
+          <h2 class="content-title">Muestreo: Cajas de Avena</h2>
+          <div class="content-body" style="text-align: center;">
+            <p>Se analizan los pesos de 12 muestras de cajas de avena (9 cajas por muestra). El objetivo es calcular los límites de control estadístico para un nivel de confianza del 99.73% (\(Z = 3\)). La desviación estándar poblacional es \(\sigma = 1.05\).</p>
+            
+            <div class="table-responsive emi-table reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Muestra</th>
+                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>1</strong></td><td>16.10</td><td>16.30</td><td>16.00</td><td>16.20</td><td>16.10</td><td>15.90</td><td>16.00</td><td>16.30</td><td>16.00</td></tr>
+                  <tr><td><strong>2</strong></td><td>16.80</td><td>16.90</td><td>16.70</td><td>16.30</td><td>17.00</td><td>16.80</td><td>16.90</td><td>17.00</td><td>16.80</td></tr>
+                  <tr><td><strong>3</strong></td><td>15.00</td><td>15.90</td><td>15.80</td><td>15.70</td><td>15.80</td><td>15.70</td><td>15.30</td><td>15.20</td><td>15.10</td></tr>
+                  <tr><td><strong>4</strong></td><td>16.80</td><td>16.50</td><td>16.80</td><td>16.80</td><td>16.80</td><td>16.20</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>5</strong></td><td>16.10</td><td>16.80</td><td>16.80</td><td>16.50</td><td>16.80</td><td>16.20</td><td>16.50</td><td>16.80</td><td>16.00</td></tr>
+                  <tr><td><strong>6</strong></td><td>16.20</td><td>16.30</td><td>16.50</td><td>16.90</td><td>16.80</td><td>16.30</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>7</strong></td><td>15.20</td><td>15.40</td><td>15.40</td><td>15.20</td><td>15.00</td><td>15.00</td><td>15.30</td><td>15.20</td><td>15.10</td></tr>
+                  <tr><td><strong>8</strong></td><td>16.90</td><td>16.30</td><td>16.30</td><td>16.40</td><td>16.80</td><td>16.30</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>9</strong></td><td>16.40</td><td>16.30</td><td>16.50</td><td>16.20</td><td>16.30</td><td>16.30</td><td>16.50</td><td>16.20</td><td>16.00</td></tr>
+                  <tr><td><strong>10</strong></td><td>14.70</td><td>14.80</td><td>14.70</td><td>14.90</td><td>14.70</td><td>14.90</td><td>14.90</td><td>14.90</td><td>14.70</td></tr>
+                  <tr><td><strong>11</strong></td><td>14.20</td><td>14.40</td><td>14.40</td><td>14.20</td><td>14.00</td><td>14.00</td><td>14.30</td><td>14.20</td><td>14.10</td></tr>
+                  <tr><td><strong>12</strong></td><td>17.40</td><td>17.50</td><td>17.50</td><td>17.20</td><td>17.30</td><td>17.30</td><td>17.50</td><td>17.20</td><td>17.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: CALCULOS -->
+        <div class="tab-panel" id="emi-calculos">
+          <span class="content-label">Fórmulas y Operaciones</span>
+          <h2 class="content-title">Cálculo de Límites (LSC y LIC)</h2>
+
+          <div class="data-summary emi-data reveal">
+            <div class="ds-item"><span>Media Global (\(\bar{\bar{X}}\))</span><strong>16.00 oz</strong></div>
+            <div class="ds-item"><span>Desv. Estándar (\(\sigma\))</span><strong>1.05</strong></div>
+            <div class="ds-item"><span>Muestra (\(n\))</span><strong>8</strong></div>
+            <div class="ds-item"><span>Valor Z</span><strong>3</strong></div>
+          </div>
+
+          <div class="math-process">
+            <div class="mp-step reveal">
+              <h4 style="text-align: center;">1. Calcular la desviación estándar de las medias</h4>
+              <div class="calc-line">
+                <span class="calc-label" style="text-align: center;">Fórmula:</span>
+                <span class="calc-math" style="text-align: center;">\[ \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \]</span>
+              </div>
+              <div class="calc-line">
+                <span class="calc-label" style="text-align: center;">Sustitución:</span>
+                <span class="calc-math" style="text-align: center;">\[ \sigma_{\bar{x}} = \frac{1.05}{\sqrt{8}} = 0.37123106 \]</span>
+              </div>
+            </div>
+
+            <div class="mp-step reveal delay-1">
+              <h4 style="text-align: center;">2. Obtener el Límite Superior de Control</h4>
+              <div class="calc-line">
+                <span class="calc-label" style="text-align: center;">Fórmula:</span>
+                <span class="calc-math" style="text-align: center;">\[ LSC = \bar{\bar{X}} + Z(\sigma_{\bar{x}}) \]</span>
+              </div>
+              <div class="calc-line highlight-result" style="text-align: center;">
+                <span class="calc-label">Cálculo:</span>
+                <span class="calc-math">\[ 16 + 3(0.37123106) = \mathbf{17.11} \]</span>
+              </div>
+            </div>
+
+            <div class="mp-step reveal delay-2">
+              <h4 style="text-align: center;">3. Obtener el Límite Inferior de Control</h4>
+              <div class="calc-line">
+                <span class="calc-label" style="text-align: center;">Fórmula:</span>
+                <span class="calc-math" style="text-align: center;">\[ LIC = \bar{\bar{X}} - Z(\sigma_{\bar{x}}) \]</span>
+              </div>
+              <div class="calc-line highlight-result" style="text-align: center;">
+                <span class="calc-label">Cálculo:</span>
+                <span class="calc-math">\[ 16 - 3(0.37123106) = \mathbf{14.88863} \]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: GRAFICA -->
+        <div class="tab-panel" id="emi-grafica">
+          <span class="content-label">Visualización</span>
+          <h2 class="content-title">Gráfica de Control</h2>
+          <p class="content-lead" style="text-align: center;">Representación de las medias de las 12 muestras evaluadas.</p>
+
+          <div class="chart-container emi-chart reveal">
+            <svg class="control-chart" viewBox="0 0 600 300" preserveAspectRatio="none">
+              <line x1="50" y1="250" x2="550" y2="250" stroke="var(--text-muted)" stroke-width="2"/>
+              <line x1="50" y1="250" x2="50" y2="30" stroke="var(--text-muted)" stroke-width="2"/>
+              <text x="40" y="255" fill="var(--text-muted)" font-size="12" text-anchor="end">14.00</text>
+              <text x="40" y="185" fill="var(--text-muted)" font-size="12" text-anchor="end">15.00</text>
+              <text x="40" y="115" fill="var(--text-muted)" font-size="12" text-anchor="end">16.00</text>
+              <text x="40" y="45" fill="var(--text-muted)" font-size="12" text-anchor="end">17.00</text>
+              <line x1="50" y1="50" x2="550" y2="50" stroke="#00f0ff" stroke-width="2" stroke-dasharray="5 5"/>
+              <text x="555" y="55" fill="#00f0ff" font-size="12">LSC = 17.11</text>
+              <line x1="50" y1="115" x2="550" y2="115" stroke="#2272ff" stroke-width="2"/>
+              <text x="555" y="120" fill="#2272ff" font-size="12">X = 16.00</text>
+              <line x1="50" y1="195" x2="550" y2="195" stroke="#00f0ff" stroke-width="2" stroke-dasharray="5 5"/>
+              <text x="555" y="200" fill="#00f0ff" font-size="12">LIC = 14.88</text>
+              <polyline points="70,110 110,80 150,150 190,110 210,110 250,110 290,160 330,110 370,110 410,210 450,230 490,40" fill="none" stroke="#00f0ff" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="70" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="110" cy="80" r="4" fill="#00f0ff"/>
+              <circle cx="150" cy="150" r="4" fill="#00f0ff"/>
+              <circle cx="190" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="210" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="250" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="290" cy="160" r="4" fill="#00f0ff"/>
+              <circle cx="330" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="370" cy="110" r="4" fill="#00f0ff"/>
+              <circle cx="410" cy="210" r="5" fill="#e74c3c"/>
+              <circle cx="450" cy="230" r="5" fill="#e74c3c"/>
+              <circle cx="490" cy="40" r="5" fill="#e74c3c"/>
+            </svg>
+            <div class="chart-analysis">
+              <h4>Análisis</h4>
+              <p>El proceso es estable en las primeras 9 muestras, pero a partir de la <strong>muestra 10</strong> el sistema pierde control. Los puntos 10 y 11 caen por debajo del LIC (14.88), y el punto 12 se dispara por encima del LSC (17.11). Esto nos indica que hubo una causa asignable de variación, como un cambio en la calibración de la máquina o un lote de materia prima defectuoso.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: CONCLUSION -->
+        <div class="tab-panel" id="emi-conclusion">
+          <span class="content-label">Conclusión</span>
+          <h2 class="content-title">Reflexión Técnica</h2>
+          <div class="conclusion-box emi-box">
+            <p>A través de esta práctica, comprobé que la estadística es una herramienta indispensable en la mecatrónica. No basta con que una máquina funcione; necesitamos saber si lo está haciendo de manera consistente. Los cálculos de los Límites de Control (LSC y LIC) nos dan un marco matemático objetivo para tomar decisiones.</p>
+            <p>Al detectar que las muestras 10, 11 y 12 se salieron de los límites, aprendí que el control de calidad no es pasivo. Exige que el operador o el ingeniero actúe de inmediato para detener la producción, inspeccionar el equipo y corregir la falla. Este tipo de análisis estadístico es lo que separa un taller artesanal de una verdadera industria automatizada y competitiva.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: CONCEPCIÓN (Tema Rosa)
+     ============================================================ -->
+<div class="view-content theme-concepcion" id="view-concepcion" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 5 · Concepción</span>
+      <h1 class="page-title reveal reveal-delay-1">CALIDAD <span class="subtitle-accent">PARTE II</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Gestión de la Calidad y Visión Sistémica</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="con-intro">Introducción</button>
+            <button class="tab-btn" data-tab="con-calidad">Definición Calidad</button>
+            <button class="tab-btn" data-tab="con-control">Control de Calidad</button>
+            <button class="tab-btn" data-tab="con-areas">Áreas Responsables</button>
+            <button class="tab-btn" data-tab="con-datos">Datos</button>
+            <button class="tab-btn" data-tab="con-calculos">Cálculos</button>
+            <button class="tab-btn" data-tab="con-grafica">Gráfica</button>
+            <button class="tab-btn" data-tab="con-conclusion">Conclusión</button>
+          </div>
+        </div>
+
+        <!-- CON: INTRO -->
+        <div class="tab-panel active" id="con-intro">
+          <div class="giant-number reveal">05</div>
+          <span class="content-label">Objetivo de Gestión</span>
+          <h2 class="content-title">La Calidad como Sistema Integral</h2>
+          <div class="content-body">
+            <p>Esta práctica tiene como finalidad entender cómo se gestiona la calidad en una institución, analizando los manuales de operación y procedimientos. Mi enfoque se centra en la <strong>visión gerencial y sistémica</strong>, donde la calidad no recae en un solo departamento, sino que es el resultado de la interacción de todas las áreas.</p>
+            <p>A través del estudio de caso del pesaje de avena, aplicaremos herramientas estadísticas para entender cómo los datos numéricos nos permiten tomar decisiones gerenciales informadas y mantener el control sobre los procesos.</p>
+          </div>
+        </div>
+
+        <!-- CON: DEFINICIÓN -->
+        <div class="tab-panel" id="con-calidad">
+          <span class="content-label">Marco Teórico</span>
+          <h2 class="content-title">Expectativa vs. Realidad</h2>
+          <div class="content-body">
+            <p>A nivel de gestión, la calidad es un concepto intangible basado en la percepción del cliente. Un producto es de calidad si su desempeño real satisface o supera lo que el cliente esperaba recibir. Esta relación se define formalmente como:</p>
+            
+            <div class="formula-card con-formula reveal" style="text-align: center;">
+              <div class="math-display">
+                \[ Q = \frac{P}{E} \]
+              </div>
+              <ul class="formula-legend" style="text-align: left;">
+                <li><strong>Q:</strong> Calidad percibida</li>
+                <li><strong>P:</strong> Desempeño observado del producto</li>
+                <li><strong>E:</strong> Expectativas del consumidor</li>
+              </ul>
+            </div>
+
+            <p>La norma ISO 9000 complementa esto diciendo que la calidad es el grado en que las características inherentes cumplen con los requisitos. Para la gestión, esto implica que debemos traducir las expectativas del cliente en especificaciones técnicas claras y medibles para toda la organización.</p>
+          </div>
+        </div>
+
+        <!-- CON: CONTROL -->
+        <div class="tab-panel" id="con-control">
+          <span class="content-label">Control de Calidad</span>
+          <h2 class="content-title">El Proceso de Control</h2>
+          <div class="content-body">
+            <p style="text-align: center;">El control de calidad se define como el uso sistemático de técnicas para mantener y mejorar la calidad de un producto. A nivel gerencial, implica coordinar las siguientes actividades operativas:</p>
+            
+            <ul class="modal-list con-list" style="max-width: 600px; margin: 0 auto; text-align: left;">
+              <li><strong>Establecer especificaciones:</strong> Definir exactamente qué se necesita.</li>
+              <li><strong>Diseño del producto:</strong> Crear un bien o servicio que cumpla con esas especificaciones.</li>
+              <li><strong>Producción e instalación:</strong> Ejecutar el proceso asegurando el cumplimiento de las intenciones de diseño.</li>
+              <li><strong>Inspección de conformidad:</strong> Verificar que el producto final cumpla con lo establecido.</li>
+              <li><strong>Examen de uso:</strong> Obtener retroalimentación del cliente sobre el desempeño real.</li>
+              <li><strong>Modificación de especificaciones:</strong> Ajustar el rumbo si la retroalimentación lo requiere.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CON: AREAS -->
+        <div class="tab-panel" id="con-areas">
+          <span class="content-label">Responsabilidad</span>
+          <h2 class="content-title">Interconexión de Áreas</h2>
+          <p class="content-lead" style="text-align: center;">El ciclo de la calidad es cerrado. Haz clic en cada área para descubrir cómo impacta en el producto final.</p>
+
+          <div class="cycle-diagram con-cycle">
+            <div class="cycle-center">
+              <span class="cycle-icon">🔄</span>
+              <h4>Producto o Servicio<br>de Calidad</h4>
+            </div>
+            <button class="cycle-node c-node-1" data-modal="area-cliente"><span>Cliente</span></button>
+            <button class="cycle-node c-node-2" data-modal="area-ventas"><span>Ventas</span></button>
+            <button class="cycle-node c-node-3" data-modal="area-ingenieria"><span>Ing. de Diseño</span></button>
+            <button class="cycle-node c-node-4" data-modal="area-adquisiciones"><span>Adquisiciones</span></button>
+            <button class="cycle-node c-node-5" data-modal="area-procesos"><span>Diseño de Procesos</span></button>
+            <button class="cycle-node c-node-6" data-modal="area-produccion"><span>Producción</span></button>
+            <button class="cycle-node c-node-7" data-modal="area-inspeccion"><span>Inspección</span></button>
+            <button class="cycle-node c-node-8" data-modal="area-empaque"><span>Empaque</span></button>
+            <button class="cycle-node c-node-9" data-modal="area-servicio"><span>Servicio</span></button>
+            
+            <svg class="cycle-lines" viewBox="0 0 600 600">
+              <circle cx="300" cy="300" r="220" fill="none" stroke="rgba(233, 30, 99, 0.3)" stroke-width="2" stroke-dasharray="8 8"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- CON: DATOS -->
+        <div class="tab-panel" id="con-datos">
+          <span class="content-label">Análisis de Datos</span>
+          <h2 class="content-title">Recopilación de Información</h2>
+          <div class="content-body" style="text-align: center;">
+            <p>Para gestionar la calidad, primero debemos medirla. En este caso, se recopilaron los pesos de 12 muestras de cajas de avena. Los administradores buscan establecer límites de control que abarquen el 99.73% de las mediciones. Se conoce que la desviación estándar de la población es de 1.05.</p>
+            
+            <div class="table-responsive con-table reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Muestra</th>
+                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>1</strong></td><td>16.10</td><td>16.30</td><td>16.00</td><td>16.20</td><td>16.10</td><td>15.90</td><td>16.00</td><td>16.30</td><td>16.00</td></tr>
+                  <tr><td><strong>2</strong></td><td>16.80</td><td>16.90</td><td>16.70</td><td>16.30</td><td>17.00</td><td>16.80</td><td>16.90</td><td>17.00</td><td>16.80</td></tr>
+                  <tr><td><strong>3</strong></td><td>15.00</td><td>15.90</td><td>15.80</td><td>15.70</td><td>15.80</td><td>15.70</td><td>15.30</td><td>15.20</td><td>15.10</td></tr>
+                  <tr><td><strong>4</strong></td><td>16.80</td><td>16.50</td><td>16.80</td><td>16.80</td><td>16.80</td><td>16.20</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>5</strong></td><td>16.10</td><td>16.80</td><td>16.80</td><td>16.50</td><td>16.80</td><td>16.20</td><td>16.50</td><td>16.80</td><td>16.00</td></tr>
+                  <tr><td><strong>6</strong></td><td>16.20</td><td>16.30</td><td>16.50</td><td>16.90</td><td>16.80</td><td>16.30</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>7</strong></td><td>15.20</td><td>15.40</td><td>15.40</td><td>15.20</td><td>15.00</td><td>15.00</td><td>15.30</td><td>15.20</td><td>15.10</td></tr>
+                  <tr><td><strong>8</strong></td><td>16.90</td><td>16.30</td><td>16.30</td><td>16.40</td><td>16.80</td><td>16.30</td><td>16.50</td><td>16.10</td><td>16.00</td></tr>
+                  <tr><td><strong>9</strong></td><td>16.40</td><td>16.30</td><td>16.50</td><td>16.20</td><td>16.30</td><td>16.30</td><td>16.50</td><td>16.20</td><td>16.00</td></tr>
+                  <tr><td><strong>10</strong></td><td>14.70</td><td>14.80</td><td>14.70</td><td>14.90</td><td>14.70</td><td>14.90</td><td>14.90</td><td>14.90</td><td>14.70</td></tr>
+                  <tr><td><strong>11</strong></td><td>14.20</td><td>14.40</td><td>14.40</td><td>14.20</td><td>14.00</td><td>14.00</td><td>14.30</td><td>14.20</td><td>14.10</td></tr>
+                  <tr><td><strong>12</strong></td><td>17.40</td><td>17.50</td><td>17.50</td><td>17.20</td><td>17.30</td><td>17.30</td><td>17.50</td><td>17.20</td><td>17.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: CALCULOS -->
+        <div class="tab-panel" id="con-calculos">
+          <span class="content-label">Fórmulas y Operaciones</span>
+          <h2 class="content-title">Cálculo de los Límites de Control</h2>
+
+          <div class="data-summary con-data reveal">
+            <div class="ds-item"><span>Promedio General</span><strong>16.00 oz</strong></div>
+            <div class="ds-item"><span>Desviación (\(\sigma\))</span><strong>1.05</strong></div>
+            <div class="ds-item"><span>Tamaño (\(n\))</span><strong>8</strong></div>
+            <div class="ds-item"><span>Z (Confianza)</span><strong>3</strong></div>
+          </div>
+
+          <div class="math-process">
+            <div class="mp-step reveal">
+              <h4 style="text-align: center;">1. Cálculo del Error Estándar</h4>
+              <p style="text-align: center;">Primero, determinamos la variabilidad de las medias muestrales.</p>
+              <div class="calc-line">
+                <span class="calc-label" style="text-align: center;">Fórmula: \(\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span>
+                <span class="calc-math" style="text-align: center;">\[ \sigma_{\bar{x}} = \frac{1.05}{2.8284} = \mathbf{0.37123} \]</span>
+              </div>
+            </div>
+
+            <div class="mp-step reveal delay-1">
+              <h4 style="text-align: center;">2. Definición del Límite Superior (LSC)</h4>
+              <p style="text-align: center;">Es el valor máximo aceptable antes de considerar que el proceso tiene fallas.</p>
+              <div class="calc-line" style="text-align: center;">
+                <span class="calc-label">Operación: \(16 + 3(0.37123106)\)</span>
+                <span class="calc-math highlight-result">\[ LSC = \mathbf{17.11 \text{ onzas}} \]</span>
+              </div>
+            </div>
+
+            <div class="mp-step reveal delay-2">
+              <h4 style="text-align: center;">3. Definición del Límite Inferior (LIC)</h4>
+              <p style="text-align: center;">Es el valor mínimo aceptable. Si baja de aquí, el producto no cumple con el estándar de calidad.</p>
+              <div class="calc-line" style="text-align: center;">
+                <span class="calc-label">Operación: \(16 - 3(0.37123106)\)</span>
+                <span class="calc-math highlight-result">\[ LIC = \mathbf{14.88863 \text{ onzas}} \]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: GRAFICA -->
+        <div class="tab-panel" id="con-grafica">
+          <span class="content-label">Visualización</span>
+          <h2 class="content-title">Gráfica de Control Gerencial</h2>
+          <p class="content-lead" style="text-align: center;">Comportamiento histórico del proceso de empaquetado.</p>
+
+          <div class="chart-container con-chart reveal">
+            <svg class="control-chart" viewBox="0 0 600 300" preserveAspectRatio="none">
+              <line x1="50" y1="250" x2="550" y2="250" stroke="var(--text-muted)" stroke-width="2"/>
+              <line x1="50" y1="250" x2="50" y2="30" stroke="var(--text-muted)" stroke-width="2"/>
+              <text x="40" y="255" fill="var(--text-muted)" font-size="12" text-anchor="end">14.00</text>
+              <text x="40" y="185" fill="var(--text-muted)" font-size="12" text-anchor="end">15.00</text>
+              <text x="40" y="115" fill="var(--text-muted)" font-size="12" text-anchor="end">16.00</text>
+              <text x="40" y="45" fill="var(--text-muted)" font-size="12" text-anchor="end">17.00</text>
+              <line x1="50" y1="50" x2="550" y2="50" stroke="#e91e63" stroke-width="2" stroke-dasharray="5 5"/>
+              <text x="555" y="55" fill="#e91e63" font-size="12">LSC = 17.11</text>
+              <line x1="50" y1="115" x2="550" y2="115" stroke="#9b59b6" stroke-width="2"/>
+              <text x="555" y="120" fill="#9b59b6" font-size="12">X = 16.00</text>
+              <line x1="50" y1="195" x2="550" y2="195" stroke="#e91e63" stroke-width="2" stroke-dasharray="5 5"/>
+              <text x="555" y="200" fill="#e91e63" font-size="12">LIC = 14.88</text>
+              <polyline points="70,110 110,80 150,150 190,110 210,110 250,110 290,160 330,110 370,110 410,210 450,230 490,40" fill="none" stroke="#e91e63" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="70" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="110" cy="80" r="4" fill="#e91e63"/>
+              <circle cx="150" cy="150" r="4" fill="#e91e63"/>
+              <circle cx="190" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="210" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="250" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="290" cy="160" r="4" fill="#e91e63"/>
+              <circle cx="330" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="370" cy="110" r="4" fill="#e91e63"/>
+              <circle cx="410" cy="210" r="5" fill="#f39c12"/>
+              <circle cx="450" cy="230" r="5" fill="#f39c12"/>
+              <circle cx="490" cy="40" r="5" fill="#f39c12"/>
+            </svg>
+            <div class="chart-analysis con-analysis">
+              <h4>Interpretación Gerencial</h4>
+              <p>La gráfica revela que el proceso fue predecible durante las primeras 9 horas. Sin embargo, los puntos naranjas (muestras 10, 11 y 12) indican una <strong>variación fuera de control</strong>. Como gerente, esto me indica que no puedo confiar en el proceso actual; se debe auditar al proveedor de la materia prima o revisar si hubo un error humano en el área de producción.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: CONCLUSION -->
+        <div class="tab-panel" id="con-conclusion">
+          <span class="content-label">Conclusión</span>
+          <h2 class="content-title">Reflexión sobre la Gestión</h2>
+          <div class="conclusion-box con-box">
+            <p>Esta práctica me dejó claro que la calidad es un esfuerzo sistémico. Como vimos en el ciclo, todos los eslabones (Ventas, Diseño, Compras, Producción) son importantes. Un error en Adquisiciones (comprar materiales de baja calidad) repercutirá directamente en Producción y se verá reflejado en la insatisfacción del cliente.</p>
+            <p>El análisis estadístico es la herramienta que nos permite como administradores tomar decisiones basadas en hechos y no en suposiciones. Los límites de control nos advierten cuándo el sistema está fallando para que podamos actuar a tiempo, garantizando así la sostenibilidad y rentabilidad de la empresa.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="mainFooter" style="display: none;">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p id="footerName">Alumno</p>
+      <p>3IV18</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODALES ===== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="modal-source" id="area-cliente"><span class="modal-kicker">Área · Cliente</span><h3 class="modal-title">El Cliente</h3><p>Es el eslabón más importante. Sus necesidades dictan las especificaciones del producto y su satisfacción define el éxito de la empresa.</p></div>
+<div class="modal-source" id="area-ventas"><span class="modal-kicker">Área · Ventas</span><h3 class="modal-title">Ventas</h3><p>Determina las necesidades de calidad del cliente. Si venden algo que la empresa no puede producir con la calidad prometida, todo el sistema fallará.</p></div>
+<div class="modal-source" id="area-ingenieria"><span class="modal-kicker">Área · Ingeniería de Diseño</span><h3 class="modal-title">Ingeniería de Diseño</h3><p>Traduce las necesidades del cliente en especificaciones técnicas y planos. Diseña un producto funcional, seguro y fácil de fabricar.</p></div>
+<div class="modal-source" id="area-adquisiciones"><span class="modal-kicker">Área · Adquisiciones</span><h3 class="modal-title">Adquisiciones</h3><p>Selecciona a los proveedores y asegura que las materias primas cumplan con los estándares de calidad. Una materia prima defectuosa arruina el proceso.</p></div>
+<div class="modal-source" id="area-procesos"><span class="modal-kicker">Área · Diseño de Procesos</span><h3 class="modal-title">Diseño de Procesos</h3><p>Define cómo se va a fabricar el producto. Selecciona la maquinaria, las herramientas y los métodos de trabajo para alcanzar la calidad diseñada.</p></div>
+<div class="modal-source" id="area-produccion"><span class="modal-kicker">Área · Producción</span><h3 class="modal-title">Producción</h3><p>Ejecuta el proceso. Es donde la calidad se materializa. El operador debe seguir los procedimientos y reportar anomalías.</p></div>
+<div class="modal-source" id="area-inspeccion"><span class="modal-kicker">Área · Inspección</span><h3 class="modal-title">Inspección y Pruebas</h3><p>Verifica que el producto cumpla con las especificaciones. Es el "control" que se asegura de que no salgan productos defectuosos.</p></div>
+<div class="modal-source" id="area-empaque"><span class="modal-kicker">Área · Empaque</span><h3 class="modal-title">Empaque y Almacenamiento</h3><p>Protege el producto para que no se dañe. Un producto excelente que llega roto al cliente es un producto de mala calidad.</p></div>
+<div class="modal-source" id="area-servicio"><span class="modal-kicker">Área · Servicio</span><h3 class="modal-title">Servicio</h3><p>Proporciona soporte postventa. Instalación, mantenimiento, garantías. Ayuda a mantener la percepción de calidad en el tiempo.</p></div>
+
+<script src="js/main.js"></script>
+<script>
+  function selectStudent(student) {
+    document.getElementById('selectionScreen').style.display = 'none';
+    document.getElementById('mainFooter').style.display = 'block';
+    
+    if (student === 'emiliano') {
+      document.getElementById('view-emiliano').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Madrigal Mendoza Emiliano';
+    } else if (student === 'concepcion') {
+      document.getElementById('view-concepcion').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Concepción López Santiago';
+    }
+    
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 100);
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.MathJax) {
+        MathJax.typesetPromise();
+      }
+    });
+  });
+</script>
+</body>
+</html>
