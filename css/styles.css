@@ -949,3 +949,355 @@ img { max-width: 100%; display: block; }
     border-bottom: 1px solid var(--border);
   }
 }
+/* ============================================================
+   PRACTICA 6: ESTRUCTURA ISO Y CUESTIONARIO
+   ============================================================ */
+
+/* Grid de los 10 requisitos */
+.iso-structure {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.iso-block {
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.iso-block:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--black-deep);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--accent-glow);
+}
+
+.iso-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.iso-block:hover .iso-num {
+  color: var(--black-deep);
+}
+
+.iso-block h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Cuestionario */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quiz-card {
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  transition: border-color 0.3s;
+}
+
+.quiz-card:hover {
+  border-color: var(--accent-color);
+}
+
+.quiz-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.quiz-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-reveal {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.btn-reveal:hover {
+  background: var(--accent-color);
+  color: var(--black-deep);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.answer-content {
+  display: none;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border);
+  animation: panel-in 0.3s ease;
+}
+
+.answer-content p {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.answer-content strong {
+  color: var(--accent-color);
+}
+/* ============================================================
+   PRACTICA 6: CORE HUD ISO 9001 Y TEST INTERACTIVO
+   ============================================================ */
+
+/* ===== CORE HUD (INFOGRAFÍA) ===== */
+.iso-core-hud {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Anillos animados de fondo */
+.hud-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed var(--accent-color);
+  opacity: 0.2;
+  animation: spin linear infinite;
+}
+.ring-1 { width: 300px; height: 300px; animation-duration: 20s; }
+.ring-2 { width: 450px; height: 450px; animation-duration: 35s; animation-direction: reverse; }
+.ring-3 { width: 580px; height: 580px; animation-duration: 50s; border-style: solid; opacity: 0.1; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Centro (Núcleo) */
+.hud-center {
+  position: relative;
+  z-index: 10;
+  width: 130px;
+  height: 130px;
+  background: var(--black-deep);
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px var(--accent-glow), inset 0 0 20px var(--accent-glow);
+}
+
+.hud-center .hud-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+.hud-center h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+
+/* Nodos (Cláusulas) */
+.hud-node {
+  position: absolute;
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hud-node span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+.hud-node:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--black-deep);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--accent-glow);
+  z-index: 20;
+}
+
+.hud-node:hover span { color: var(--black-deep); }
+
+/* Posicionamiento matemático de los 10 nodos (Radio 220px) */
+.n-1  { top: 8%; left: 50%; transform: translateX(-50%); }
+.n-2  { top: 15%; right: 15%; }
+.n-3  { top: 35%; right: 0%; }
+.n-4  { bottom: 35%; right: 0%; }
+.n-5  { bottom: 15%; right: 15%; }
+.n-6  { bottom: 8%; left: 50%; transform: translateX(-50%); }
+.n-7  { bottom: 15%; left: 15%; }
+.n-8  { bottom: 35%; left: 0%; }
+.n-9  { top: 35%; left: 0%; }
+.n-10 { top: 15%; left: 15%; }
+
+/* Ajuste específico para los que usan translateX */
+.n-1:hover, .n-6:hover { transform: translateX(-50%) scale(1.1); }
+
+/* ===== TEST INTERACTIVO ===== */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quiz-card {
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-align: left;
+}
+
+.quiz-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.q-opt {
+  background: var(--black-deep);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.q-opt:hover {
+  border-color: var(--accent-color);
+  background: rgba(255,255,255,0.05);
+}
+
+/* Estados de respuesta */
+.q-opt.correct {
+  background: rgba(22, 160, 133, 0.15);
+  border-color: #16a085;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(22, 160, 133, 0.3);
+}
+
+.q-opt.incorrect {
+  background: rgba(231, 76, 60, 0.15);
+  border-color: #e74c3c;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Feedback box */
+.feedback-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  animation: panel-in 0.3s ease;
+}
+
+.fb-ok {
+  background: rgba(22, 160, 133, 0.1);
+  border-left: 3px solid #16a085;
+  color: #d1f2eb;
+}
+.fb-ok strong { color: #1abc9c; }
+
+.fb-bad {
+  background: rgba(231, 76, 60, 0.1);
+  border-left: 3px solid #e74c3c;
+  color: #fadbd8;
+}
+.fb-bad strong { color: #e74c3c; }
+
+/* Responsive para el HUD */
+@media (max-width: 800px) {
+  .iso-core-hud { aspect-ratio: auto; height: 400px; }
+  .ring-1 { width: 200px; height: 200px; }
+  .ring-2 { width: 300px; height: 300px; }
+  .ring-3 { width: 380px; height: 380px; }
+  .hud-center { width: 100px; height: 100px; }
+  .hud-center .hud-icon { font-size: 1.8rem; }
+  .hud-center h4 { font-size: 1rem; }
+  .hud-node { font-size: 0.65rem; padding: 0.3rem 0.5rem; }
+  
+  /* Reajustar posiciones en móvil */
+  .n-1 { top: 0; }
+  .n-2 { top: 10%; right: 5%; }
+  .n-3 { top: 40%; right: 0; }
+  .n-4 { bottom: 40%; right: 0; }
+  .n-5 { bottom: 10%; right: 5%; }
+  .n-6 { bottom: 0; }
+  .n-7 { bottom: 10%; left: 5%; }
+  .n-8 { bottom: 40%; left: 0; }
+  .n-9 { top: 40%; left: 0; }
+  .n-10 { top: 10%; left: 5%; }
+}
