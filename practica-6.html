@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 6 | Interpretación de la Norma ISO 9001</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="practica-5-body">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="cecyt2.html">CALIDAD CECYT 2</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PANTALLA DE SELECCIÓN ===== -->
+<div class="selection-screen" id="selectionScreen">
+  <div class="selection-bg-grid"></div>
+  <div class="selection-content">
+    <span class="page-eyebrow">Práctica 06 · Individual</span>
+    <h1 class="selection-title">¿Quién está consultando?</h1>
+    <p class="selection-subtitle">Selecciona tu nombre para acceder al análisis profundo de la Norma ISO 9001.</p>
+    
+    <div class="selection-cards">
+      <button class="selection-card card-emiliano" onclick="selectStudent('emiliano')">
+        <span class="selection-icon">⚙️</span>
+        <h3>Emiliano</h3>
+        <p>Madrigal Mendoza</p>
+        <span class="selection-role">Enfoque: Operatividad y Procesos</span>
+      </button>
+      
+      <button class="selection-card card-concepcion" onclick="selectStudent('concepcion')">
+        <span class="selection-icon">📊</span>
+        <h3>Concepción</h3>
+        <p>López Santiago</p>
+        <span class="selection-role">Enfoque: Estrategia y Gestión</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: EMILIANO (Tema Cian)
+     ============================================================ -->
+<div class="view-content theme-emiliano" id="view-emiliano" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 6 · Emiliano</span>
+      <h1 class="page-title reveal reveal-delay-1">ISO <span class="subtitle-accent">9001</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Arquitectura del Sistema de Gestión</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="emi-intro">Introducción</button>
+            <button class="tab-btn" data-tab="emi-marco">Marco Conceptual</button>
+            <button class="tab-btn" data-tab="emi-infografia">Core HUD ISO</button>
+            <button class="tab-btn" data-tab="emi-cuestionario">Test Interactivo</button>
+            <button class="tab-btn" data-tab="emi-conclusion">Conclusión</button>
+          </div>
+        </div>
+
+        <!-- EMI: INTRO -->
+        <div class="tab-panel active" id="emi-intro">
+          <div class="giant-number reveal">06</div>
+          <span class="content-label">Objetivo Técnico</span>
+          <h2 class="content-title">Ingeniería de Procesos ISO</h2>
+          <div class="content-body">
+            <p>El propósito de esta práctica es analizar la Norma ISO 9001 como un <strong>plano de ingeniería organizacional</strong>. En la mecatrónica, no podemos dejar el funcionamiento de un sistema a la suerte; la norma nos exige documentar, medir y controlar cada variable.</p>
+            <p>Analizaremos cómo los 10 requisitos y el ciclo PHVA se convierten en las herramientas operativas que garantizan que un sistema (ya sea una máquina o un proceso administrativo) funcione con precisión milimétrica.</p>
+          </div>
+        </div>
+
+        <!-- EMI: MARCO -->
+        <div class="tab-panel" id="emi-marco">
+          <span class="content-label">Marco Conceptual</span>
+          <h2 class="content-title">Fundamentos y PHVA</h2>
+          <div class="content-body">
+            <p>La ISO 9001 es el estándar internacional para los Sistemas de Gestión de la Calidad. Se basa en dos pilares técnicos:</p>
+            
+            <div class="analysis-grid reveal">
+              <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+                <span class="analysis-icon">🔄</span>
+                <h5>Ciclo PHVA</h5>
+                <p>Planificar (establecer objetivos), Hacer (implementar), Verificar (medir) y Actuar (mejorar). Es el motor del sistema.</p>
+              </div>
+              <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+                <span class="analysis-icon">⚠️</span>
+                <h5>Enfoque a Riesgos</h5>
+                <p>Identificar qué puede fallar en el proceso antes de que ocurra, para implementar controles preventivos.</p>
+              </div>
+            </div>
+
+            <div class="quote-block reveal">
+              <span class="quote-mark">"</span>
+              <p>El enfoque a procesos permite a una organización planificar sus procesos y sus interacciones. El ciclo PHVA permite asegurarse de que cuenten con recursos y se gestionen adecuadamente.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: INFOGRAFÍA (CORE HUD) -->
+        <div class="tab-panel" id="emi-infografia">
+          <span class="content-label">Infografía Interactiva</span>
+          <h2 class="content-title">El Core de la ISO 9001</h2>
+          <p class="content-lead">Haz clic en cada cláusula para ver su función operativa.</p>
+
+          <div class="iso-core-hud">
+            <!-- Anillos animados -->
+            <div class="hud-ring ring-1"></div>
+            <div class="hud-ring ring-2"></div>
+            <div class="hud-ring ring-3"></div>
+            
+            <div class="hud-center">
+              <span class="hud-icon">⚙️</span>
+              <h4>ISO 9001</h4>
+            </div>
+
+            <!-- Cláusulas (Nodos) -->
+            <button class="hud-node n-1" data-modal="iso-1"><span>01</span>Objeto</button>
+            <button class="hud-node n-2" data-modal="iso-2"><span>02</span>Referencias</button>
+            <button class="hud-node n-3" data-modal="iso-3"><span>03</span>Términos</button>
+            <button class="hud-node n-4" data-modal="iso-4"><span>04</span>Contexto</button>
+            <button class="hud-node n-5" data-modal="iso-5"><span>05</span>Liderazgo</button>
+            
+            <button class="hud-node n-6" data-modal="iso-6"><span>06</span>Planificación</button>
+            <button class="hud-node n-7" data-modal="iso-7"><span>07</span>Apoyo</button>
+            <button class="hud-node n-8" data-modal="iso-8"><span>08</span>Operación</button>
+            <button class="hud-node n-9" data-modal="iso-9"><span>09</span>Evaluación</button>
+            <button class="hud-node n-10" data-modal="iso-10"><span>10</span>Mejora</button>
+          </div>
+        </div>
+
+        <!-- EMI: CUESTIONARIO (TEST INTERACTIVO) -->
+        <div class="tab-panel" id="emi-cuestionario">
+          <span class="content-label">Evaluación</span>
+          <h2 class="content-title">Test de Conocimiento</h2>
+          <p class="content-lead">Selecciona la opción correcta. Puede haber más de una respuesta válida.</p>
+          
+          <div class="quiz-container">
+            <!-- Pregunta 1 -->
+            <div class="quiz-card reveal">
+              <h4>1. El plan de auditorías internas de ISO 9001 establece que:</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Cor-recto. Deben cubrir todo el sistema, tener personal capacitado y ser imparciales.')">a) Recorrerá todos los elementos y los auditores no dependerán del área auditada.</button>
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. Pueden ser externos, no es obligatorio que sean de la plantilla.')">b) Los auditores deben pertenecer obligatoriamente a la plantilla.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="quiz-card reveal delay-1">
+              <h4>2. Costos: Prevención (10%), Detección (25%), Fallos Int (40%), Fallos Ext (10%).</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. Los costos de detección no parecen el problema principal.')">a) Los costos de detección parecen muy bajos.</button>
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Los fallos representan el 50%, por lo que invertir más en prevención (solo 10%) es la solución técnica.')">b) Es preciso invertir más en prevención porque los fallos son excesivos.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="quiz-card reveal delay-2">
+              <h4>3. ¿Cuál NO es un "costo de prevención"?</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Los ensayos de recepción son controles (evaluación) cuando la materia prima ya llegó.')">a) Realización de ensayos de recepción de materias primas.</button>
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. La preparación de planes de calidad sí es prevención.')">b) Preparación de planes de calidad.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="quiz-card reveal delay-3">
+              <h4>4. Un programa de círculos de calidad bien organizado produce todo, EXCEPTO:</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. Los círculos de calidad SÍ mejoran la moral.')">a) Mejorar la moral de los operarios.</button>
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Los círculos de calidad requieren que la gerencia les preste MÁS atención y liderazgo, no menos.')">b) Reducir la necesidad de atención de la gerencia.</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMI: CONCLUSION -->
+        <div class="tab-panel" id="emi-conclusion">
+          <span class="content-label">Conclusión</span>
+          <h2 class="content-title">Reflexión de Ingeniería</h2>
+          <div class="conclusion-box emi-box">
+            <p>La ISO 9001 es el plano definitivo para cualquier sistema mecatrónico. Si un sensor falla, si un PLC se desprograma o si una pieza no cumple la tolerancia, el sistema de gestión nos obliga a tener un registro de qué pasó, por qué pasó y cómo evitar que vuelva a ocurrir.</p>
+            <p>Aprender a interpretar sus cláusulas y aplicar el ciclo PHVA es lo que separa a un técnico empírico de un ingeniero de calidad capaz de diseñar procesos robustos, predecibles y a prueba de fallos.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: CONCEPCIÓN (Tema Rosa)
+     ============================================================ -->
+<div class="view-content theme-concepcion" id="view-concepcion" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 6 · Concepción</span>
+      <h1 class="page-title reveal reveal-delay-1">ISO <span class="subtitle-accent">9001</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Estrategia y Liderazgo Organizacional</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="con-intro">Introducción</button>
+            <button class="tab-btn" data-tab="con-marco">Marco Conceptual</button>
+            <button class="tab-btn" data-tab="con-infografia">Core HUD ISO</button>
+            <button class="tab-btn" data-tab="con-cuestionario">Test Interactivo</button>
+            <button class="tab-btn" data-tab="con-conclusion">Conclusión</button>
+          </div>
+        </div>
+
+        <!-- CON: INTRO -->
+        <div class="tab-panel active" id="con-intro">
+          <div class="giant-number reveal">06</div>
+          <span class="content-label">Objetivo Gerencial</span>
+          <h2 class="content-title">La Calidad como Estrategia</h2>
+          <div class="content-body">
+            <p>Esta práctica busca comprender la Norma ISO 9001 como un <strong>activo estratégico</strong>. En el mundo empresarial, no basta con tener buenas intenciones; se necesita un sistema que garantice la satisfacción del cliente y la sostenibilidad del negocio.</p>
+            <p>Analizaremos cómo la correcta gestión de los recursos, el liderazgo visible y la evaluación constante del desempeño permiten que una organización no solo sobreviva, sino que lidere en su sector.</p>
+          </div>
+        </div>
+
+        <!-- CON: MARCO -->
+        <div class="tab-panel" id="con-marco">
+          <span class="content-label">Marco Conceptual</span>
+          <h2 class="content-title">Los 7 Principios de la Calidad</h2>
+          <div class="content-body">
+            <p>La ISO 9001 se fundamenta en 7 principios que toda organización debe adoptar:</p>
+            
+            <div class="chips-row reveal">
+              <span class="chip chip-blue">1. Enfoque al cliente</span>
+              <span class="chip chip-pink">2. Liderazgo</span>
+              <span class="chip chip-purple">3. Compromiso de personas</span>
+              <span class="chip chip-orange">4. Enfoque a procesos</span>
+              <span class="chip chip-teal">5. Mejora</span>
+              <span class="chip chip-yellow">6. Decisiones con evidencia</span>
+              <span class="chip chip-blue">7. Gestión de relaciones</span>
+            </div>
+
+            <div class="quote-block reveal">
+              <span class="quote-mark">"</span>
+              <p>La adopción de un sistema de gestión de la calidad es una decisión estratégica para una organización que le puede ayudar a mejorar su desempeño global y proporcionar una base sólida para las iniciativas de desarrollo sostenible.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: INFOGRAFÍA (CORE HUD) -->
+        <div class="tab-panel" id="con-infografia">
+          <span class="content-label">Infografía Interactiva</span>
+          <h2 class="content-title">El Ecosistema ISO 9001</h2>
+          <p class="content-lead">Haz clic en cada cláusula para ver su función estratégica.</p>
+
+          <div class="iso-core-hud">
+            <div class="hud-ring ring-1"></div>
+            <div class="hud-ring ring-2"></div>
+            <div class="hud-ring ring-3"></div>
+            
+            <div class="hud-center">
+              <span class="hud-icon">📊</span>
+              <h4>ISO 9001</h4>
+            </div>
+
+            <button class="hud-node n-1" data-modal="iso-1"><span>01</span>Objeto</button>
+            <button class="hud-node n-2" data-modal="iso-2"><span>02</span>Referencias</button>
+            <button class="hud-node n-3" data-modal="iso-3"><span>03</span>Términos</button>
+            <button class="hud-node n-4" data-modal="iso-4"><span>04</span>Contexto</button>
+            <button class="hud-node n-5" data-modal="iso-5"><span>05</span>Liderazgo</button>
+            
+            <button class="hud-node n-6" data-modal="iso-6"><span>06</span>Planificación</button>
+            <button class="hud-node n-7" data-modal="iso-7"><span>07</span>Apoyo</button>
+            <button class="hud-node n-8" data-modal="iso-8"><span>08</span>Operación</button>
+            <button class="hud-node n-9" data-modal="iso-9"><span>09</span>Evaluación</button>
+            <button class="hud-node n-10" data-modal="iso-10"><span>10</span>Mejora</button>
+          </div>
+        </div>
+
+        <!-- CON: CUESTIONARIO (TEST INTERACTIVO) -->
+        <div class="tab-panel" id="con-cuestionario">
+          <span class="content-label">Evaluación</span>
+          <h2 class="content-title">Test de Conocimiento</h2>
+          <p class="content-lead">Selecciona la opción correcta. Puede haber más de una respuesta válida.</p>
+          
+          <div class="quiz-container">
+            <!-- Pregunta 1 -->
+            <div class="quiz-card reveal">
+              <h4>1. El plan de auditorías internas de ISO 9001 establece que:</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. La auditoría debe ser integral y transparente, garantizando la independencia del auditor.')">a) Recorrerá todos los elementos y los auditores no dependerán del área auditada.</button>
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. La norma permite contratar auditores externos para asegurar la objetividad.')">b) Los auditores deben pertenecer obligatoriamente a la plantilla.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="quiz-card reveal delay-1">
+              <h4>2. Costos: Prevención (10%), Detección (25%), Fallos Int (40%), Fallos Ext (10%).</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. El problema no es que la detección sea baja, sino que los fallos son altísimos.')">a) Los costos de detección parecen muy bajos.</button>
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Con un 50% de costos en fallos, la gerencia debe priorizar la inversión en prevención (actualmente solo el 10%).')">b) Es preciso invertir más en prevención porque los fallos son excesivos.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="quiz-card reveal delay-2">
+              <h4>3. ¿Cuál NO es un "costo de prevención"?</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Si ya estás ensayando la materia prima, estás en la fase de evaluación/detección, no de prevención.')">a) Realización de ensayos de recepción de materias primas.</button>
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. Diseñar planes de calidad es una actividad preventiva.')">b) Preparación de planes de calidad.</button>
+              </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="quiz-card reveal delay-3">
+              <h4>4. Un programa de círculos de calidad bien organizado produce todo, EXCEPTO:</h4>
+              <div class="quiz-options">
+                <button class="q-opt" onclick="checkAnswer(this, false, 'Incorrecto. Mejorar la moral y la comunicación es un beneficio directo.')">a) Mejorar la comunicación entre la gerencia y los operarios.</button>
+                <button class="q-opt" onclick="checkAnswer(this, true, 'Correcto. Los círculos de calidad requieren un liderazgo activo; la gerencia debe prestar MÁS atención, no menos.')">b) Reducir la necesidad de atención de la gerencia.</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: CONCLUSION -->
+        <div class="tab-panel" id="con-conclusion">
+          <span class="content-label">Conclusión</span>
+          <h2 class="content-title">Reflexión Estratégica</h2>
+          <div class="conclusion-box con-box">
+            <p>La implementación de la ISO 9001 no es un gasto, es una inversión en la reputación y viabilidad de la empresa. Al analizar los costos de calidad, nos damos cuenta de que una organización que no previene, está destinada a gastar el doble corrigiendo errores.</p>
+            <p>Como futura administradora, mi conclusión es que la ISO 9001 nos obliga a tener una visión holística del negocio. No se trata de que cada área trabaje por su lado, sino de que todas las partes interesadas (clientes, empleados, proveedores) se beneficien de un sistema donde el liderazgo y la toma de decisiones basadas en datos son la norma, no la excepción.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="mainFooter" style="display: none;">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p id="footerName">Alumno</p>
+      <p>3IV18</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODALES ISO ===== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="modal-source" id="iso-1"><span class="modal-kicker">Requisito 1</span><h3 class="modal-title">Objeto y campo de aplicación</h3><p>Define el propósito de la norma: demostrar la capacidad de una organización para proporcionar productos que satisfagan los requisitos del cliente y legales, aspirando a aumentar su satisfacción.</p></div>
+<div class="modal-source" id="iso-2"><span class="modal-kicker">Requisito 2</span><h3 class="modal-title">Referencias normativas</h3><p>Hace referencia a la norma ISO 9000, que contiene los fundamentos y el vocabulario esenciales para entender y aplicar la ISO 9001.</p></div>
+<div class="modal-source" id="iso-3"><span class="modal-kicker">Requisito 3</span><h3 class="modal-title">Términos y definiciones</h3><p>Establece el vocabulario técnico oficial para evitar ambigüedades en la implementación del sistema de gestión.</p></div>
+<div class="modal-source" id="iso-4"><span class="modal-kicker">Requisito 4</span><h3 class="modal-title">Contexto de la organización</h3><p>La organización debe entender su entorno interno y externo, identificar a las partes interesadas y determinar el alcance de su sistema de gestión de calidad.</p></div>
+<div class="modal-source" id="iso-5"><span class="modal-kicker">Requisito 5</span><h3 class="modal-title">Liderazgo</h3><p>La alta dirección debe demostrar compromiso, establecer la política de calidad, asegurar la integración de los requisitos y promover el enfoque al cliente.</p></div>
+<div class="modal-source" id="iso-6"><span class="modal-kicker">Requisito 6</span><h3 class="modal-title">Planificación</h3><p>Requiere identificar riesgos y oportunidades, establecer objetivos de calidad medibles y planificar los cambios en el sistema de forma controlada.</p></div>
+<div class="modal-source" id="iso-7"><span class="modal-kicker">Requisito 7</span><h3 class="modal-title">Apoyo</h3><p>Define los recursos necesarios, la competencia del personal, la toma de conciencia, la comunicación y la información documentada (control de documentos).</p></div>
+<div class="modal-source" id="iso-8"><span class="modal-kicker">Requisito 8</span><h3 class="modal-title">Operación</h3><p>Es la ejecución del proceso. Cubre la planificación operacional, el diseño, los controles de producción, la liberación de productos y el control de salidas no conformes.</p></div>
+<div class="modal-source" id="iso-9"><span class="modal-kicker">Requisito 9</span><h3 class="modal-title">Evaluación del desempeño</h3><p>La organización debe medir y monitorear el sistema, evaluar la satisfacción del cliente, realizar auditorías internas y revisiones por la dirección.</p></div>
+<div class="modal-source" id="iso-10"><span class="modal-kicker">Requisito 10</span><h3 class="modal-title">Mejora</h3><p>La organización debe determinar oportunidades de mejora, implementar acciones correctivas ante no conformidades y mejorar continuamente la eficacia del sistema.</p></div>
+
+<script src="js/main.js"></script>
+<script>
+  function selectStudent(student) {
+    document.getElementById('selectionScreen').style.display = 'none';
+    document.getElementById('mainFooter').style.display = 'block';
+    
+    if (student === 'emiliano') {
+      document.getElementById('view-emiliano').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Madrigal Mendoza Emiliano';
+    } else if (student === 'concepcion') {
+      document.getElementById('view-concepcion').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Concepción López Santiago';
+    }
+    
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 100);
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.MathJax) {
+        MathJax.typesetPromise();
+      }
+    });
+  });
+
+  // Lógica del Test Interactivo
+  function checkAnswer(btn, isCorrect, message) {
+    // Resetear estilos del grupo de opciones
+    const parent = btn.parentElement;
+    parent.querySelectorAll('.q-opt').forEach(b => {
+      b.classList.remove('correct', 'incorrect');
+    });
+
+    // Aplicar clase según respuesta
+    if (isCorrect) {
+      btn.classList.add('correct');
+    } else {
+      btn.classList.add('incorrect');
+    }
+
+    // Mostrar feedback (removiendo anterior si existe)
+    let feedback = parent.nextElementSibling;
+    if (feedback && feedback.classList.contains('feedback-box')) {
+      feedback.remove();
+    }
+
+    feedback = document.createElement('div');
+    feedback.className = 'feedback-box ' + (isCorrect ? 'fb-ok' : 'fb-bad');
+    feedback.innerHTML = `<strong>${isCorrect ? '¡Correcto!' : 'Incorrecto:'}</strong> ${message}`;
+    
+    parent.parentElement.insertBefore(feedback, parent.nextSibling);
+  }
+</script>
+</body>
+</html>
