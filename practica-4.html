@@ -19,6 +19,7 @@
     <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
     <div class="links">
       <a href="index.html">Inicio</a>
+      <a href="cecyt2.html">CALIDAD CECYT 2</a> <!-- NUEVO BOTÓN -->
       <a href="practicas.html">PRACTICAS</a>
     </div>
   </div>
@@ -30,6 +31,7 @@
     <h1 class="page-title reveal reveal-delay-1">PRÁCTICA 4</h1>
     <p class="page-subtitle reveal reveal-delay-2">
       Gestión y Control de Calidad<br>
+      <span class="subtitle-accent">Parte I</span>
     </p>
   </div>
   <div class="page-hero-shape"></div>
@@ -44,9 +46,12 @@
           <button class="tab-btn active" data-tab="intro">Introducción</button>
           <button class="tab-btn" data-tab="marco">Marco Teórico</button>
           <button class="tab-btn" data-tab="vs">Gestión vs Control</button>
+          <button class="tab-btn" data-tab="herramientas">Herramientas</button>
+          <button class="tab-btn" data-tab="costos">Costos de Calidad</button>
           <button class="tab-btn" data-tab="completar">Completar Textos</button>
           <button class="tab-btn" data-tab="casos">Casos</button>
           <button class="tab-btn" data-tab="cuestionario">Cuestionario</button>
+          <button class="tab-btn" data-tab="iso21001">ISO 21001</button>
           <button class="tab-btn" data-tab="sopa">Sopa de Letras</button>
           <button class="tab-btn" data-tab="conclusion">Conclusión</button>
           <button class="tab-btn" data-tab="biblio">Bibliografía</button>
@@ -98,13 +103,13 @@
     <p>El desarrollo de la Gestión de la Calidad Total puede beneficiarse de la organización de proyectos que vinculen:</p>
 
     <div class="chips-row">
-      <span class="chip chip-blue">🎯 Liderazgo</span>
-      <span class="chip chip-pink">👥 Participación</span>
-      <span class="chip chip-purple">💪 Compromiso</span>
-      <span class="chip chip-orange">🔑 Autorresponsabilización</span>
-      <span class="chip chip-teal">🤝 Cooperación</span>
-      <span class="chip chip-yellow">📚 Aprendizaje</span>
-    </div>
+  <button class="chip chip-blue" data-modal="deep-chip-liderazgo">🎯 Liderazgo</button>
+  <button class="chip chip-pink" data-modal="deep-chip-participacion">👥 Participación</button>
+  <button class="chip chip-purple" data-modal="deep-chip-compromiso">💪 Compromiso</button>
+  <button class="chip chip-orange" data-modal="deep-chip-autorr">🔑 Autorresponsabilización</button>
+  <button class="chip chip-teal" data-modal="deep-chip-cooperacion">🤝 Cooperación</button>
+  <button class="chip chip-yellow" data-modal="deep-chip-aprendizaje">📚 Aprendizaje</button>
+</div>
 
     <h3 class="sub-title-center">🕰️ La segunda generación de la calidad</h3>
     <p>La satisfacción empresarial con este enfoque empezó pronto a resquebrajarse ante la creciente complejidad de los sistemas productivos intercambiables y de las tecnologías de producción en masa. El crecimiento continuo de la escala de producción y la complejidad tecnológica de ciertas industrias hicieron la <strong>inspección masiva</strong> cada vez más complicada.</p>
@@ -116,8 +121,86 @@
       <p>La segunda generación en la historia de la calidad se caracterizó por tener como centro de preocupación el <strong>control de la calidad en el proceso</strong>.</p>
     </div>
 
+    <!-- NUEVO: Los 14 puntos de Deming -->
+    <h3 class="sub-title-center">📋 Los 14 puntos de W. Edwards Deming</h3>
+    <p>Deming propuso catorce puntos para la transformación de la industria, que constituyen la base de la <strong>Calidad Total (TQM)</strong>[reference:4]:</p>
+
+    <div class="deming-grid">
+      <div class="deming-card">
+        <span class="deming-num">1</span>
+        <h5>Constancia en el propósito</h5>
+        <p>Mejorar constantemente productos y servicios para ser competitivos.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">2</span>
+        <h5>Adoptar la nueva filosofía</h5>
+        <p>No aceptar niveles aceptables de defectos, demoras o errores.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">3</span>
+        <h5>No depender de la inspección masiva</h5>
+        <p>La inspección no mejora ni garantiza la calidad.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">4</span>
+        <h5>No comprar solo por precio</h5>
+        <p>Buscar proveedores con calidad comprobada.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">5</span>
+        <h5>Mejorar constantemente el sistema</h5>
+        <p>Planificación, producción y servicio.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">6</span>
+        <h5>Instituir la capacitación</h5>
+        <p>El personal necesita formación continua.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">7</span>
+        <h5>Adoptar e instituir el liderazgo</h5>
+        <p>El liderazgo debe ayudar al personal a hacer mejor su trabajo.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">8</span>
+        <h5>Eliminar el miedo</h5>
+        <p>El miedo impide la mejora y la productividad.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">9</span>
+        <h5>Romper las barreras entre áreas</h5>
+        <p>Todos deben trabajar como un solo equipo.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">10</span>
+        <h5>Eliminar lemas y metas numéricas</h5>
+        <p>Los lemas no mejoran los procesos.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">11</span>
+        <h5>Eliminar cuotas numéricas</h5>
+        <p>Sustituir por liderazgo y mejora continua.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">12</span>
+        <h5>Eliminar barreras al orgullo por el trabajo</h5>
+        <p>El trabajador debe sentirse orgulloso de lo que hace.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">13</span>
+        <h5>Instituir educación y capacitación</h5>
+        <p>Programa vigoroso de auto-mejora para todos.</p>
+      </div>
+      <div class="deming-card">
+        <span class="deming-num">14</span>
+        <h5>Actuar para lograr la transformación</h5>
+        <p>La alta dirección debe comprometerse con el cambio.</p>
+      </div>
+    </div>
+
   </div>
 </div>
+
       <!-- VS -->
       <div class="tab-panel" id="vs">
         <span class="content-label">Comparación</span>
@@ -127,26 +210,24 @@
             <span class="vs-badge">Gestión</span>
             <h3>Gestión de la Calidad</h3>
             <ul>
-              <li><strong>Alcance:</strong> Toda la organización</li>
-              <li><strong>Enfoque:</strong> Estratégico y preventivo</li>
-              <li><strong>Responsable:</strong> Todos los miembros</li>
-              <li><strong>Horizonte:</strong> Largo plazo</li>
-              <li><strong>Objetivo:</strong> Satisfacer al cliente</li>
-              <li><strong>Pregunta clave:</strong> ¿Qué vamos a hacer?</li>
-            </ul>
+  <li><button class="deep-link-block" data-modal="deep-vs-alcance-g">Alcance: Toda la organización</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-enfoque-g">Enfoque: Estratégico y preventivo</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-resp-g">Responsable: Todos los miembros</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-horizonte-g">Horizonte: Largo plazo</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-objetivo-g">Objetivo: Satisfacer al cliente</button></li>
+</ul>
           </article>
           <div class="vs-circle">VS</div>
           <article class="vs-card vs-control">
             <span class="vs-badge">Control</span>
             <h3>Control de la Calidad</h3>
             <ul>
-              <li><strong>Alcance:</strong> Producto o proceso</li>
-              <li><strong>Enfoque:</strong> Operativo y correctivo</li>
-              <li><strong>Responsable:</strong> Área de calidad</li>
-              <li><strong>Horizonte:</strong> Corto plazo</li>
-              <li><strong>Objetivo:</strong> Cumplir especificaciones</li>
-              <li><strong>Pregunta clave:</strong> ¿Lo estamos haciendo bien?</li>
-            </ul>
+  <li><button class="deep-link-block" data-modal="deep-vs-alcance-c">Alcance: Producto o proceso</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-enfoque-c">Enfoque: Operativo y correctivo</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-resp-c">Responsable: Área de calidad</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-horizonte-c">Horizonte: Corto plazo</button></li>
+  <li><button class="deep-link-block" data-modal="deep-vs-objetivo-c">Objetivo: Cumplir especificaciones</button></li>
+</ul>
           </article>
         </div>
         <div class="callout callout-blue reveal" style="margin-top: 2.5rem;">
@@ -154,6 +235,97 @@
           <div>
             <strong>Lo que comparten</strong>
             <p>Ambas buscan la <strong>calidad</strong> y la <strong>satisfacción del cliente</strong>. La gestión planifica el rumbo y el control verifica que se cumpla.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTAS -->
+      <div class="tab-panel" id="herramientas">
+        <span class="content-label">Herramientas de Calidad</span>
+        <h2 class="content-title">Las herramientas esenciales</h2>
+        <p class="content-lead">Haz clic en cada tarjeta para ver más detalles.</p>
+
+        <div class="herramientas-grid">
+          <button class="herramienta-card" data-modal="herramienta-ishikawa">
+            <span class="herramienta-icon">🐟</span>
+            <h4>Diagrama de Ishikawa</h4>
+            <p>También llamado "espina de pescado". Identifica causas raíz de un problema.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="herramienta-card" data-modal="herramienta-pareto">
+            <span class="herramienta-icon">📊</span>
+            <h4>Diagrama de Pareto</h4>
+            <p>El 80% de los problemas proviene del 20% de las causas.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="herramienta-card" data-modal="herramienta-5s">
+            <span class="herramienta-icon">🧹</span>
+            <h4>Metodología 5S</h4>
+            <p>Clasificar, ordenar, limpiar, estandarizar y sostener.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="herramienta-card" data-modal="herramienta-phva">
+            <span class="herramienta-icon">🔄</span>
+            <h4>Ciclo PHVA</h4>
+            <p>Planear, Hacer, Verificar, Actuar. Ciclo de mejora continua.</p>
+            <span class="click-hint">+</span>
+          </button>
+        </div>
+
+        <!-- Diagrama de Ishikawa visual -->
+        <div class="ishikawa-visual reveal">
+          <h3 class="sub-title-center">Diagrama de Ishikawa (Espina de Pescado)</h3>
+          <div class="ishikawa-diagram">
+            <div class="ishikawa-espina"></div>
+            <div class="ishikawa-problema">Problema</div>
+            <div class="ishikawa-causa causa-1">Mano de obra</div>
+            <div class="ishikawa-causa causa-2">Métodos</div>
+            <div class="ishikawa-causa causa-3">Materiales</div>
+            <div class="ishikawa-causa causa-4">Maquinaria</div>
+            <div class="ishikawa-causa causa-5">Medición</div>
+            <div class="ishikawa-causa causa-6">Medio ambiente</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COSTOS DE CALIDAD -->
+      <div class="tab-panel" id="costos">
+        <span class="content-label">Costos de Calidad</span>
+        <h2 class="content-title">Los 4 tipos de costos</h2>
+        <p class="content-lead">Haz clic en cada tarjeta para ver más detalles.</p>
+
+        <div class="costos-grid">
+          <button class="costo-card costo-prevencion" data-modal="costo-prevencion">
+            <span class="costo-icon">🛡️</span>
+            <h4>Prevención</h4>
+            <p>Evitar que los errores ocurran.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="costo-card costo-evaluacion" data-modal="costo-evaluacion">
+            <span class="costo-icon">📏</span>
+            <h4>Evaluación</h4>
+            <p>Medir y verificar la calidad.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="costo-card costo-fallo-interno" data-modal="costo-fallo-interno">
+            <span class="costo-icon">⚠️</span>
+            <h4>Fallo Interno</h4>
+            <p>Defectos antes de llegar al cliente.</p>
+            <span class="click-hint">+</span>
+          </button>
+          <button class="costo-card costo-fallo-externo" data-modal="costo-fallo-externo">
+            <span class="costo-icon">🚨</span>
+            <h4>Fallo Externo</h4>
+            <p>Defectos que llegan al cliente.</p>
+            <span class="click-hint">+</span>
+          </button>
+        </div>
+
+        <div class="callout callout-purple reveal" style="margin-top: 2rem;">
+          <span class="callout-icon">💰</span>
+          <div>
+            <strong>La fórmula de los costos de calidad</strong>
+            <p>Costo Total de Calidad = Prevención + Evaluación + Fallos Internos + Fallos Externos[reference:5].</p>
           </div>
         </div>
       </div>
@@ -251,6 +423,50 @@
         </div>
       </div>
 
+      <!-- ISO 21001 -->
+      <div class="tab-panel" id="iso21001">
+        <span class="content-label">ISO 21001</span>
+        <h2 class="content-title">Norma para Organizaciones Educativas</h2>
+
+        <div class="content-body">
+          <p>La <strong>ISO 21001:2018</strong> es la Norma Internacional para los sistemas de gestión de organizaciones educativas (SGOE). Se centra en los sistemas de gestión y los procesos educativos, no en los productos[reference:6].</p>
+
+          <p>Esta norma es aplicable a cualquier organización educativa que utilice un currículo para apoyar el desarrollo de competencias a través de la enseñanza, el aprendizaje o la investigación[reference:7].</p>
+
+          <div class="callout callout-blue reveal">
+            <span class="callout-icon">📚</span>
+            <div>
+              <strong>¿Por qué es importante para el CECyT 2?</strong>
+              <p>El CECyT 2, como institución educativa del IPN, aplica los principios de esta norma para garantizar la calidad de sus servicios educativos y la satisfacción de sus estudiantes.</p>
+            </div>
+          </div>
+
+          <h3 class="sub-title-center">Beneficios de la ISO 21001</h3>
+          <div class="beneficios-grid">
+            <div class="beneficio-card">
+              <span class="beneficio-icon">🎯</span>
+              <h5>Mejora la satisfacción</h5>
+              <p>De estudiantes, beneficiarios y personal.</p>
+            </div>
+            <div class="beneficio-card">
+              <span class="beneficio-icon">📊</span>
+              <h5>Optimiza procesos</h5>
+              <p>Mejora el desempeño organizacional.</p>
+            </div>
+            <div class="beneficio-card">
+              <span class="beneficio-icon">🌍</span>
+              <h5>Estándar internacional</h5>
+              <p>Reconocimiento global de calidad educativa.</p>
+            </div>
+            <div class="beneficio-card">
+              <span class="beneficio-icon">📈</span>
+              <h5>Mejora continua</h5>
+              <p>Ciclo PHVA aplicado a la educación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- SOPA -->
       <div class="tab-panel" id="sopa">
         <span class="content-label">Sopa de Letras</span>
@@ -279,6 +495,8 @@
           <p>Después de esta práctica podemos concluir que la <strong>gestión de la calidad</strong> y el <strong>control de la calidad</strong> no son lo mismo, aunque muchas veces se confundan. La gestión es el rumbo, la estrategia, lo que toda la organización debe tener claro desde la dirección hasta el último trabajador. El control, en cambio, es la parte operativa, la que verifica día a día que los productos y procesos cumplan con lo que se espera.</p>
           <p>Vimos con AT&amp;T que la Calidad Total no siempre es suficiente cuando el cambio es muy grande: hay que aprender a aprender. Con Vega Sicilia y Ferrero entendimos que hay empresas que prefieren perder dinero antes que perder la confianza del cliente.</p>
           <p>Al analizar el Sistema de Gestión de Calidad del CECyT 2 entendimos que una institución educativa también es una empresa que ofrece un servicio (la educación), y que aplica los mismos principios: misión, visión, objetivos medibles, políticas, indicadores y mejora continua.</p>
+          <p>También aprendimos que herramientas como el <strong>Diagrama de Ishikawa</strong>, el <strong>Diagrama de Pareto</strong>, la <strong>metodología 5S</strong> y el <strong>ciclo PHVA</strong> son fundamentales para identificar problemas y mejorar procesos de manera sistemática.</p>
+          <p>Finalmente, comprendimos que los <strong>costos de calidad</strong> (prevención, evaluación y fallos) nos ayudan a tomar decisiones informadas sobre dónde invertir para mejorar la calidad y reducir pérdidas.</p>
         </div>
       </div>
 
@@ -291,10 +509,12 @@
           <li>Centro de Estudios Científicos y Tecnológicos No. 2 "Miguel Bernard". (2024). <em>Protocolo de Plagio en el CECyT 2</em>. IPN.</li>
           <li>Centro de Estudios Científicos y Tecnológicos No. 2 "Miguel Bernard". (2024). <em>Protocolo de Atención a las Necesidades Especiales de Educación (NEE)</em>. IPN.</li>
           <li>International Organization for Standardization. (2015). <em>ISO 9000:2015 Fundamentos y vocabulario</em>. ISO.</li>
+          <li>International Organization for Standardization. (2015). <em>ISO 9001:2015 Sistemas de gestión de la calidad — Requisitos</em>. ISO.</li>
           <li>International Organization for Standardization. (2018). <em>ISO 21001:2018 Sistemas de gestión para organizaciones educativas</em>. ISO.</li>
           <li>Juran, J. M. (1995). <em>Managerial Breakthrough</em>. McGraw-Hill.</li>
           <li>Deming, W. E. (1986). <em>Out of the Crisis</em>. MIT Press.</li>
           <li>Crosby, P. B. (1979). <em>Quality is Free</em>. McGraw-Hill.</li>
+          <li>ASQ. (s. f.). <em>Cost of Quality (COQ)</em>. American Society for Quality.</li>
         </ul>
       </div>
 
@@ -416,13 +636,151 @@
   <p><strong>¿Extrapolable?</strong> Sí, para empresas con productos perecederos o sensibles al ambiente.</p>
 </div>
 
-<!-- ========== MODALES: CUESTIONARIO II ========== -->
+<!-- ========== MODALES: HERRAMIENTAS ========== -->
+<div class="modal-source" id="herramienta-ishikawa">
+  <span class="modal-kicker">Herramienta · Ishikawa</span>
+  <h3 class="modal-title">Diagrama de Ishikawa</h3>
+  <p>También conocido como <strong>"espina de pescado"</strong> o diagrama causa-efecto. Es una herramienta que permite identificar las causas potenciales de un problema, clasificándolas en categorías[reference:8].</p>
+
+  <h4 class="modal-subtitle">Las 6 categorías (6M)</h4>
+  <ul class="modal-list">
+    <li><strong>Mano de obra:</strong> personas involucradas en el proceso.</li>
+    <li><strong>Métodos:</strong> procedimientos y formas de trabajo.</li>
+    <li><strong>Materiales:</strong> insumos y materias primas.</li>
+    <li><strong>Maquinaria:</strong> equipos y herramientas.</li>
+    <li><strong>Medición:</strong> sistemas de medición y control.</li>
+    <li><strong>Medio ambiente:</strong> condiciones del entorno.</li>
+  </ul>
+
+  <p><strong>¿Cómo se usa?</strong> Se coloca el problema en la "cabeza" del pescado y se van agregando las causas potenciales en cada "espina", hasta identificar la causa raíz.</p>
+</div>
+
+<div class="modal-source" id="herramienta-pareto">
+  <span class="modal-kicker">Herramienta · Pareto</span>
+  <h3 class="modal-title">Diagrama de Pareto</h3>
+  <p>Basado en el <strong>principio de Pareto</strong> (regla 80/20): el 80% de los problemas proviene del 20% de las causas[reference:9].</p>
+
+  <h4 class="modal-subtitle">¿Cómo se usa?</h4>
+  <ul class="modal-list">
+    <li>Se identifican los problemas o defectos más frecuentes.</li>
+    <li>Se ordenan de mayor a menor frecuencia.</li>
+    <li>Se calcula el porcentaje acumulado.</li>
+    <li>Se priorizan las causas que representan el 80% del problema.</li>
+  </ul>
+
+  <p><strong>Ejemplo:</strong> Si en una fábrica el 80% de los defectos proviene de solo 2 de 10 causas posibles, se atacan esas 2 primero.</p>
+</div>
+
+<div class="modal-source" id="herramienta-5s">
+  <span class="modal-kicker">Herramienta · 5S</span>
+  <h3 class="modal-title">Metodología 5S</h3>
+  <p>Metodología japonesa que busca mejorar el orden y la limpieza en el lugar de trabajo[reference:10].</p>
+
+  <h4 class="modal-subtitle">Las 5S</h4>
+  <ul class="modal-list">
+    <li><strong>Seiri (Clasificar):</strong> Separar lo necesario de lo innecesario.</li>
+    <li><strong>Seiton (Ordenar):</strong> Un lugar para cada cosa y cada cosa en su lugar.</li>
+    <li><strong>Seiso (Limpiar):</strong> Mantener limpio el espacio de trabajo.</li>
+    <li><strong>Seiketsu (Estandarizar):</strong> Crear normas y procedimientos.</li>
+    <li><strong>Shitsuke (Sostener):</strong> Mantener la disciplina y el compromiso.</li>
+  </ul>
+
+  <p><strong>Beneficios:</strong> mayor productividad, menos accidentes, mejor clima laboral y calidad consistente[reference:11].</p>
+</div>
+
+<div class="modal-source" id="herramienta-phva">
+  <span class="modal-kicker">Herramienta · PHVA</span>
+  <h3 class="modal-title">Ciclo PHVA (Ciclo de Deming)</h3>
+  <p>El ciclo <strong>Planear-Hacer-Verificar-Actuar</strong> es la base de la mejora continua[reference:12].</p>
+
+  <div class="proceso-flow">
+    <div class="proceso-paso"><span>P</span>Planear: Definir objetivos y procesos</div>
+    <div class="proceso-arrow">↓</div>
+    <div class="proceso-paso"><span>H</span>Hacer: Implementar lo planeado</div>
+    <div class="proceso-arrow">↓</div>
+    <div class="proceso-paso"><span>V</span>Verificar: Medir y comparar resultados</div>
+    <div class="proceso-arrow">↓</div>
+    <div class="proceso-paso"><span>A</span>Actuar: Corregir y estandarizar</div>
+  </div>
+
+  <p>El ciclo se repite indefinidamente, cada vez con niveles más altos de calidad[reference:13].</p>
+</div>
+
+<!-- ========== MODALES: COSTOS ========== -->
+<div class="modal-source" id="costo-prevencion">
+  <span class="modal-kicker">Costo · Prevención</span>
+  <h3 class="modal-title">Costos de Prevención</h3>
+  <p>Son los costos asociados con el diseño, implementación y mantenimiento del sistema de gestión de calidad[reference:14].</p>
+
+  <h4 class="modal-subtitle">Ejemplos</h4>
+  <ul class="modal-list">
+    <li>Capacitación del personal en calidad.</li>
+    <li>Planificación de la calidad.</li>
+    <li>Diseño de procesos robustos.</li>
+    <li>Selección y evaluación de proveedores.</li>
+    <li>Mantenimiento preventivo de equipos.</li>
+  </ul>
+
+  <p><strong>Filosofía:</strong> "Prevenir es mejor que curar". Invertir en prevención reduce los costos de fallos.</p>
+</div>
+
+<div class="modal-source" id="costo-evaluacion">
+  <span class="modal-kicker">Costo · Evaluación</span>
+  <h3 class="modal-title">Costos de Evaluación</h3>
+  <p>Son los costos asociados a las actividades de <strong>medición, inspección y verificación</strong> de la calidad[reference:15].</p>
+
+  <h4 class="modal-subtitle">Ejemplos</h4>
+  <ul class="modal-list">
+    <li>Inspección de materias primas.</li>
+    <li>Inspección durante el proceso.</li>
+    <li>Inspección final del producto.</li>
+    <li>Auditorías de calidad.</li>
+    <li>Pruebas de laboratorio.</li>
+  </ul>
+
+  <p><strong>Objetivo:</strong> Detectar defectos antes de que lleguen al cliente.</p>
+</div>
+
+<div class="modal-source" id="costo-fallo-interno">
+  <span class="modal-kicker">Costo · Fallo Interno</span>
+  <h3 class="modal-title">Costos de Fallo Interno</h3>
+  <p>Son los costos generados por <strong>defectos detectados antes de que el producto salga de la empresa</strong>[reference:16].</p>
+
+  <h4 class="modal-subtitle">Ejemplos</h4>
+  <ul class="modal-list">
+    <li>Reprocesos y retrabajos.</li>
+    <li>Desperdicio de materiales.</li>
+    <li>Paros de producción no planificados.</li>
+    <li>Reinspección de productos defectuosos.</li>
+  </ul>
+
+  <p><strong>Impacto:</strong> Aumentan los costos y reducen la productividad.</p>
+</div>
+
+<div class="modal-source" id="costo-fallo-externo">
+  <span class="modal-kicker">Costo · Fallo Externo</span>
+  <h3 class="modal-title">Costos de Fallo Externo</h3>
+  <p>Son los costos generados por <strong>defectos que llegan al cliente</strong>. Son los más costosos porque afectan la reputación[reference:17].</p>
+
+  <h4 class="modal-subtitle">Ejemplos</h4>
+  <ul class="modal-list">
+    <li>Devoluciones y garantías.</li>
+    <li>Quejas y reclamaciones de clientes.</li>
+    <li>Pérdida de clientes y reputación.</li>
+    <li>Demandas legales.</li>
+    <li>Recall de productos.</li>
+  </ul>
+
+  <p><strong>Regla:</strong> 1 peso invertido en prevención ahorra 10 pesos en fallos externos.</p>
+</div>
+
+<!-- ========== MODALES: CUESTIONARIO II (con clickeables anidados) ========== -->
 
 <div class="modal-source" id="c1">
   <span class="modal-kicker">Cuestionario II · 01</span>
   <p class="modal-question">"¿Elabora una infografía de la Gestión de calidad y control de calidad de una empresa?"</p>
   <h3 class="modal-title">Gestión y Control en el CECyT 2</h3>
-  <p class="modal-sub">El Sistema de Gestión de Calidad institucional</p>
+  <p class="modal-sub">Haz clic en cualquier elemento para profundizar</p>
 
   <div class="vs-visual">
     <div class="vs-side vs-side-gestion">
@@ -432,10 +790,10 @@
       </div>
       <span class="vs-side-sub">Lo que la dirección planea</span>
       <ul class="vs-side-list">
-        <li>Misión y Visión</li>
-        <li>4 Objetivos de Calidad</li>
-        <li>8 Políticas de Calidad</li>
-        <li>Compromiso directivo</li>
+        <li><button class="deep-link" data-modal="deep-mision-vision">Misión y Visión</button></li>
+        <li><button class="deep-link" data-modal="deep-objetivos">4 Objetivos de Calidad</button></li>
+        <li><button class="deep-link" data-modal="deep-politicas">8 Políticas de Calidad</button></li>
+        <li><button class="deep-link" data-modal="deep-compromiso">Compromiso directivo</button></li>
       </ul>
     </div>
 
@@ -451,10 +809,10 @@
       </div>
       <span class="vs-side-sub">Lo que se verifica</span>
       <ul class="vs-side-list">
-        <li>Auditorías internas</li>
-        <li>Encuestas de satisfacción</li>
-        <li>Índice de aprobación</li>
-        <li>Eficiencia terminal</li>
+        <li><button class="deep-link" data-modal="deep-auditorias">Auditorías internas</button></li>
+        <li><button class="deep-link" data-modal="deep-encuestas">Encuestas de satisfacción</button></li>
+        <li><button class="deep-link" data-modal="deep-aprobacion">Índice de aprobación</button></li>
+        <li><button class="deep-link" data-modal="deep-eficiencia">Eficiencia terminal</button></li>
       </ul>
     </div>
   </div>
@@ -468,40 +826,40 @@
   <span class="modal-kicker">Cuestionario II · 02</span>
   <p class="modal-question">"¿Elabora una infografía de la organización de tu empresa como fabricante de tu proyecto?"</p>
   <h3 class="modal-title">Organigrama del CECyT 2</h3>
-  <p class="modal-sub">Estructura organizacional como empresa de servicios educativos</p>
+  <p class="modal-sub">Haz clic en cualquier área para ver sus funciones</p>
 
   <div class="org-tree">
     <div class="org-level">
-      <div class="org-node org-node-top">
+      <button class="org-node org-node-top" data-modal="deep-dir-general">
         <span class="org-node-icon">🏛️</span>
         <span class="org-node-title">Dirección General</span>
-      </div>
+      </button>
     </div>
 
     <div class="org-connector"></div>
 
     <div class="org-level">
-      <div class="org-node org-node-mid">
+      <button class="org-node org-node-mid" data-modal="deep-sub-academica">
         <span class="org-node-icon">📚</span>
         <span class="org-node-title">Subdirección Académica</span>
-      </div>
-      <div class="org-node org-node-mid">
+      </button>
+      <button class="org-node org-node-mid" data-modal="deep-sub-admin">
         <span class="org-node-icon">💼</span>
         <span class="org-node-title">Subdirección Administrativa</span>
-      </div>
+      </button>
     </div>
 
     <div class="org-connector"></div>
 
     <div class="org-level">
-      <div class="org-node org-node-leaf">Docentes / Tutorías</div>
-      <div class="org-node org-node-leaf">Recursos Humanos</div>
-      <div class="org-node org-node-leaf">Servicios Escolares</div>
-      <div class="org-node org-node-leaf">Recursos Financieros</div>
-      <div class="org-node org-node-leaf">Orientación Educativa</div>
-      <div class="org-node org-node-leaf">Servicios Médicos</div>
-      <div class="org-node org-node-leaf">Biblioteca</div>
-      <div class="org-node org-node-leaf">Comité de Honor</div>
+      <button class="org-node org-node-leaf" data-modal="deep-docentes">Docentes / Tutorías</button>
+      <button class="org-node org-node-leaf" data-modal="deep-rh">Recursos Humanos</button>
+      <button class="org-node org-node-leaf" data-modal="deep-escolares">Servicios Escolares</button>
+      <button class="org-node org-node-leaf" data-modal="deep-financieros">Recursos Financieros</button>
+      <button class="org-node org-node-leaf" data-modal="deep-orientacion">Orientación Educativa</button>
+      <button class="org-node org-node-leaf" data-modal="deep-medicos">Servicios Médicos</button>
+      <button class="org-node org-node-leaf" data-modal="deep-biblioteca">Biblioteca</button>
+      <button class="org-node org-node-leaf" data-modal="deep-honor">Comité de Honor</button>
     </div>
   </div>
 </div>
@@ -510,49 +868,57 @@
   <span class="modal-kicker">Cuestionario II · 03</span>
   <p class="modal-question">"Describe qué va a realizar cada área de la empresa entendiendo qué es la empresa."</p>
   <h3 class="modal-title">Funciones por área</h3>
-  <p class="modal-sub">Cada área reporta indicadores que alimentan los 4 Objetivos de Calidad</p>
+  <p class="modal-sub">Haz clic en cada área para ver indicadores y responsabilidades</p>
 
   <div class="areas-visual">
-    <div class="area-visual-card">
+    <button class="area-visual-card" data-modal="deep-sub-academica">
       <div class="area-visual-icon" style="--c:#2272ff">📚</div>
       <h5>Subdirección Académica</h5>
       <p>Diseña planes de estudio, coordina docentes, gestiona tutorías.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-sub-admin">
       <div class="area-visual-icon" style="--c:#e91e63">💼</div>
       <h5>Subdirección Administrativa</h5>
       <p>Gestiona recursos humanos, financieros y materiales.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-escolares">
       <div class="area-visual-icon" style="--c:#16a085">📋</div>
       <h5>Servicios Escolares</h5>
       <p>Inscripciones, constancias, certificados y control escolar.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-orientacion">
       <div class="area-visual-icon" style="--c:#f39c12">🧠</div>
       <h5>Orientación Educativa</h5>
       <p>Apoyo psicológico y vocacional a estudiantes.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-medicos">
       <div class="area-visual-icon" style="--c:#9b59b6">⚕️</div>
       <h5>Servicios Médicos</h5>
       <p>Atención de urgencias y salud preventiva.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-biblioteca">
       <div class="area-visual-icon" style="--c:#3498db">📖</div>
       <h5>Biblioteca</h5>
       <p>Recursos bibliográficos y digitales.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-honor">
       <div class="area-visual-icon" style="--c:#e74c3c">⚖️</div>
       <h5>Comité de Honor</h5>
       <p>Aplica protocolos de plagio y disciplina.</p>
-    </div>
-    <div class="area-visual-card">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="area-visual-card" data-modal="deep-rh">
       <div class="area-visual-icon" style="--c:#f1c40f">👥</div>
       <h5>Recursos Humanos</h5>
       <p>Protocolo NEE y evaluación del personal.</p>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
   </div>
 </div>
 
@@ -560,65 +926,73 @@
   <span class="modal-kicker">Cuestionario II · 04</span>
   <p class="modal-question">"Describe qué va a hacer tu producto y si hay competencia con respecto a este."</p>
   <h3 class="modal-title">Nuestro producto y su competencia</h3>
-  <p class="modal-sub">Producto: Técnicos en Mecatrónica con calidad certificable</p>
+  <p class="modal-sub">Haz clic en cada paso o competidor para ver más detalles</p>
 
   <h4 class="modal-subtitle">Proceso de producción del servicio</h4>
   <div class="product-flow">
-    <div class="product-step">
+    <button class="product-step" data-modal="deep-prod-ingreso">
       <span class="product-step-num">1</span>
       <div class="product-step-content">
         <h6>Ingreso</h6>
         <p>Selección de aspirantes (COMIPEMS)</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="product-arrow">▼</div>
-    <div class="product-step">
+    <button class="product-step" data-modal="deep-prod-formacion">
       <span class="product-step-num">2</span>
       <div class="product-step-content">
         <h6>Formación</h6>
         <p>6 semestres con talleres especializados</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="product-arrow">▼</div>
-    <div class="product-step">
+    <button class="product-step" data-modal="deep-prod-evaluacion">
       <span class="product-step-num">3</span>
       <div class="product-step-content">
         <h6>Evaluación</h6>
         <p>Indicadores de aprobación y eficiencia terminal</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="product-arrow">▼</div>
-    <div class="product-step product-step-final">
+    <button class="product-step product-step-final" data-modal="deep-prod-egreso">
       <span class="product-step-num">✓</span>
       <div class="product-step-content">
         <h6>Egreso</h6>
         <p>Técnicos listos para el Nivel Superior o el mundo laboral</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
   </div>
 
   <h4 class="modal-subtitle">Competencia</h4>
   <div class="competitors-grid">
-    <div class="competitor">
+    <button class="competitor" data-modal="deep-comp-cecyt">
       <span class="competitor-icon">🏫</span>
       <span class="competitor-name">Otros CECyT</span>
       <span class="competitor-type">IPN</span>
-    </div>
-    <div class="competitor">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="competitor" data-modal="deep-comp-cbtis">
       <span class="competitor-icon">🏭</span>
       <span class="competitor-name">CBTIS</span>
       <span class="competitor-type">DGETI</span>
-    </div>
-    <div class="competitor">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="competitor" data-modal="deep-comp-conalep">
       <span class="competitor-icon">⚙️</span>
       <span class="competitor-name">CONALEP</span>
       <span class="competitor-type">Federal</span>
-    </div>
-    <div class="competitor">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="competitor" data-modal="deep-comp-privadas">
       <span class="competitor-icon">🎓</span>
       <span class="competitor-name">Privadas</span>
       <span class="competitor-type">Particular</span>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
   </div>
 
   <div class="modal-callout">
@@ -630,7 +1004,7 @@
   <span class="modal-kicker">Cuestionario II · 05</span>
   <p class="modal-question">"¿Describe con un marco conceptual y una infografía el control de calidad que emplearás en tu proceso de fabricación?"</p>
   <h3 class="modal-title">Marco conceptual del control</h3>
-  <p class="modal-sub">Ciclo PHVA aplicado a los procesos educativos del CECyT 2</p>
+  <p class="modal-sub">Haz clic en cada fase o indicador para profundizar</p>
 
   <div class="phva-circle">
     <div class="phva-center">
@@ -638,57 +1012,62 @@
       <span class="phva-center-text">PHVA</span>
     </div>
 
-    <div class="phva-node phva-p">
+    <button class="phva-node phva-p" data-modal="deep-phva-p">
       <div class="phva-node-inner">
         <span class="phva-letter">P</span>
         <span class="phva-title">Planear</span>
         <span class="phva-desc">Definir objetivos</span>
       </div>
-    </div>
+    </button>
 
-    <div class="phva-node phva-h">
+    <button class="phva-node phva-h" data-modal="deep-phva-h">
       <div class="phva-node-inner">
         <span class="phva-letter">H</span>
         <span class="phva-title">Hacer</span>
         <span class="phva-desc">Ejecutar programa</span>
       </div>
-    </div>
+    </button>
 
-    <div class="phva-node phva-v">
+    <button class="phva-node phva-v" data-modal="deep-phva-v">
       <div class="phva-node-inner">
         <span class="phva-letter">V</span>
         <span class="phva-title">Verificar</span>
         <span class="phva-desc">Medir indicadores</span>
       </div>
-    </div>
+    </button>
 
-    <div class="phva-node phva-a">
+    <button class="phva-node phva-a" data-modal="deep-phva-a">
       <div class="phva-node-inner">
         <span class="phva-letter">A</span>
         <span class="phva-title">Actuar</span>
         <span class="phva-desc">Mejora continua</span>
       </div>
-    </div>
+    </button>
   </div>
 
   <h4 class="modal-subtitle">Indicadores de control</h4>
+  <p class="modal-sub" style="font-size:0.82rem;">Haz clic en cada indicador</p>
   <div class="indicators-grid">
-    <div class="indicator">
+    <button class="indicator" data-modal="deep-ind-docente">
       <span class="indicator-num">≥ 90%</span>
       <span class="indicator-label">Capacitación docente</span>
-    </div>
-    <div class="indicator">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="indicator" data-modal="deep-ind-aprobacion">
       <span class="indicator-num">+ 1%</span>
       <span class="indicator-label">Aprobación semestral</span>
-    </div>
-    <div class="indicator">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="indicator" data-modal="deep-ind-eficiencia">
       <span class="indicator-num">+ 1%</span>
       <span class="indicator-label">Eficiencia terminal</span>
-    </div>
-    <div class="indicator">
+      <span class="click-hint">+</span>
+    </button>
+    <button class="indicator" data-modal="deep-ind-satisfaccion">
       <span class="indicator-num">≥ 80%</span>
       <span class="indicator-label">Satisfacción usuario</span>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
   </div>
 </div>
 
@@ -696,69 +1075,742 @@
   <span class="modal-kicker">Cuestionario II · 06</span>
   <p class="modal-question">"Describe mediante un diagrama de proceso cómo mejorarías tu proyecto."</p>
   <h3 class="modal-title">Diagrama de proceso de mejora</h3>
-  <p class="modal-sub">Metodología PHVA aplicada al Sistema de Gestión de Calidad</p>
+  <p class="modal-sub">Haz clic en cada paso para ver herramientas y ejemplos</p>
 
   <div class="improve-flow">
-    <div class="improve-step">
+    <button class="improve-step" data-modal="deep-mejora-1">
       <div class="improve-step-icon">🔎</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Paso 1</span>
         <h6>Identificar el problema</h6>
         <p>Baja aprobación, insatisfacción, etc.</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="improve-line"></div>
-    <div class="improve-step">
+    <button class="improve-step" data-modal="deep-mejora-2">
       <div class="improve-step-icon">📊</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Paso 2</span>
         <h6>Analizar causas</h6>
         <p>Diagrama de Ishikawa / encuestas</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="improve-line"></div>
-    <div class="improve-step">
+    <button class="improve-step" data-modal="deep-mejora-3">
       <div class="improve-step-icon">💡</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Paso 3</span>
         <h6>Proponer solución</h6>
         <p>Programa de tutorías, capacitación</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="improve-line"></div>
-    <div class="improve-step">
+    <button class="improve-step" data-modal="deep-mejora-4">
       <div class="improve-step-icon">⚙️</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Paso 4</span>
         <h6>Implementar cambio</h6>
         <p>En el área correspondiente</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="improve-line"></div>
-    <div class="improve-step">
+    <button class="improve-step" data-modal="deep-mejora-5">
       <div class="improve-step-icon">📈</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Paso 5</span>
         <h6>Verificar resultados</h6>
         <p>Auditoría interna</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
     <div class="improve-line improve-line-success"></div>
-    <div class="improve-step improve-step-success">
+    <button class="improve-step improve-step-success" data-modal="deep-mejora-meta">
       <div class="improve-step-icon">✓</div>
       <div class="improve-step-body">
         <span class="improve-step-num">Meta</span>
         <h6>Estandarizar la mejora</h6>
         <p>En el Manual de Calidad</p>
       </div>
-    </div>
+      <span class="click-hint">+</span>
+    </button>
   </div>
 
   <div class="modal-callout">
     <strong>Documentación asociada:</strong> Protocolo de Plagio, Protocolo NEE, Manual de Calidad, Manual de Procedimientos.
   </div>
 </div>
+<!-- ===== MODALES ANIDADOS: PROFUNDIZACIÓN ===== -->
 
+<!-- c1: Gestión -->
+<div class="modal-source" id="deep-mision-vision">
+  <span class="modal-kicker">Gestión · Profundización</span>
+  <h3 class="modal-title">Misión y Visión del CECyT 2</h3>
+  <h4 class="modal-subtitle">🎯 Misión</h4>
+  <p>El CECyT 2 "Miguel Bernard" es una de las unidades académicas del IPN, líder en la promoción del desarrollo científico y tecnológico de México.</p>
+  <p>Su responsabilidad social es primordial: formar <strong>ciudadanos responsables, conscientes y éticos</strong> en el marco de la equidad de género y el camino de la sustentabilidad.</p>
+  <h4 class="modal-subtitle">🔭 Visión</h4>
+  <p>Ser una Unidad Académica del Nivel Medio Superior que desempeñe un papel fundamental en el <strong>liderazgo, prestigio y reconocimiento tecnológico</strong> del IPN, con un enfoque claro en contribuir a la solución de problemas sociales y al avance tecnológico mundial.</p>
+  <p>El objetivo es ser referente en la formación de profesionales altamente capacitados y comprometidos con el desarrollo humano, la equidad de género y la sustentabilidad.</p>
+</div>
+
+<div class="modal-source" id="deep-objetivos">
+  <span class="modal-kicker">Gestión · Profundización</span>
+  <h3 class="modal-title">Los 4 Objetivos de Calidad</h3>
+  <ol class="modal-list">
+    <li><strong>Fortalecimiento de la Capacitación Docente:</strong> garantizar que al menos el 90% del personal docente participe semestralmente en programas de formación, y que al menos el 50% del personal directivo y PAAE reciba capacitación anual.</li>
+    <li><strong>Mejora en el Índice de Aprobación:</strong> aumentar al menos 1% semestralmente el índice de aprobación académica de los estudiantes.</li>
+    <li><strong>Incremento en la Eficiencia Terminal:</strong> elevar anualmente al menos 1% la eficiencia terminal institucional.</li>
+    <li><strong>Optimización de la Satisfacción del Usuario:</strong> alcanzar un 80% de satisfacción semestral en la evaluación de los servicios académicos y administrativos.</li>
+  </ol>
+  <div class="modal-callout">
+    Cada objetivo es <strong>medible, alcanzable y con plazo definido</strong>, cumpliendo con los criterios SMART.
+  </div>
+</div>
+
+<div class="modal-source" id="deep-politicas">
+  <span class="modal-kicker">Gestión · Profundización</span>
+  <h3 class="modal-title">Las 8 Políticas de Calidad</h3>
+  <ol class="modal-list">
+    <li><strong>Desarrollo Integral del Estudiante:</strong> entorno inclusivo que fomenta cultura, deporte y equidad.</li>
+    <li><strong>Innovación y Propiedad Intelectual:</strong> mejora continua mediante investigación y tecnología.</li>
+    <li><strong>Sustentabilidad y Responsabilidad Social:</strong> conciencia ambiental en todas las actividades.</li>
+    <li><strong>Desarrollo del Personal Docente y PAAE:</strong> formación y actualización continua.</li>
+    <li><strong>Vinculación Académica y Laboral:</strong> lazos con la industria y otras instituciones educativas.</li>
+    <li><strong>Evaluación y Mejora Continua:</strong> procesos de retroalimentación para garantizar calidad.</li>
+    <li><strong>Internacionalización:</strong> participación en proyectos y conferencias globales.</li>
+    <li><strong>Participación de la Comunidad Educativa:</strong> colaboración de estudiantes, docentes, PAAE y padres.</li>
+  </ol>
+</div>
+
+<div class="modal-source" id="deep-compromiso">
+  <span class="modal-kicker">Gestión · Profundización</span>
+  <h3 class="modal-title">Compromiso Directivo</h3>
+  <p>El compromiso de la alta dirección es uno de los <strong>7 principios de la ISO 9001</strong>. Sin él, ningún sistema de gestión de calidad funciona.</p>
+  <h4 class="modal-subtitle">¿En qué se concreta?</h4>
+  <ul class="modal-list">
+    <li>Establecer la política y los objetivos de calidad.</li>
+    <li>Asegurar la integración de los requisitos en los procesos.</li>
+    <li>Promover el enfoque al cliente en toda la organización.</li>
+    <li>Asignar roles, responsabilidades y autoridades.</li>
+    <li>Proporcionar los recursos necesarios.</li>
+    <li>Comunicar la importancia de la calidad.</li>
+  </ul>
+  <p>En el CECyT 2, esto se traduce en la firma y seguimiento de los 4 Objetivos de Calidad por parte de la Dirección General.</p>
+</div>
+
+<!-- c1: Control -->
+<div class="modal-source" id="deep-auditorias">
+  <span class="modal-kicker">Control · Profundización</span>
+  <h3 class="modal-title">Auditorías Internas</h3>
+  <p>Una <strong>auditoría interna</strong> es un examen sistemático e independiente para determinar si las actividades y resultados cumplen con lo planeado.</p>
+  <h4 class="modal-subtitle">Tipos de auditoría</h4>
+  <ul class="modal-list">
+    <li><strong>Auditoría de primera parte:</strong> la realiza la propia organización.</li>
+    <li><strong>Auditoría de segunda parte:</strong> la realiza un cliente o proveedor.</li>
+    <li><strong>Auditoría de tercera parte:</strong> la realiza un organismo certificador externo.</li>
+  </ul>
+  <p><strong>Periodicidad:</strong> el CECyT 2 debe realizar auditorías internas al menos una vez al año para mantener su certificación ISO 9001.</p>
+</div>
+
+<div class="modal-source" id="deep-encuestas">
+  <span class="modal-kicker">Control · Profundización</span>
+  <h3 class="modal-title">Encuestas de Satisfacción</h3>
+  <p>Son el instrumento principal para medir la <strong>percepción del usuario</strong> sobre los servicios educativos y administrativos.</p>
+  <h4 class="modal-subtitle">¿Qué se mide?</h4>
+  <ul class="modal-list">
+    <li>Calidad de la enseñanza.</li>
+    <li>Atención del personal administrativo.</li>
+    <li>Estado de las instalaciones.</li>
+    <li>Disponibilidad de recursos (biblioteca, laboratorios).</li>
+    <li>Clima escolar.</li>
+  </ul>
+  <p><strong>Meta:</strong> alcanzar un 80% de satisfacción semestral, lo que se traduce en un indicador clave del Objetivo 4.</p>
+</div>
+
+<div class="modal-source" id="deep-aprobacion">
+  <span class="modal-kicker">Control · Profundización</span>
+  <h3 class="modal-title">Índice de Aprobación Académica</h3>
+  <p>Es el porcentaje de estudiantes que acreditan las materias que cursan en un semestre.</p>
+  <h4 class="modal-subtitle">Fórmula</h4>
+  <p style="font-family: 'Courier New', monospace; background: var(--black-deep); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">IA = (Alumnos aprobados / Alumnos inscritos) × 100</p>
+  <p><strong>Meta:</strong> aumentar +1% semestralmente en comparación con el semestre equivalente del año anterior.</p>
+  <p>Este indicador alimenta el Objetivo de Calidad #2 y se revisa en cada junta académica.</p>
+</div>
+
+<div class="modal-source" id="deep-eficiencia">
+  <span class="modal-kicker">Control · Profundización</span>
+  <h3 class="modal-title">Eficiencia Terminal</h3>
+  <p>Es el porcentaje de estudiantes que terminan sus estudios en el tiempo previsto (o dentro de los límites aceptables).</p>
+  <h4 class="modal-subtitle">Fórmula</h4>
+  <p style="font-family: 'Courier New', monospace; background: var(--black-deep); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">ET = (Egresados / Alumnos de nuevo ingreso) × 100</p>
+  <p><strong>Meta:</strong> elevar anualmente al menos 1% la eficiencia terminal institucional.</p>
+  <p>Es uno de los indicadores más importantes de la calidad educativa porque refleja el éxito completo del proceso formativo.</p>
+</div>
+
+<!-- c2/c3: Áreas del organigrama -->
+<div class="modal-source" id="deep-dir-general">
+  <span class="modal-kicker">Área · Dirección General</span>
+  <h3 class="modal-title">Dirección General</h3>
+  <p>Es la máxima autoridad del CECyT 2. Tiene la responsabilidad de <strong>liderar el Sistema de Gestión de Calidad</strong> y garantizar el cumplimiento de los objetivos institucionales.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Representar legalmente a la institución.</li>
+    <li>Aprobar y firmar la política y objetivos de calidad.</li>
+    <li>Asignar recursos para el sistema de gestión.</li>
+    <li>Presidir las revisiones por la dirección.</li>
+    <li>Coordinar con el IPN a nivel central.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-sub-academica">
+  <span class="modal-kicker">Área · Subdirección Académica</span>
+  <h3 class="modal-title">Subdirección Académica</h3>
+  <p>Es el área responsable de la <strong>formación técnica y académica</strong> de los estudiantes.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Diseñar y supervisar los planes de estudio.</li>
+    <li>Coordinar a los docentes y asignaturas.</li>
+    <li>Gestionar las tutorías y programas de asesoría.</li>
+    <li>Evaluar el desempeño académico.</li>
+    <li>Vincular la teoría con la práctica en talleres.</li>
+  </ul>
+  <p><strong>Indicador que impacta:</strong> Índice de Aprobación Académica (Objetivo 2).</p>
+</div>
+
+<div class="modal-source" id="deep-sub-admin">
+  <span class="modal-kicker">Área · Subdirección Administrativa</span>
+  <h3 class="modal-title">Subdirección Administrativa</h3>
+  <p>Es el área responsable de los <strong>recursos humanos, financieros y materiales</strong> de la institución.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Gestionar el presupuesto institucional.</li>
+    <li>Administrar los recursos humanos.</li>
+    <li>Mantener las instalaciones funcionales y seguras.</li>
+    <li>Adquirir materiales y equipos.</li>
+    <li>Aplicar el protocolo NEE al personal.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-docentes">
+  <span class="modal-kicker">Área · Docentes y Tutorías</span>
+  <h3 class="modal-title">Docentes y Tutorías</h3>
+  <p>Los docentes son el <strong>pilar fundamental del proceso educativo</strong>. Las tutorías son el acompañamiento personalizado que se le da a cada estudiante.</p>
+  <h4 class="modal-subtitle">Modalidades de tutoría</h4>
+  <ul class="modal-list">
+    <li><strong>Tutoría individual:</strong> sesiones uno a uno.</li>
+    <li><strong>Tutoría grupal:</strong> trabajo en pequeños grupos.</li>
+    <li><strong>Tutoría académica:</strong> refuerzo en materias específicas.</li>
+    <li><strong>Tutoría vocacional:</strong> orientación para el futuro profesional.</li>
+  </ul>
+  <p><strong>Indicador que impacta:</strong> Capacitación docente (≥ 90%) y Aprobación académica.</p>
+</div>
+
+<div class="modal-source" id="deep-rh">
+  <span class="modal-kicker">Área · Recursos Humanos</span>
+  <h3 class="modal-title">Recursos Humanos</h3>
+  <p>Gestiona el <strong>capital humano</strong> del CECyT 2, desde la contratación hasta el desarrollo profesional.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Reclutamiento y selección de personal.</li>
+    <li>Capacitación y desarrollo (junto con la Subdirección Académica).</li>
+    <li>Evaluación del desempeño.</li>
+    <li>Aplicación del Protocolo NEE.</li>
+    <li>Nómina y prestaciones.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-escolares">
+  <span class="modal-kicker">Área · Servicios Escolares</span>
+  <h3 class="modal-title">Servicios Escolares</h3>
+  <p>Es el área de <strong>atención directa al estudiante</strong> en trámites académicos.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Inscripciones y reinscripciones.</li>
+    <li>Expedición de constancias y certificados.</li>
+    <li>Control de kardex y calificaciones.</li>
+    <li>Trámites de titulación (a nivel técnico).</li>
+    <li>Atención a egresados.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-financieros">
+  <span class="modal-kicker">Área · Recursos Financieros</span>
+  <h3 class="modal-title">Recursos Financieros</h3>
+  <p>Se encarga de la <strong>gestión económica y presupuestal</strong> de la institución.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Elaborar el presupuesto anual.</li>
+    <li>Controlar ingresos y egresos.</li>
+    <li>Rendir cuentas al IPN central.</li>
+    <li>Auditorías financieras.</li>
+    <li>Pago de proveedores y servicios.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-orientacion">
+  <span class="modal-kicker">Área · Orientación Educativa</span>
+  <h3 class="modal-title">Orientación Educativa</h3>
+  <p>Brinda <strong>apoyo psicológico, vocacional y emocional</strong> a los estudiantes.</p>
+  <h4 class="modal-subtitle">Servicios que ofrece</h4>
+  <ul class="modal-list">
+    <li>Orientación vocacional.</li>
+    <li>Apoyo psicológico individual y grupal.</li>
+    <li>Talleres de habilidades socioemocionales.</li>
+    <li>Prevención de adicciones y violencia.</li>
+    <li>Canalización a servicios especializados.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-medicos">
+  <span class="modal-kicker">Área · Servicios Médicos</span>
+  <h3 class="modal-title">Servicios Médicos</h3>
+  <p>Área responsable de la <strong>salud preventiva y atención de urgencias</strong> dentro del plantel.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Atención de primeros auxilios.</li>
+    <li>Campañas de vacunación.</li>
+    <li>Programas de salud preventiva.</li>
+    <li>Pláticas sobre nutrición y salud.</li>
+    <li>Coordinación con protección civil.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-biblioteca">
+  <span class="modal-kicker">Área · Biblioteca</span>
+  <h3 class="modal-title">Biblioteca</h3>
+  <p>Espacio de <strong>consulta y estudio</strong> que apoya la formación académica.</p>
+  <h4 class="modal-subtitle">Servicios</h4>
+  <ul class="modal-list">
+    <li>Préstamo de libros físicos.</li>
+    <li>Acceso a bases de datos digitales.</li>
+    <li>Salas de estudio individual y grupal.</li>
+    <li>Asesoría en investigación documental.</li>
+    <li>Repositorio de tesis y proyectos.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-honor">
+  <span class="modal-kicker">Área · Comité de Honor</span>
+  <h3 class="modal-title">Comité de Honor</h3>
+  <p>Órgano colegiado que <strong>aplica los protocolos disciplinarios</strong>, incluyendo el Protocolo de Plagio del CECyT 2.</p>
+  <h4 class="modal-subtitle">Funciones principales</h4>
+  <ul class="modal-list">
+    <li>Recibir denuncias de plagio y faltas graves.</li>
+    <li>Investigar y documentar casos.</li>
+    <li>Aplicar sanciones conforme a la normativa.</li>
+    <li>Promover la integridad académica.</li>
+    <li>Dar seguimiento a casos reincidentes.</li>
+  </ul>
+  <div class="modal-callout">
+    <strong>Base legal:</strong> Artículo 108 del Reglamento Interno del IPN, fracciones II y III, y Artículo 427 del Código Penal Federal.
+  </div>
+</div>
+
+<!-- c4: Producto y competencia -->
+<div class="modal-source" id="deep-prod-ingreso">
+  <span class="modal-kicker">Proceso · Ingreso</span>
+  <h3 class="modal-title">Ingreso al CECyT 2</h3>
+  <p>Los aspirantes ingresan mediante el <strong>concurso COMIPEMS</strong> (Comisión Metropolitana de Instituciones Públicas de Educación Media Superior).</p>
+  <h4 class="modal-subtitle">Requisitos</h4>
+  <ul class="modal-list">
+    <li>Haber concluido la secundaria.</li>
+    <li>Presentar el examen COMIPEMS.</li>
+    <li>Obtener el puntaje requerido por el CECyT 2.</li>
+    <li>Entregar documentación completa.</li>
+  </ul>
+  <p><strong>Estadística:</strong> el CECyT 2 recibe miles de solicitudes cada año y admite a un porcentaje reducido de aspirantes, lo que garantiza un alumnado seleccionado.</p>
+</div>
+
+<div class="modal-source" id="deep-prod-formacion">
+  <span class="modal-kicker">Proceso · Formación</span>
+  <h3 class="modal-title">Formación Técnica</h3>
+  <p>Durante <strong>6 semestres</strong> los estudiantes cursan materias del tronco común (matemáticas, física, química, humanidades) y de la carrera técnica en Mecatrónica.</p>
+  <h4 class="modal-subtitle">Componentes de la formación</h4>
+  <ul class="modal-list">
+    <li><strong>Básica:</strong> fundamentos científicos.</li>
+    <li><strong>Técnica:</strong> conocimientos específicos de mecatrónica.</li>
+    <li><strong>Talleres:</strong> prácticas en laboratorios especializados.</li>
+    <li><strong>Humanística:</strong> formación ética y social.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-prod-evaluacion">
+  <span class="modal-kicker">Proceso · Evaluación</span>
+  <h3 class="modal-title">Evaluación del Aprendizaje</h3>
+  <p>La evaluación es continua y se compone de tres evaluaciones parciales por semestre.</p>
+  <h4 class="modal-subtitle">Indicadores clave</h4>
+  <ul class="modal-list">
+    <li><strong>Índice de aprobación:</strong> % de alumnos que acreditan.</li>
+    <li><strong>Índice de reprobación:</strong> % de alumnos que no acreditan.</li>
+    <li><strong>Eficiencia terminal:</strong> % que termina en tiempo.</li>
+    <li><strong>Satisfacción del estudiante:</strong> encuesta semestral.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-prod-egreso">
+  <span class="modal-kicker">Proceso · Egreso</span>
+  <h3 class="modal-title">Egreso del Técnico</h3>
+  <p>Al terminar los 6 semestres, el estudiante obtiene el <strong>título de Técnico en Mecatrónica</strong> avalado por el IPN.</p>
+  <h4 class="modal-subtitle">Opciones al egresar</h4>
+  <ul class="modal-list">
+    <li>Ingresar al Nivel Superior (universidad).</li>
+    <li>Incorporarse al mercado laboral.</li>
+    <li>Emprender su propio negocio.</li>
+    <li>Estudiar una especialidad técnica.</li>
+  </ul>
+  <div class="modal-callout">
+    <strong>Ventaja competitiva:</strong> el respaldo del IPN y la formación práctica en talleres especializados.
+  </div>
+</div>
+
+<div class="modal-source" id="deep-comp-cecyt">
+  <span class="modal-kicker">Competencia · CECyT</span>
+  <h3 class="modal-title">Otros CECyT del IPN</h3>
+  <p>Existen <strong>17 CECyT</strong> en la Zona Metropolitana del Valle de México. Cada uno ofrece carreras técnicas del área de Ingeniería y Ciencias Físico-Matemáticas.</p>
+  <h4 class="modal-subtitle">Diferencias entre CECyT</h4>
+  <ul class="modal-list">
+    <li>Ubicación geográfica.</li>
+    <li>Especialidades técnicas ofertadas.</li>
+    <li>Instalaciones y talleres.</li>
+    <li>Ambiente académico.</li>
+  </ul>
+  <p>El CECyT 2 se distingue por su enfoque en mecatrónica y su sistema de gestión de calidad certificado.</p>
+</div>
+
+<div class="modal-source" id="deep-comp-cbtis">
+  <span class="modal-kicker">Competencia · CBTIS</span>
+  <h3 class="modal-title">CBTIS (DGETI)</h3>
+  <p>Los <strong>Centros de Bachillerato Tecnológico Industrial y de Servicios</strong> son parte de la DGETI (Dirección General de Educación Tecnológica Industrial).</p>
+  <p>Ofrecen carreras técnicas similares pero con menor especialización en áreas avanzadas como mecatrónica.</p>
+</div>
+
+<div class="modal-source" id="deep-comp-conalep">
+  <span class="modal-kicker">Competencia · CONALEP</span>
+  <h3 class="modal-title">CONALEP</h3>
+  <p>El <strong>Colegio Nacional de Educación Profesional Técnica</strong> ofrece carreras técnicas de nivel medio superior con enfoque práctico.</p>
+  <p>Es una alternativa sólida para estudiantes que buscan una formación técnica rápida.</p>
+</div>
+
+<div class="modal-source" id="deep-comp-privadas">
+  <span class="modal-kicker">Competencia · Privadas</span>
+  <h3 class="modal-title">Instituciones Privadas</h3>
+  <p>Existen preparatorias privadas que ofrecen formación técnica, pero con costos elevados y sin el respaldo del IPN.</p>
+  <p>El CECyT 2, al ser público, ofrece <strong>educación de calidad gratuita</strong>, lo que es una ventaja importante.</p>
+</div>
+
+<!-- c5: PHVA -->
+<div class="modal-source" id="deep-phva-p">
+  <span class="modal-kicker">PHVA · Planear</span>
+  <h3 class="modal-title">P — Planear</h3>
+  <p>En esta fase se define <strong>qué se quiere lograr y cómo</strong>.</p>
+  <h4 class="modal-subtitle">Actividades</h4>
+  <ul class="modal-list">
+    <li>Identificar el problema o la oportunidad.</li>
+    <li>Establecer objetivos medibles (SMART).</li>
+    <li>Analizar causas raíz (Ishikawa, Pareto).</li>
+    <li>Diseñar el plan de acción.</li>
+    <li>Asignar recursos y responsables.</li>
+  </ul>
+  <p><strong>En el CECyT 2:</strong> se aplica al inicio de cada semestre cuando se establecen los 4 objetivos de calidad y sus planes de acción.</p>
+</div>
+
+<div class="modal-source" id="deep-phva-h">
+  <span class="modal-kicker">PHVA · Hacer</span>
+  <h3 class="modal-title">H — Hacer</h3>
+  <p>Se <strong>implementa lo planeado</strong> en la fase anterior.</p>
+  <h4 class="modal-subtitle">Actividades</h4>
+  <ul class="modal-list">
+    <li>Ejecutar el plan de acción.</li>
+    <li>Capacitar al personal involucrado.</li>
+    <li>Documentar el proceso.</li>
+    <li>Recopilar datos durante la ejecución.</li>
+    <li>Resolver imprevistos.</li>
+  </ul>
+  <p><strong>En el CECyT 2:</strong> es la ejecución diaria de clases, tutorías, capacitaciones y servicios.</p>
+</div>
+
+<div class="modal-source" id="deep-phva-v">
+  <span class="modal-kicker">PHVA · Verificar</span>
+  <h3 class="modal-title">V — Verificar</h3>
+  <p>Se <strong>miden y comparan los resultados</strong> obtenidos contra los objetivos planteados.</p>
+  <h4 class="modal-subtitle">Actividades</h4>
+  <ul class="modal-list">
+    <li>Recopilar datos de indicadores.</li>
+    <li>Comparar contra metas.</li>
+    <li>Analizar desviaciones.</li>
+    <li>Realizar auditorías internas.</li>
+    <li>Encuestas de satisfacción.</li>
+  </ul>
+  <p><strong>En el CECyT 2:</strong> se aplican las encuestas semestrales, se miden los índices de aprobación y eficiencia terminal.</p>
+</div>
+
+<div class="modal-source" id="deep-phva-a">
+  <span class="modal-kicker">PHVA · Actuar</span>
+  <h3 class="modal-title">A — Actuar</h3>
+  <p>Se toman <strong>acciones correctivas y preventivas</strong> para mejorar el sistema.</p>
+  <h4 class="modal-subtitle">Actividades</h4>
+  <ul class="modal-list">
+    <li>Corregir desviaciones detectadas.</li>
+    <li>Estandarizar las mejoras exitosas.</li>
+    <li>Actualizar procedimientos y manuales.</li>
+    <li>Documentar lecciones aprendidas.</li>
+    <li>Planear el siguiente ciclo.</li>
+  </ul>
+  <p><strong>En el CECyT 2:</strong> se actualizan los manuales y se planea el siguiente semestre con las mejoras identificadas.</p>
+</div>
+
+<!-- c5: Indicadores -->
+<div class="modal-source" id="deep-ind-docente">
+  <span class="modal-kicker">Indicador · Docente</span>
+  <h3 class="modal-title">Capacitación Docente ≥ 90%</h3>
+  <p><strong>Definición:</strong> al menos el 90% del personal docente debe participar semestralmente en programas de formación pedagógica o disciplinar.</p>
+  <h4 class="modal-subtitle">¿Por qué importa?</h4>
+  <p>Un docente actualizado puede transmitir mejor los conocimientos y adaptarse a las nuevas tecnologías, especialmente en áreas como la mecatrónica donde los avances son constantes.</p>
+</div>
+
+<div class="modal-source" id="deep-ind-aprobacion">
+  <span class="modal-kicker">Indicador · Aprobación</span>
+  <h3 class="modal-title">Aprobación Académica +1%</h3>
+  <p><strong>Definición:</strong> aumentar al menos 1% semestralmente el índice de aprobación académica, comparado con el semestre equivalente del año anterior.</p>
+  <h4 class="modal-subtitle">Acciones para lograrlo</h4>
+  <ul class="modal-list">
+    <li>Programa de tutorías reforzado.</li>
+    <li>Asesorías extracurriculares.</li>
+    <li>Material didáctico actualizado.</li>
+    <li>Seguimiento personalizado a alumnos en riesgo.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-ind-eficiencia">
+  <span class="modal-kicker">Indicador · Eficiencia</span>
+  <h3 class="modal-title">Eficiencia Terminal +1%</h3>
+  <p><strong>Definición:</strong> elevar anualmente al menos 1% la eficiencia terminal institucional.</p>
+  <h4 class="modal-subtitle">Acciones para lograrlo</h4>
+  <ul class="modal-list">
+    <li>Reducir la deserción escolar.</li>
+    <li>Apoyar a estudiantes con problemas económicos.</li>
+    <li>Programas de orientación vocacional.</li>
+    <li>Acompañamiento psicológico.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-ind-satisfaccion">
+  <span class="modal-kicker">Indicador · Satisfacción</span>
+  <h3 class="modal-title">Satisfacción ≥ 80%</h3>
+  <p><strong>Definición:</strong> alcanzar un 80% de satisfacción semestral en la evaluación de los servicios académicos y administrativos.</p>
+  <h4 class="modal-subtitle">¿Qué se evalúa?</h4>
+  <ul class="modal-list">
+    <li>Calidad de la enseñanza.</li>
+    <li>Atención del personal.</li>
+    <li>Instalaciones.</li>
+    <li>Comunicación institucional.</li>
+    <li>Servicios de apoyo (biblioteca, médico, etc.).</li>
+  </ul>
+</div>
+
+<!-- c6: Mejora -->
+<div class="modal-source" id="deep-mejora-1">
+  <span class="modal-kicker">Mejora · Paso 1</span>
+  <h3 class="modal-title">Identificar el problema</h3>
+  <p>El primer paso es <strong>reconocer que existe un problema</strong> y definirlo claramente.</p>
+  <h4 class="modal-subtitle">Herramientas útiles</h4>
+  <ul class="modal-list">
+    <li><strong>Lluvia de ideas:</strong> para listar problemas potenciales.</li>
+    <li><strong>Encuestas:</strong> para detectar áreas de insatisfacción.</li>
+    <li><strong>Datos históricos:</strong> tendencias de indicadores.</li>
+    <li><strong>Observación directa:</strong> ver el proceso en acción.</li>
+  </ul>
+  <p><strong>En el CECyT 2:</strong> podría ser detectar que la aprobación bajó, que la satisfacción no llega al 80%, o que cierto proceso administrativo es lento.</p>
+</div>
+
+<div class="modal-source" id="deep-mejora-2">
+  <span class="modal-kicker">Mejora · Paso 2</span>
+  <h3 class="modal-title">Analizar causas</h3>
+  <p>Una vez identificado el problema, hay que encontrar <strong>sus causas raíz</strong>, no solo los síntomas.</p>
+  <h4 class="modal-subtitle">Herramientas</h4>
+  <ul class="modal-list">
+    <li><strong>Diagrama de Ishikawa:</strong> las 6M (mano de obra, métodos, materiales, maquinaria, medición, medio ambiente).</li>
+    <li><strong>Diagrama de Pareto:</strong> identificar el 20% de causas que generan el 80% del problema.</li>
+    <li><strong>5 porqués:</strong> preguntar "¿por qué?" cinco veces seguidas.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-mejora-3">
+  <span class="modal-kicker">Mejora · Paso 3</span>
+  <h3 class="modal-title">Proponer solución</h3>
+  <p>Con las causas raíz identificadas, se diseñan <strong>soluciones concretas y medibles</strong>.</p>
+  <h4 class="modal-subtitle">Criterios para elegir la mejor solución</h4>
+  <ul class="modal-list">
+    <li><strong>Impacto:</strong> ¿resuelve el problema de raíz?</li>
+    <li><strong>Costo:</strong> ¿es viable económicamente?</li>
+    <li><strong>Tiempo:</strong> ¿se puede implementar rápido?</li>
+    <li><strong>Recursos:</strong> ¿tenemos lo necesario?</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-mejora-4">
+  <span class="modal-kicker">Mejora · Paso 4</span>
+  <h3 class="modal-title">Implementar cambio</h3>
+  <p>Se <strong>ejecuta la solución</strong> en el área correspondiente.</p>
+  <h4 class="modal-subtitle">Recomendaciones</h4>
+  <ul class="modal-list">
+    <li>Implementar primero en pequeña escala (piloto).</li>
+    <li>Capacitar al personal involucrado.</li>
+    <li>Documentar el proceso.</li>
+    <li>Comunicar el cambio a toda la organización.</li>
+    <li>Resolver imprevistos rápidamente.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-mejora-5">
+  <span class="modal-kicker">Mejora · Paso 5</span>
+  <h3 class="modal-title">Verificar resultados</h3>
+  <p>Se <strong>mide el impacto</strong> de la solución implementada.</p>
+  <h4 class="modal-subtitle">Preguntas clave</h4>
+  <ul class="modal-list">
+    <li>¿Se resolvió el problema?</li>
+    <li>¿Se alcanzaron las metas?</li>
+    <li>¿Hubo efectos secundarios no previstos?</li>
+    <li>¿Qué podemos aprender de este proceso?</li>
+  </ul>
+  <p>Si los resultados son buenos, se estandariza. Si no, se reinicia el ciclo PHVA.</p>
+</div>
+
+<div class="modal-source" id="deep-mejora-meta">
+  <span class="modal-kicker">Mejora · Meta</span>
+  <h3 class="modal-title">Estandarizar la mejora</h3>
+  <p>El último paso es <strong>documentar el cambio exitoso</strong> para que se convierta en parte de la operación normal.</p>
+  <h4 class="modal-subtitle">¿Dónde se documenta?</h4>
+  <ul class="modal-list">
+    <li><strong>Manual de Calidad:</strong> política y objetivos.</li>
+    <li><strong>Manual de Procedimientos:</strong> pasos específicos.</li>
+    <li><strong>Instructivos de trabajo:</strong> cómo hacer cada tarea.</li>
+    <li><strong>Registros:</strong> evidencia de que se hizo.</li>
+  </ul>
+  <div class="modal-callout">
+    <strong>Filosofía:</strong> "Lo que no está documentado, no existe". Sin estandarización, las mejoras se pierden con el tiempo.
+  </div>
+</div>
+<!-- Chips Marco Teórico -->
+<div class="modal-source" id="deep-chip-liderazgo">
+  <span class="modal-kicker">Elemento GCT · Liderazgo</span>
+  <h3 class="modal-title">Liderazgo</h3>
+  <p>El liderazgo en la Gestión de la Calidad Total es el <strong>compromiso visible de la alta dirección</strong> con el sistema de calidad.</p>
+  <h4 class="modal-subtitle">Características</h4>
+  <ul class="modal-list">
+    <li>Establece la visión y los valores.</li>
+    <li>Predica con el ejemplo.</li>
+    <li>Asigna recursos para la calidad.</li>
+    <li>Reconoce y premia los logros.</li>
+    <li>Promueve la mejora continua.</li>
+  </ul>
+</div>
+
+<div class="modal-source" id="deep-chip-participacion">
+  <span class="modal-kicker">Elemento GCT · Participación</span>
+  <h3 class="modal-title">Participación</h3>
+  <p>La participación significa que <strong>todo el personal</strong> se involucra activamente en el sistema de gestión de calidad.</p>
+  <p>Cada persona aporta ideas, detecta problemas y propone mejoras desde su puesto de trabajo.</p>
+</div>
+
+<div class="modal-source" id="deep-chip-compromiso">
+  <span class="modal-kicker">Elemento GCT · Compromiso</span>
+  <h3 class="modal-title">Compromiso</h3>
+  <p>El compromiso es la <strong>decisión firme de hacer las cosas bien</strong> y de mantener ese esfuerzo en el tiempo.</p>
+  <p>Sin compromiso, la calidad se convierte en un discurso vacío.</p>
+</div>
+
+<div class="modal-source" id="deep-chip-autorr">
+  <span class="modal-kicker">Elemento GCT · Autorresponsabilización</span>
+  <h3 class="modal-title">Autorresponsabilización</h3>
+  <p>Significa que <strong>cada persona asume la responsabilidad de su propio trabajo</strong> y de su contribución a la calidad.</p>
+  <p>No se trata de buscar culpables, sino de asumir el control personal.</p>
+</div>
+
+<div class="modal-source" id="deep-chip-cooperacion">
+  <span class="modal-kicker">Elemento GCT · Cooperación</span>
+  <h3 class="modal-title">Cooperación</h3>
+  <p>La cooperación es el <strong>trabajo en equipo entre áreas</strong> que rompe los silos organizacionales.</p>
+  <p>Es uno de los 14 puntos de Deming: "Romper las barreras entre áreas".</p>
+</div>
+
+<div class="modal-source" id="deep-chip-aprendizaje">
+  <span class="modal-kicker">Elemento GCT · Aprendizaje</span>
+  <h3 class="modal-title">Aprendizaje</h3>
+  <p>El aprendizaje organizacional es lo que AT&amp;T echaba en falta: la capacidad de <strong>aprender de la experiencia</strong> y adaptarse.</p>
+  <p>Es la base de la mejora continua y de la innovación.</p>
+</div>
+
+<!-- VS: Gestión -->
+<div class="modal-source" id="deep-vs-alcance-g">
+  <span class="modal-kicker">Gestión · Alcance</span>
+  <h3 class="modal-title">Alcance: Toda la organización</h3>
+  <p>La gestión de la calidad <strong>abarca a toda la organización</strong>: desde la dirección general hasta el último operario, incluyendo proveedores y clientes.</p>
+  <p>No es un departamento específico; es una forma de dirigir toda la empresa.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-enfoque-g">
+  <span class="modal-kicker">Gestión · Enfoque</span>
+  <h3 class="modal-title">Enfoque: Estratégico y preventivo</h3>
+  <p>La gestión mira hacia el <strong>futuro</strong> y se anticipa a los problemas antes de que ocurran.</p>
+  <p>Diseña procesos que naturalmente produzcan calidad.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-resp-g">
+  <span class="modal-kicker">Gestión · Responsable</span>
+  <h3 class="modal-title">Responsable: Todos los miembros</h3>
+  <p>En gestión, la calidad es <strong>responsabilidad de todos</strong>. No hay "el departamento de calidad" que arregle todo.</p>
+  <p>Cada persona es responsable de su parte del proceso.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-horizonte-g">
+  <span class="modal-kicker">Gestión · Horizonte</span>
+  <h3 class="modal-title">Horizonte: Largo plazo</h3>
+  <p>La gestión trabaja con visión de <strong>años, no meses</strong>. Construye cultura y sistemas que perduren.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-objetivo-g">
+  <span class="modal-kicker">Gestión · Objetivo</span>
+  <h3 class="modal-title">Objetivo: Satisfacer al cliente</h3>
+  <p>El objetivo final de la gestión es la <strong>satisfacción del cliente</strong>, entendiendo sus necesidades presentes y futuras.</p>
+</div>
+
+<!-- VS: Control -->
+<div class="modal-source" id="deep-vs-alcance-c">
+  <span class="modal-kicker">Control · Alcance</span>
+  <h3 class="modal-title">Alcance: Producto o proceso</h3>
+  <p>El control se enfoca en <strong>productos específicos o procesos puntuales</strong>, no en toda la organización.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-enfoque-c">
+  <span class="modal-kicker">Control · Enfoque</span>
+  <h3 class="modal-title">Enfoque: Operativo y correctivo</h3>
+  <p>El control actúa <strong>sobre los defectos ya ocurridos</strong>: los detecta y los corrige.</p>
+  <p>Es operativo porque se aplica al día a día de la producción.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-resp-c">
+  <span class="modal-kicker">Control · Responsable</span>
+  <h3 class="modal-title">Responsable: Área de calidad</h3>
+  <p>El control suele estar a cargo del <strong>área de calidad o inspección</strong>, aunque cada vez más se distribuye a los propios operarios.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-horizonte-c">
+  <span class="modal-kicker">Control · Horizonte</span>
+  <h3 class="modal-title">Horizonte: Corto plazo</h3>
+  <p>El control actúa <strong>en el momento</strong>: inspecciona el lote actual, verifica el proceso en tiempo real.</p>
+</div>
+
+<div class="modal-source" id="deep-vs-objetivo-c">
+  <span class="modal-kicker">Control · Objetivo</span>
+  <h3 class="modal-title">Objetivo: Cumplir especificaciones</h3>
+  <p>El objetivo inmediato del control es que el producto <strong>cumpla con las especificaciones</strong> definidas.</p>
+  <p>Si cumple, se libera. Si no, se rechaza o se reprocesa.</p>
+</div>
 <!-- ========== MODALES: COMPLETAR ========== -->
 <div class="modal-source" id="filosofia">
   <span class="modal-kicker">Completar · 01</span>
