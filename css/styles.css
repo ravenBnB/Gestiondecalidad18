@@ -871,3 +871,81 @@ img { max-width: 100%; display: block; }
   .c-node-8 { top: 28%; left: 25%; }
   .c-node-9 { top: 15%; left: 75%; }
 }
+/* ===== BARRA DOBLE DE ACCIÓN (HOME) ===== */
+.dual-action-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--black-deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.action-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.25em;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: background 0.25s;
+  border-right: 1px solid var(--border);
+}
+
+.action-btn:last-child {
+  border-right: none;
+}
+
+.action-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent 0, transparent 20px, rgba(255, 255, 255, 0.1) 20px, rgba(255, 255, 255, 0.1) 22px);
+  transition: transform 0.4s;
+}
+
+.action-btn:hover {
+  background: var(--neon);
+  box-shadow: 0 0 40px var(--neon-glow);
+}
+
+.action-btn.btn-cecyt:hover {
+  background: #e91e63; /* Rosa para diferenciarlo */
+  box-shadow: 0 0 40px rgba(233, 30, 99, 0.4);
+}
+
+.action-btn:hover::before {
+  transform: translateX(20px);
+}
+
+.action-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.action-btn .arrow {
+  font-size: 1.6rem;
+  transition: transform 0.3s;
+}
+
+.action-btn:hover .arrow {
+  transform: translateX(10px);
+}
+
+/* Responsive: en móvil se apilan uno encima del otro */
+@media (max-width: 800px) {
+  .dual-action-bar {
+    grid-template-columns: 1fr;
+  }
+  .action-btn {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
