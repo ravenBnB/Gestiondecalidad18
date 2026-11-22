@@ -110,18 +110,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== MODAL ===== */
+   /* ============================================================
+     MODAL CON HISTORIAL (permite navegación anidada)
+     ============================================================ */
   const overlay = document.getElementById('modalOverlay');
   const modalBody = document.getElementById('modalBody');
   const modalClose = document.getElementById('modalClose');
+  let modalHistory = [];
+
+  function renderModal(sourceId) {
+    if (!modalBody) return;
+    const source = document.getElementById(sourceId);
+    if (!source) return;
+
+    modalBody.innerHTML = '';
+
+    // Botón volver (solo si hay historial previo)
+    if (modalHistory.length > 1) {
+      const backBtn = document.createElement('button');
+      backBtn.className = 'modal-back';
+      backBtn.type = 'button';
+      backBtn.innerHTML = '← Volver';
+      backBtn.addEventListener('click', goBackModal);
+      modalBody.appendChild(backBtn);
+    }
+
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = source.innerHTML;
+    modalBody.appendChild(wrapper);
+  }
 
   function openModal(sourceId) {
     const source = document.getElementById(sourceId);
     if (!source || !overlay || !modalBody) return;
-    modalBody.innerHTML = source.innerHTML;
+    modalHistory.push(sourceId);
+    renderModal(sourceId);
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+  }
+
+  function goBackModal() {
+    if (modalHistory.length > 1) {
+      modalHistory.pop();
+      renderModal(modalHistory[modalHistory.length - 1]);
+      modalBody.scrollTop = 0;
+    }
   }
 
   function closeModal() {
@@ -129,14 +163,40 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.remove('open');
     overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    modalHistory = [];
     setTimeout(() => { if (modalBody) modalBody.innerHTML = ''; }, 300);
   }
 
-  document.querySelectorAll('[data-modal]').forEach(el => {
-    el.addEventListener('click', (e) => {
+  // Delegación global: maneja clicks en [data-modal] y [data-fill]
+  // incluso cuando el contenido es dinámico (dentro de modales)
+  document.addEventListener('click', (e) => {
+    const modalTarget = e.target.closest('[data-modal]');
+    const fillTarget = e.target.closest('[data-fill]');
+
+    if (modalTarget) {
       e.preventDefault();
-      openModal(el.dataset.modal);
-    });
+      const isOpen = overlay && overlay.classList.contains('open');
+      if (isOpen) {
+        // Click anidado: agregar al historial
+        modalHistory.push(modalTarget.dataset.modal);
+        renderModal(modalTarget.dataset.modal);
+        modalBody.scrollTop = 0;
+      } else {
+        modalHistory = [];
+        openModal(modalTarget.dataset.modal);
+      }
+    } else if (fillTarget) {
+      e.preventDefault();
+      const isOpen = overlay && overlay.classList.contains('open');
+      if (isOpen) {
+        modalHistory.push(fillTarget.dataset.fill);
+        renderModal(fillTarget.dataset.fill);
+        modalBody.scrollTop = 0;
+      } else {
+        modalHistory = [];
+        openModal(fillTarget.dataset.fill);
+      }
+    }
   });
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
@@ -147,69 +207,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay && overlay.classList.contains('open')) {
-      closeModal();
+      if (modalHistory.length > 1) {
+        goBackModal();
+      } else {
+        closeModal();
+      }
     }
   });
+});
+// ===== MODALES DE LAS SUPER INFOGRAFÍAS =====
+(function initSuperModals() {
+  const overlay = document.getElementById('modalOverlay');
+  const modalBody = document.getElementById('modalBody');
+  const modalClose = document.getElementById('modalClose');
+  
+  if (!overlay || !modalBody) return;
 
-  /* ===== SOPA DE LETRAS ===== */
-  const sopaGrid = document.getElementById('sopaGrid');
-  if (sopaGrid) {
-    const gridRows = [
-      "LIDERAZGOABC", "DEFGHIJKLMNO", "MEJORAPQRSTU", "VWXYZABCDEFG",
-      "CLIENTEHIJKL", "MNOPQRSTUVWX", "PROCESOSYZAB", "CDEFGHIJKLMN",
-      "HECHOSOPQRST", "UVWXYZABCDEF", "PERSONALGHIJ", "RELACIONESKL"
-    ];
-
-    const wordPositions = {
-      liderazgo:  [0,1,2,3,4,5,6,7,8],
-      mejora:     [24,25,26,27,28,29],
-      cliente:    [48,49,50,51,52,53,54],
-      procesos:   [72,73,74,75,76,77,78,79],
-      hechos:     [96,97,98,99,100,101],
-      personal:   [120,121,122,123,124,125,126,127],
-      relaciones: [132,133,134,135,136,137,138,139,140,141]
-    };
-
-    let cellIndex = 0;
-    gridRows.forEach(row => {
-      for (let i = 0; i < row.length; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'sopa-cell';
-        cell.textContent = row[i];
-        cell.dataset.index = cellIndex;
-        sopaGrid.appendChild(cell);
-        cellIndex++;
-      }
-    });
-
-    const wordButtons = document.querySelectorAll('.sopa-word');
-    wordButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const word = btn.dataset.word;
-        const isActive = btn.classList.contains('active');
-        document.querySelectorAll('.sopa-cell.highlight').forEach(c => c.classList.remove('highlight'));
-        wordButtons.forEach(b => b.classList.remove('active'));
-        if (!isActive && wordPositions[word]) {
-          btn.classList.add('active');
-          wordPositions[word].forEach(idx => {
-            const cell = sopaGrid.children[idx];
-            if (cell) cell.classList.add('highlight');
-          });
-        }
-      });
-    });
-  }
-
-  /* ===== DATA-FILL ===== */
-  document.querySelectorAll('[data-fill]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const source = document.getElementById(el.dataset.fill);
-      if (!source || !overlay || !modalBody) return;
+  document.querySelectorAll('[data-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-modal');
+      const source = document.getElementById(id);
+      if (!source) return;
+      
       modalBody.innerHTML = source.innerHTML;
       overlay.classList.add('open');
       overlay.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
     });
   });
-});
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+
+// ===== ANIMACIÓN DE BARRA DE PROGRESO =====
+(function initFlowBar() {
+  const bar = document.getElementById('flowBar');
+  const marks = document.querySelectorAll('.fp-mark');
+  if (!bar) return;
+  
+  let progress = 0;
+  let phase = 1;
+  
+  // Anima la barra al entrar en vista
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        bar.style.width = '100%';
+        marks.forEach(m => m.classList.add('active'));
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  const container = bar.closest('.flow-progress');
+  if (container) observer.observe(container);
+})();
