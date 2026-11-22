@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 7 | Gestión y Control de Calidad. Auditoría Parte I</title>
+  <meta name="description" content="Práctica 7: Auditoría de Gestión y Control de Calidad - CECyT No. 2">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="practica-5-body">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="cecyt2.html">CALIDAD CECYT 2</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PANTALLA DE SELECCIÓN ===== -->
+<div class="selection-screen" id="selectionScreen">
+  <div class="selection-bg-grid"></div>
+  <div class="selection-content">
+    <span class="page-eyebrow">Práctica 07 · Individual + Equipo</span>
+    <h1 class="selection-title">¿Quién está consultando?</h1>
+    <p class="selection-subtitle">Selecciona tu nombre para acceder al análisis de la auditoría de calidad.</p>
+    
+    <div class="selection-cards">
+      <button class="selection-card card-madrigal" onclick="selectStudent('madrigal')">
+        <span class="selection-icon">⚙️</span>
+        <h3>Madrigal</h3>
+        <p>Emiliano Mendoza</p>
+        <span class="selection-role">Enfoque: Técnico y de Procesos</span>
+      </button>
+      
+      <button class="selection-card card-concepcion" onclick="selectStudent('concepcion')">
+        <span class="selection-icon">📊</span>
+        <h3>Concepción</h3>
+        <p>López Santiago</p>
+        <span class="selection-role">Enfoque: Estratégico y Gerencial</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: MADRIGAL (Cian)
+     ============================================================ -->
+<div class="view-content theme-madrigal" id="view-madrigal" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 7 · Madrigal</span>
+      <h1 class="page-title reveal reveal-delay-1">AUDITORÍA <span class="subtitle-accent">PARTE I</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Gestión y Control de Calidad · Análisis Técnico</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="mad-intro">Introducción</button>
+            <button class="tab-btn" data-tab="mad-marco">Marco Teórico</button>
+            <button class="tab-btn" data-tab="mad-caso">Caso Práctico</button>
+            <button class="tab-btn" data-tab="mad-informe">Informe de Auditoría</button>
+            <button class="tab-btn" data-tab="mad-infografias">Infografías</button>
+            <button class="tab-btn" data-tab="mad-conclusion">Conclusión</button>
+            <button class="tab-btn" data-tab="mad-biblio">Bibliografía</button>
+          </div>
+        </div>
+
+        <!-- MAD: INTRO -->
+        <div class="tab-panel active" id="mad-intro">
+          <div class="giant-number reveal">07</div>
+          <span class="content-label">Propósito</span>
+          <h2 class="content-title">Operatividad de un Proceso Mecatrónico</h2>
+          <div class="content-body">
+            <p>El propósito de esta práctica es revisar la <strong>operatividad de un proceso mecatrónico</strong> con base en las políticas de calidad, la planeación, los recursos y los procesos de una institución. Para ello, analizaremos qué es una <strong>auditoría de calidad</strong>, su estructura según la Norma ISO 9001 y la Norma ISO 19011, y aplicaremos estos conocimientos al análisis de un caso real de una cadena de restaurantes de comida rápida.</p>
+            <p>Desde mi perspectiva técnica, la auditoría es una <strong>herramienta de diagnóstico</strong> que nos permite verificar, con evidencia objetiva, si un sistema mecatrónico (o cualquier sistema de gestión) está funcionando como fue diseñado o si está fallando en algún punto del proceso.</p>
+          </div>
+        </div>
+
+        <!-- MAD: MARCO -->
+        <div class="tab-panel" id="mad-marco">
+          <span class="content-label">Marco Teórico</span>
+          <h2 class="content-title">¿Qué es una Auditoría de Calidad?</h2>
+          <div class="content-body">
+            <p>La Norma ISO 9000 define la auditoría de calidad como un <strong>"proceso sistemático, independiente y documentado para obtener evidencias de la auditoría y evaluarlas de manera objetiva con el fin de determinar la extensión en que se cumplen los criterios de auditoría"</strong>.</p>
+            
+            <div class="analysis-grid reveal">
+              <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+                <span class="analysis-icon">📋</span>
+                <h5>ISO 19011</h5>
+                <p>Establece las directrices para la auditoría de los sistemas de gestión de la calidad y/o ambiental.</p>
+              </div>
+              <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+                <span class="analysis-icon">📌</span>
+                <h5>ISO 9001</h5>
+                <p>Exige que la organización realice auditorías internas a intervalos planificados para verificar la eficacia del SGC.</p>
+              </div>
+            </div>
+
+            <h3 class="sub-title">Clasificación de las Auditorías</h3>
+            <div class="clases-grid">
+              <article class="clase-card cc-blue">
+                <span class="clase-num">1ª Parte</span>
+                <h4>Auditoría Interna</h4>
+                <p>Realizada por miembros de la propia organización para fines internos. Proporciona información para la dirección y acciones correctivas.</p>
+              </article>
+              <article class="clase-card cc-pink">
+                <span class="clase-num">2ª Parte</span>
+                <h4>Auditoría Externa</h4>
+                <p>Realizada por los clientes de la organización o por personas que actúan de parte de éste, cuando existe un contrato.</p>
+              </article>
+              <article class="clase-card cc-purple">
+                <span class="clase-num">3ª Parte</span>
+                <h4>Auditoría de Certificación</h4>
+                <p>Realizada por organizaciones competentes de certificación para obtener la certificación del sistema de gestión de calidad.</p>
+              </article>
+            </div>
+
+            <div class="quote-block reveal">
+              <span class="quote-mark">"</span>
+              <p>Una auditoría no es sinónimo de inspección ni de supervisión. Estas últimas se llevan a cabo con el único propósito de controlar un proceso o verificar la conformidad de un producto. La auditoría busca evaluar la eficacia del sistema para lograr los objetivos de calidad.</p>
+            </div>
+
+            <h3 class="sub-title">Conceptos clave a verificar en una auditoría</h3>
+            <ul class="feature-list">
+              <li>Que los procedimientos estén en el lugar de aplicación.</li>
+              <li>Que los procedimientos sean adecuados a la función.</li>
+              <li>Que el personal esté debidamente capacitado en los procedimientos correspondientes.</li>
+              <li>Que lo realizado sea de acuerdo con lo documentado.</li>
+            </ul>
+
+            <div class="callout callout-blue" style="margin-top: 1.5rem;">
+              <span class="callout-icon">⚠️</span>
+              <div>
+                <strong>No conformidad</strong>
+                <p>Es una discrepancia entre lo que exige la Norma de referencia y lo que se define en el manual de calidad y documentos anexos, o entre éstos y la forma de operar en la realidad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAD: CASO PRÁCTICO -->
+        <div class="tab-panel" id="mad-caso">
+          <span class="content-label">Caso Práctico</span>
+          <h2 class="content-title">"American Fast Food"</h2>
+          <p class="content-lead">Análisis de la conversación entre el auditor jefe (A) y el responsable de calidad (C).</p>
+
+          <div class="content-body">
+            <p>La cadena de restaurantes de comida rápida <strong>"American Fast Food"</strong> tiene 10 establecimientos y busca certificarse según la Norma ISO 9001. Durante la auditoría de certificación, se produce una conversación reveladora entre el auditor jefe y el responsable de calidad de la empresa.</p>
+            
+            <p>Del análisis de las respuestas del responsable de calidad (C), se identifican <strong>6 no conformidades</strong> que se detallan en la pestaña de <strong>"Informe de Auditoría"</strong>.</p>
+
+            <div class="sticky-note">
+              <p><strong>Observación técnica:</strong> El caso muestra a una empresa que confía más en la "experiencia empírica" de su personal que en un sistema documentado y medible. Esto es un error clásico en la gestión de calidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAD: INFORME -->
+        <div class="tab-panel" id="mad-informe">
+          <span class="content-label">Informe de Auditoría</span>
+          <h2 class="content-title">No Conformidades Detectadas</h2>
+          <p class="content-lead">Análisis técnico de cada hallazgo, indicando párrafo, descripción y cláusula ISO incumplida.</p>
+
+          <div class="quiz-container">
+            <!-- NC 1 -->
+            <div class="quiz-card reveal">
+              <div class="nc-header">
+                <span class="nc-badge">NC-01</span>
+                <span class="nc-para">Párrafo 2</span>
+              </div>
+              <h4>Integración indebida de auditores internos sin formación</h4>
+              <p><strong>Descripción:</strong> El responsable de calidad propone que tres personas de la organización se integren al equipo auditor de certificación, argumentando que "no tienen formación" y que es una buena oportunidad para que aprendan. Esto viola la independencia y competencia del auditor.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.2 (Auditoría interna) — Los auditores deben ser imparciales y competentes. ISO 19011 exige que los auditores tengan formación específica.
+              </div>
+            </div>
+
+            <!-- NC 2 -->
+            <div class="quiz-card reveal delay-1">
+              <div class="nc-header">
+                <span class="nc-badge">NC-02</span>
+                <span class="nc-para">Párrafo 8</span>
+              </div>
+              <h4>Revisión por la Dirección condicionada</h4>
+              <p><strong>Descripción:</strong> El comité de calidad se reúne mensualmente, pero la revisión por la dirección solo se hace "si queda tiempo". Los responsables de departamento aprovechan las reuniones para otros temas. Esto demuestra que la revisión por la dirección no se planifica formalmente.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.3 (Revisión por la Dirección) — Debe realizarse a intervalos planificados y no estar sujeta a disponibilidad de tiempo.
+              </div>
+            </div>
+
+            <!-- NC 3 -->
+            <div class="quiz-card reveal delay-2">
+              <div class="nc-header">
+                <span class="nc-badge">NC-03</span>
+                <span class="nc-para">Párrafo 10</span>
+              </div>
+              <h4>Auditorías internas reactivas y sin independencia</h4>
+              <p><strong>Descripción:</strong> Las auditorías internas solo se realizan cuando hay reclamaciones, y como no ha habido, no se han hecho. Además, el responsable del área afectada es quien realiza la auditoría, lo cual elimina la imparcialidad.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.2 — Las auditorías deben ser a intervalos planificados y los auditores no deben auditar su propio trabajo.
+              </div>
+            </div>
+
+            <!-- NC 4 -->
+            <div class="quiz-card reveal delay-3">
+              <div class="nc-header">
+                <span class="nc-badge">NC-04</span>
+                <span class="nc-para">Párrafo 12</span>
+              </div>
+              <h4>Ausencia de procedimiento para no conformidades</h4>
+              <p><strong>Descripción:</strong> No existe un procedimiento para revisar no conformidades e implementar acciones correctivas. El responsable argumenta que "no lo necesitamos" porque "no cometemos errores" y cada quien toma acciones por su cuenta.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 10.2 (No conformidad y acción correctiva) — Se requiere un proceso documentado para gestionar no conformidades y acciones correctivas.
+              </div>
+            </div>
+
+            <!-- NC 5 -->
+            <div class="quiz-card reveal">
+              <div class="nc-header">
+                <span class="nc-badge">NC-05</span>
+                <span class="nc-para">Párrafo 14</span>
+              </div>
+              <h4>Evaluación de eficacia de la formación inexistente</h4>
+              <p><strong>Descripción:</strong> La eficacia de la formación se evalúa solo preguntando verbalmente al empleado, sin registros formales. Se argumenta que "las labores son muy sencillas" y que se aprende "con la práctica diaria".</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 7.2 (Competencia) — Debe evaluarse la eficacia de las acciones tomadas y conservar información documentada como evidencia.
+              </div>
+            </div>
+
+            <!-- NC 6 -->
+            <div class="quiz-card reveal delay-1">
+              <div class="nc-header">
+                <span class="nc-badge">NC-06</span>
+                <span class="nc-para">Párrafo 18</span>
+              </div>
+              <h4>Falta de re-evaluación de proveedores</h4>
+              <p><strong>Descripción:</strong> El proveedor "Kike Potatoes, S.L." fue evaluado en 2007 y no se le ha vuelto a evaluar. Además, el responsable admite que "ni miramos el albarán cuando nos llega el camión", lo que indica falta de verificación de productos comprados.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 8.4 (Control de procesos, productos y servicios suministrados externamente) — Los proveedores deben evaluarse y re-evaluarse periódicamente, y verificarse los productos recibidos.
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-title" style="margin-top: 3rem;">Crítica a la Actuación del Auditor</h3>
+          <div class="analysis-grid reveal">
+            <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+              <span class="analysis-icon">✅</span>
+              <h5>Puntos Fuertes</h5>
+              <p>El auditor realizó preguntas clave sobre el mapa de procesos, la evaluación de proveedores, la formación y la revisión por la dirección. Documentó adecuadamente las respuestas.</p>
+            </div>
+            <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+              <span class="analysis-icon">❌</span>
+              <h5>Áreas de Oportunidad</h5>
+              <p>El auditor fue demasiado permisivo. Cuando C propuso integrar a su personal sin formación al equipo auditor, el auditor respondió "Me parece muy bien" en lugar de rechazarlo de inmediato. Tampoco fue firme al cuestionar la ausencia de un procedimiento de acciones correctivas ni al exigir registros de formación. Le faltó profundizar en la evidencia objetiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== INFOGRAFÍAS SUPER POWER ===== -->
+<div class="tab-panel" id="mad-infografias">
+  <span class="content-label">Infografías Interactivas</span>
+  <h2 class="content-title">Material Visual Avanzado</h2>
+  <p class="content-lead">Haz clic en cada nodo o botón para explorar los detalles. Cada elemento tiene info interactiva.</p>
+
+  <!-- ================================================
+       SUPER INFOGRAFÍA 1: ¿QUÉ ES UNA AUDITORÍA?
+       ================================================ -->
+  <div class="super-info super-info--radial">
+    <div class="super-info__bg-grid"></div>
+    <div class="super-info__particles">
+      <span class="sp sp-1"></span>
+      <span class="sp sp-2"></span>
+      <span class="sp sp-3"></span>
+      <span class="sp sp-4"></span>
+      <span class="sp sp-5"></span>
+      <span class="sp sp-6"></span>
+    </div>
+
+    <header class="super-info__head">
+      <span class="super-info__kicker">◆ Infografía 01 ◆</span>
+      <h3 class="super-info__title">¿Qué es una Auditoría ISO 9000?</h3>
+      <p class="super-info__sub">Sistema de Gestión de la Calidad · ISO 9001 / ISO 19011</p>
+    </header>
+
+    <div class="radial-diagram">
+      <!-- SVG de fondo: anillos + conexiones -->
+      <svg class="radial-svg" viewBox="0 0 700 700" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="rg-center" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--accent-color)" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="var(--accent-color)" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="lg-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="var(--accent-color)" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="var(--accent-color)" stop-opacity="0.15"/>
+          </linearGradient>
+        </defs>
+        <circle cx="350" cy="350" r="290" fill="url(#rg-center)"/>
+        <circle cx="350" cy="350" r="260" fill="none" stroke="url(#lg-ring)" stroke-width="1.5" stroke-dasharray="4 8"/>
+        <circle cx="350" cy="350" r="180" fill="none" stroke="url(#lg-ring)" stroke-width="2"/>
+        <circle cx="350" cy="350" r="100" fill="none" stroke="url(#lg-ring)" stroke-width="1" stroke-dasharray="2 6"/>
+        <!-- Líneas radiales -->
+        <g stroke="var(--accent-color)" stroke-opacity="0.35" stroke-width="1.5">
+          <line x1="350" y1="350" x2="350" y2="90"/>
+          <line x1="350" y1="350" x2="575" y2="220"/>
+          <line x1="350" y1="350" x2="575" y2="480"/>
+          <line x1="350" y1="350" x2="350" y2="610"/>
+          <line x1="350" y1="350" x2="125" y2="480"/>
+          <line x1="350" y1="350" x2="125" y2="220"/>
+        </g>
+      </svg>
+
+      <!-- Núcleo -->
+      <div class="radial-center">
+        <div class="radial-center__ring"></div>
+        <div class="radial-center__inner">
+          <span class="radial-center__icon">🔍</span>
+          <span class="radial-center__label">AUDITORÍA</span>
+          <span class="radial-center__sublabel">ISO 9000</span>
+        </div>
+      </div>
+
+      <!-- Nodos orbitales -->
+      <button class="radial-node rn-1" data-modal="aud-def">
+        <span class="rn-num">01</span>
+        <span class="rn-icon">📋</span>
+        <span class="rn-title">Definición</span>
+      </button>
+      <button class="radial-node rn-2" data-modal="aud-obj">
+        <span class="rn-num">02</span>
+        <span class="rn-icon">🎯</span>
+        <span class="rn-title">Objetivo</span>
+      </button>
+      <button class="radial-node rn-3" data-modal="aud-tipos">
+        <span class="rn-num">03</span>
+        <span class="rn-icon">🔍</span>
+        <span class="rn-title">Tipos</span>
+      </button>
+      <button class="radial-node rn-4" data-modal="aud-nc">
+        <span class="rn-num">04</span>
+        <span class="rn-icon">⚠️</span>
+        <span class="rn-title">No Conformidad</span>
+      </button>
+      <button class="radial-node rn-5" data-modal="aud-ben">
+        <span class="rn-num">05</span>
+        <span class="rn-icon">✨</span>
+        <span class="rn-title">Beneficios</span>
+      </button>
+      <button class="radial-node rn-6" data-modal="aud-car">
+        <span class="rn-num">06</span>
+        <span class="rn-icon">🔑</span>
+        <span class="rn-title">Características</span>
+      </button>
+    </div>
+
+    <div class="super-info__legend">
+      <span class="legend-item"><span class="legend-dot" style="background:#00f0ff"></span> Conceptos clave</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#e91e63"></span> Haz clic para detalles</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#16a085"></span> Normas de referencia</span>
+    </div>
+  </div>
+
+  <!-- ================================================
+       SUPER INFOGRAFÍA 2: PARTES DE UNA AUDITORÍA
+       ================================================ -->
+  <div class="super-info super-info--flow">
+    <header class="super-info__head">
+      <span class="super-info__kicker">◆ Infografía 02 ◆</span>
+      <h3 class="super-info__title">Partes que Conforman una Auditoría</h3>
+      <p class="super-info__sub">Ciclo completo · 4 fases secuenciales</p>
+    </header>
+
+    <!-- Barra de progreso global -->
+    <div class="flow-progress">
+      <div class="flow-progress__bar" id="flowBar"></div>
+      <div class="flow-progress__marks">
+        <span class="fp-mark active" data-phase="1">01</span>
+        <span class="fp-mark" data-phase="2">02</span>
+        <span class="fp-mark" data-phase="3">03</span>
+        <span class="fp-mark" data-phase="4">04</span>
+      </div>
+    </div>
+
+    <!-- Las 4 fases -->
+    <div class="flow-cards">
+      <button class="flow-card fc-1" data-modal="flow-plan">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">01</span>
+        <span class="fc-icon">📝</span>
+        <h4 class="fc-title">Planificación</h4>
+        <p class="fc-desc">Definir alcance, criterios, equipo y programa de auditoría.</p>
+        <span class="fc-tag">Fase inicial</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-2" data-modal="flow-exec">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">02</span>
+        <span class="fc-icon">🔍</span>
+        <h4 class="fc-title">Ejecución</h4>
+        <p class="fc-desc">Recopilar evidencia objetiva en campo, entrevistas y documentos.</p>
+        <span class="fc-tag">Trabajo de campo</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-3" data-modal="flow-report">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">03</span>
+        <span class="fc-icon">📄</span>
+        <h4 class="fc-title">Informe</h4>
+        <p class="fc-desc">Documentar hallazgos, no conformidades y conclusiones.</p>
+        <span class="fc-tag">Documentación</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-4" data-modal="flow-follow">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">04</span>
+        <span class="fc-icon">🔄</span>
+        <h4 class="fc-title">Seguimiento</h4>
+        <p class="fc-desc">Verificar acciones correctivas y evaluar su eficacia.</p>
+        <span class="fc-tag">Mejora continua</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+    </div>
+
+    <!-- Resultado final -->
+    <div class="flow-result">
+      <span class="flow-result__icon">🏆</span>
+      <div>
+        <strong>Resultado:</strong> Sistema de gestión verificado y en mejora continua
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODALES DE LAS SUPER INFOGRAFÍAS ===== -->
+<div class="super-modal-source" id="aud-def">
+  <span class="modal-kicker">Concepto 01</span>
+  <h3 class="modal-title">📋 Definición de Auditoría</h3>
+  <p>Según ISO 9000: <em>"Proceso sistemático, independiente y documentado para obtener evidencias de la auditoría y evaluarlas de manera objetiva con el fin de determinar la extensión en que se cumplen los criterios de auditoría"</em>.</p>
+  <ul>
+    <li><strong>Sistemático:</strong> Sigue un método planificado y ordenado.</li>
+    <li><strong>Independiente:</strong> El auditor no debe auditar su propio trabajo.</li>
+    <li><strong>Documentado:</strong> Todo debe quedar registrado con evidencia.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-obj">
+  <span class="modal-kicker">Concepto 02</span>
+  <h3 class="modal-title">🎯 Objetivo de la Auditoría</h3>
+  <p>Determinar si el Sistema de Gestión de Calidad (SGC) es <strong>conforme</strong> con las disposiciones planificadas, los requisitos de la norma y los requisitos propios de la organización.</p>
+  <p>También verifica si el SGC está <strong>implementado y se mantiene de manera eficaz</strong>.</p>
+  <ul>
+    <li>Detectar áreas de mejora.</li>
+    <li>Prevenir fallos antes de que afecten al cliente.</li>
+    <li>Proporcionar información para la toma de decisiones.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-tipos">
+  <span class="modal-kicker">Concepto 03</span>
+  <h3 class="modal-title">🔍 Tipos de Auditoría</h3>
+  <ul>
+    <li><strong>1ª Parte — Interna:</strong> La realiza la propia organización para fines internos. Proporciona información a la dirección.</li>
+    <li><strong>2ª Parte — Externa:</strong> La realizan los clientes o personas en su nombre, cuando existe un contrato.</li>
+    <li><strong>3ª Parte — Certificación:</strong> La realiza un organismo independiente de certificación para otorgar el certificado ISO 9001.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-nc">
+  <span class="modal-kicker">Concepto 04</span>
+  <h3 class="modal-title">⚠️ No Conformidad</h3>
+  <p>Es una <strong>discrepancia</strong> entre lo que exige la norma de referencia y lo que define el manual de calidad, o entre éstos y la forma real de operar.</p>
+  <ul>
+    <li><strong>NC Mayor:</strong> Afecta la capacidad del sistema para cumplir requisitos.</li>
+    <li><strong>NC Menor:</strong> Es un fallo aislado que no compromete el sistema completo.</li>
+    <li><strong>Observación:</strong> No es NC, pero podría convertirse en una si no se atiende.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-ben">
+  <span class="modal-kicker">Concepto 05</span>
+  <h3 class="modal-title">✨ Beneficios de Auditar</h3>
+  <ul>
+    <li>Verificar que el sistema está implantado y cumple con los requisitos.</li>
+    <li>Establecer la eficacia y eficiencia del sistema.</li>
+    <li>Dar confianza a los clientes de que la organización se autoevalúa.</li>
+    <li>Facilitar la inscripción en un registro del sistema de calidad.</li>
+    <li>Cumplir con los requisitos de las normas internacionales.</li>
+    <li>Identificar oportunidades de mejora continua.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-car">
+  <span class="modal-kicker">Concepto 06</span>
+  <h3 class="modal-title">🔑 Características del Auditor</h3>
+  <ul>
+    <li><strong>Independiente:</strong> No audita su propio trabajo.</li>
+    <li><strong>Competente:</strong> Tiene formación y experiencia específica.</li>
+    <li><strong>Objetivo:</strong> Basa sus conclusiones en evidencia.</li>
+    <li><strong>Ético:</strong> Actúa con integridad y confidencialidad.</li>
+    <li><strong>Firme:</strong> No permite que el auditado controle el proceso.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-plan">
+  <span class="modal-kicker">Fase 01</span>
+  <h3 class="modal-title">📝 Planificación</h3>
+  <p>Antes de auditar, se debe <strong>planificar todo el proceso</strong>.</p>
+  <ul>
+    <li>Definir el <strong>alcance</strong> y los <strong>criterios</strong> de auditoría.</li>
+    <li>Seleccionar el <strong>equipo auditor</strong> competente e independiente.</li>
+    <li>Elaborar el <strong>programa de auditoría</strong> con fechas y responsables.</li>
+    <li>Revisar la documentación previa del sistema de gestión.</li>
+    <li>Notificar al auditado (no son visitas sorpresa).</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-exec">
+  <span class="modal-kicker">Fase 02</span>
+  <h3 class="modal-title">🔍 Ejecución</h3>
+  <p>Es el <strong>trabajo de campo</strong> de la auditoría. Se recopila evidencia objetiva.</p>
+  <ul>
+    <li>Realizar <strong>entrevistas</strong> con el personal.</li>
+    <li><strong>Observar</strong> los procesos en operación.</li>
+    <li><strong>Revisar documentos</strong> y registros.</li>
+    <li>Verificar que los procedimientos estén en su lugar de aplicación.</li>
+    <li>Documentar <strong>evidencias</strong> y hallazgos.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-report">
+  <span class="modal-kicker">Fase 03</span>
+  <h3 class="modal-title">📄 Informe</h3>
+  <p>Se documentan formalmente los <strong>hallazgos de la auditoría</strong>.</p>
+  <ul>
+    <li>Identificar las <strong>no conformidades</strong> con su cláusula incumplida.</li>
+    <li>Describir cada hallazgo con <strong>evidencia objetiva</strong>.</li>
+    <li>Consensuar el informe con el auditado.</li>
+    <li>Presentar conclusiones a la <strong>alta dirección</strong>.</li>
+    <li>Entregar copia del informe al auditado.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-follow">
+  <span class="modal-kicker">Fase 04</span>
+  <h3 class="modal-title">🔄 Seguimiento</h3>
+  <p>La auditoría <strong>no termina con el informe</strong>; hay que verificar que se tomen acciones.</p>
+  <ul>
+    <li>El auditado debe implementar <strong>acciones correctivas</strong>.</li>
+    <li>Se verifica la <strong>eficacia</strong> de las acciones tomadas.</li>
+    <li>Se documentan los resultados del seguimiento.</li>
+    <li>Se cierra el ciclo de <strong>mejora continua</strong>.</li>
+  </ul>
+</div>
+
+        <!-- MAD: CONCLUSIÓN -->
+        <div class="tab-panel" id="mad-conclusion">
+          <span class="content-label">Conclusión Individual</span>
+          <h2 class="content-title">Reflexión Técnica</h2>
+          <div class="conclusion-box mad-box">
+            <p>El caso de "American Fast Food" es un ejemplo perfecto de cómo una empresa puede <strong>confundir la experiencia empírica con un sistema de gestión de calidad</strong>. El responsable de calidad argumenta que "la gente lleva mucho tiempo y conoce bien su trabajo", pero eso no es un sistema; es una apuesta.</p>
+            <p>Desde mi perspectiva técnica, los 6 hallazgos demuestran que la empresa carece de los <strong>registros y mecanismos de verificación</strong> que exige la ISO 9001. Sin procedimientos documentados, sin auditorías planificadas, sin evaluación de proveedores y sin un sistema de acciones correctivas, no hay forma de saber si el proceso está bajo control. Y si no lo puedes demostrar con datos, no hay calidad, solo suerte.</p>
+            <p>La crítica al auditor también es importante: un auditor debe ser <strong>firme e independiente</strong>. Aceptar que el auditado integre personal sin formación al equipo auditor es un error grave que compromete la objetividad de la certificación.</p>
+          </div>
+        </div>
+
+        <!-- MAD: BIBLIO -->
+        <div class="tab-panel" id="mad-biblio">
+          <span class="content-label">Referencias</span>
+          <h2 class="content-title">Bibliografía</h2>
+          <ul class="bibliography">
+            <li>International Organization for Standardization. (2015). <em>ISO 9001:2015 Sistemas de gestión de la calidad — Requisitos</em>. ISO.</li>
+            <li>International Organization for Standardization. (2018). <em>ISO 19011:2018 Directrices para la auditoría de los sistemas de gestión</em>. ISO.</li>
+            <li>Instituto Politécnico Nacional. (2024). <em>Gestión de la Calidad en Sistemas Mecatrónicos: Práctica 7. Auditoría Parte I</em>. CECyT No. 2 "Miguel Bernard".</li>
+            <li>Centro de Registro y Certificación de Personas de la AEC. (s. f.). <em>Caso práctico: American Fast Food</em>.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============================================================
+     CONTENIDO: CONCEPCIÓN (Rosa)
+     ============================================================ -->
+<div class="view-content theme-concepcion" id="view-concepcion" style="display: none;">
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-eyebrow reveal">Práctica 7 · Concepción</span>
+      <h1 class="page-title reveal reveal-delay-1">AUDITORÍA <span class="subtitle-accent">PARTE I</span></h1>
+      <p class="page-subtitle reveal reveal-delay-2">Gestión y Control de Calidad · Análisis Estratégico</p>
+    </div>
+    <div class="page-hero-shape"></div>
+  </header>
+
+  <main>
+    <section class="section practice-content">
+      <div class="container container-narrow">
+        
+        <div class="tabs-wrapper">
+          <div class="tabs-scroll">
+            <button class="tab-btn active" data-tab="con-intro">Introducción</button>
+            <button class="tab-btn" data-tab="con-marco">Marco Teórico</button>
+            <button class="tab-btn" data-tab="con-caso">Caso Práctico</button>
+            <button class="tab-btn" data-tab="con-informe">Informe de Auditoría</button>
+            <button class="tab-btn" data-tab="con-infografias">Infografías</button>
+            <button class="tab-btn" data-tab="con-conclusion">Conclusión</button>
+            <button class="tab-btn" data-tab="con-biblio">Bibliografía</button>
+          </div>
+        </div>
+
+        <!-- CON: INTRO -->
+        <div class="tab-panel active" id="con-intro">
+          <div class="giant-number reveal">07</div>
+          <span class="content-label">Propósito</span>
+          <h2 class="content-title">La Auditoría como Herramienta Estratégica</h2>
+          <div class="content-body">
+            <p>Esta práctica tiene como propósito revisar la <strong>operatividad de un proceso mecatrónico</strong> con base en las políticas de calidad, la planeación, los recursos y los procesos de una institución. Para ello, analizaremos la <strong>auditoría de calidad</strong> como una herramienta estratégica de dirección, no solo como un trámite de certificación.</p>
+            <p>Desde mi perspectiva gerencial, la auditoría es un <strong>instrumento de liderazgo</strong> que permite a la alta dirección tomar decisiones basadas en evidencia objetiva, identificar áreas de mejora y demostrar a los clientes y partes interesadas que la organización está comprometida con la calidad.</p>
+          </div>
+        </div>
+
+        <!-- CON: MARCO -->
+        <div class="tab-panel" id="con-marco">
+          <span class="content-label">Marco Teórico</span>
+          <h2 class="content-title">Fundamentos de la Auditoría</h2>
+          <div class="content-body">
+            <p>La Norma ISO 9000 define la auditoría de calidad como un <strong>"proceso sistemático, independiente y documentado para obtener evidencias de la auditoría y evaluarlas de manera objetiva con el fin de determinar la extensión en que se cumplen los criterios de auditoría"</strong>.</p>
+            
+            <div class="quote-block reveal">
+              <span class="quote-mark">"</span>
+              <p>Las auditorías nos permiten saber en qué grado se cumplen los requisitos definidos, pudiéndose detectar las áreas que fallan en algún momento del proceso. Es función de la auditoría interna, ayudar a los miembros de la organización en el cumplimiento efectivo de sus responsabilidades.</p>
+            </div>
+
+            <h3 class="sub-title">Clasificación de las Auditorías</h3>
+            <div class="clases-grid">
+              <article class="clase-card cc-blue">
+                <span class="clase-num">1ª Parte</span>
+                <h4>Auditoría Interna</h4>
+                <p>Proporciona información para la dirección y para las acciones correctivas, preventivas o de mejora. Es una herramienta de autoevaluación.</p>
+              </article>
+              <article class="clase-card cc-pink">
+                <span class="clase-num">2ª Parte</span>
+                <h4>Auditoría Externa</h4>
+                <p>Proporciona confianza al cliente en la organización suministradora. Se realiza por los clientes o por personas que actúan de parte de éste.</p>
+              </article>
+              <article class="clase-card cc-purple">
+                <span class="clase-num">3ª Parte</span>
+                <h4>Auditoría de Certificación</h4>
+                <p>Proporciona confianza a los clientes potenciales. Se realiza por organizaciones competentes de certificación.</p>
+              </article>
+            </div>
+
+            <h3 class="sub-title">¿Por qué es necesaria la auditoría interna?</h3>
+            <ul class="feature-list">
+              <li>Para verificar que el sistema de calidad está implantado y cumple continuamente con los requisitos.</li>
+              <li>Para establecer la eficacia y eficiencia del sistema en la consecución de los objetivos.</li>
+              <li>Para dar confianza a los clientes de que la organización se autoevalúa.</li>
+              <li>Para facilitar la inscripción en un registro del sistema de calidad.</li>
+              <li>Para cumplir con los requisitos de las normas internacionales.</li>
+            </ul>
+
+            <div class="callout callout-pink" style="margin-top: 1.5rem;">
+              <span class="callout-icon">💡</span>
+              <div>
+                <strong>Diferencia clave</strong>
+                <p>Auditoría no es sinónimo de inspección ni de supervisión. La inspección verifica la conformidad de un producto; la auditoría evalúa la eficacia del sistema de gestión para lograr los objetivos de calidad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: CASO -->
+        <div class="tab-panel" id="con-caso">
+          <span class="content-label">Caso Práctico</span>
+          <h2 class="content-title">"American Fast Food"</h2>
+          <p class="content-lead">Análisis estratégico de la conversación entre el auditor jefe (A) y el responsable de calidad (C).</p>
+
+          <div class="content-body">
+            <p>La cadena de restaurantes de comida rápida <strong>"American Fast Food"</strong> tiene 10 establecimientos y busca certificarse según la Norma ISO 9001. Durante la auditoría de certificación, se produce una conversación reveladora entre el auditor jefe y el responsable de calidad de la empresa.</p>
+            
+            <p>Desde una perspectiva gerencial, el caso revela una <strong>cultura organizacional que no comprende el valor estratégico de la calidad</strong>. El responsable de calidad actúa como un bombero que apaga incendios, no como un líder que previene que ocurran.</p>
+
+            <div class="sticky-note">
+              <p><strong>Observación gerencial:</strong> La empresa confunde "tener un sistema de calidad" con "tener un manual de calidad". La ISO 9001 exige evidencia de implementación, no solo documentación.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CON: INFORME -->
+        <div class="tab-panel" id="con-informe">
+          <span class="content-label">Informe de Auditoría</span>
+          <h2 class="content-title">No Conformidades Detectadas</h2>
+          <p class="content-lead">Análisis gerencial de cada hallazgo, indicando párrafo, descripción y cláusula ISO incumplida.</p>
+
+          <div class="quiz-container">
+            <div class="quiz-card reveal">
+              <div class="nc-header">
+                <span class="nc-badge">NC-01</span>
+                <span class="nc-para">Párrafo 2</span>
+              </div>
+              <h4>Integración indebida de auditores internos sin formación</h4>
+              <p><strong>Descripción:</strong> El responsable de calidad propone que tres personas de la organización se integren al equipo auditor de certificación, argumentando que "no tienen formación" y que es una buena oportunidad para que aprendan. Esto viola la independencia y competencia del auditor.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.2 (Auditoría interna) — Los auditores deben ser imparciales y competentes. ISO 19011 exige que los auditores tengan formación específica.
+              </div>
+            </div>
+
+            <div class="quiz-card reveal delay-1">
+              <div class="nc-header">
+                <span class="nc-badge">NC-02</span>
+                <span class="nc-para">Párrafo 8</span>
+              </div>
+              <h4>Revisión por la Dirección condicionada</h4>
+              <p><strong>Descripción:</strong> El comité de calidad se reúne mensualmente, pero la revisión por la dirección solo se hace "si queda tiempo". Los responsables de departamento aprovechan las reuniones para otros temas. Esto demuestra que la revisión por la dirección no se planifica formalmente.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.3 (Revisión por la Dirección) — Debe realizarse a intervalos planificados y no estar sujeta a disponibilidad de tiempo.
+              </div>
+            </div>
+
+            <div class="quiz-card reveal delay-2">
+              <div class="nc-header">
+                <span class="nc-badge">NC-03</span>
+                <span class="nc-para">Párrafo 10</span>
+              </div>
+              <h4>Auditorías internas reactivas y sin independencia</h4>
+              <p><strong>Descripción:</strong> Las auditorías internas solo se realizan cuando hay reclamaciones, y como no ha habido, no se han hecho. Además, el responsable del área afectada es quien realiza la auditoría, lo cual elimina la imparcialidad.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 9.2 — Las auditorías deben ser a intervalos planificados y los auditores no deben auditar su propio trabajo.
+              </div>
+            </div>
+
+            <div class="quiz-card reveal delay-3">
+              <div class="nc-header">
+                <span class="nc-badge">NC-04</span>
+                <span class="nc-para">Párrafo 12</span>
+              </div>
+              <h4>Ausencia de procedimiento para no conformidades</h4>
+              <p><strong>Descripción:</strong> No existe un procedimiento para revisar no conformidades e implementar acciones correctivas. El responsable argumenta que "no lo necesitamos" porque "no cometemos errores" y cada quien toma acciones por su cuenta.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 10.2 (No conformidad y acción correctiva) — Se requiere un proceso documentado para gestionar no conformidades y acciones correctivas.
+              </div>
+            </div>
+
+            <div class="quiz-card reveal">
+              <div class="nc-header">
+                <span class="nc-badge">NC-05</span>
+                <span class="nc-para">Párrafo 14</span>
+              </div>
+              <h4>Evaluación de eficacia de la formación inexistente</h4>
+              <p><strong>Descripción:</strong> La eficacia de la formación se evalúa solo preguntando verbalmente al empleado, sin registros formales. Se argumenta que "las labores son muy sencillas" y que se aprende "con la práctica diaria".</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 7.2 (Competencia) — Debe evaluarse la eficacia de las acciones tomadas y conservar información documentada como evidencia.
+              </div>
+            </div>
+
+            <div class="quiz-card reveal delay-1">
+              <div class="nc-header">
+                <span class="nc-badge">NC-06</span>
+                <span class="nc-para">Párrafo 18</span>
+              </div>
+              <h4>Falta de re-evaluación de proveedores</h4>
+              <p><strong>Descripción:</strong> El proveedor "Kike Potatoes, S.L." fue evaluado en 2007 y no se le ha vuelto a evaluar. Además, el responsable admite que "ni miramos el albarán cuando nos llega el camión", lo que indica falta de verificación de productos comprados.</p>
+              <div class="nc-clausula">
+                <strong>Cláusula ISO 9001:2015 incumplida:</strong> 8.4 (Control de procesos, productos y servicios suministrados externamente) — Los proveedores deben evaluarse y re-evaluarse periódicamente, y verificarse los productos recibidos.
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-title" style="margin-top: 3rem;">Crítica a la Actuación del Auditor</h3>
+          <div class="analysis-grid reveal">
+            <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+              <span class="analysis-icon">✅</span>
+              <h5>Puntos Fuertes</h5>
+              <p>El auditor demostró conocimiento técnico y realizó preguntas clave. Documentó las respuestas y mantuvo una actitud profesional durante la entrevista.</p>
+            </div>
+            <div class="analysis-card" style="text-align: left; padding: 1.5rem;">
+              <span class="analysis-icon">❌</span>
+              <h5>Áreas de Oportunidad</h5>
+              <p>El auditor careció de la firmeza necesaria para un proceso de certificación. Aceptó sin objeción la propuesta de integrar personal sin formación al equipo auditor, lo cual compromete la independencia. No profundizó en la ausencia de procedimientos de acciones correctivas ni exigió evidencia documental de la formación. Un auditor debe ser objetivo, pero también firme y asertivo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== INFOGRAFÍAS SUPER POWER ===== -->
+<div class="tab-panel" id="con-infografias">
+  <span class="content-label">Infografías Interactivas</span>
+  <h2 class="content-title">Material Visual Avanzado</h2>
+  <p class="content-lead">Haz clic en cada nodo o botón para explorar los detalles. Cada elemento tiene info interactiva.</p>
+
+  <!-- ================================================
+       SUPER INFOGRAFÍA 1: ¿QUÉ ES UNA AUDITORÍA?
+       ================================================ -->
+  <div class="super-info super-info--radial">
+    <div class="super-info__bg-grid"></div>
+    <div class="super-info__particles">
+      <span class="sp sp-1"></span>
+      <span class="sp sp-2"></span>
+      <span class="sp sp-3"></span>
+      <span class="sp sp-4"></span>
+      <span class="sp sp-5"></span>
+      <span class="sp sp-6"></span>
+    </div>
+
+    <header class="super-info__head">
+      <span class="super-info__kicker">◆ Infografía 01 ◆</span>
+      <h3 class="super-info__title">¿Qué es una Auditoría ISO 9000?</h3>
+      <p class="super-info__sub">Sistema de Gestión de la Calidad · ISO 9001 / ISO 19011</p>
+    </header>
+
+    <div class="radial-diagram">
+      <!-- SVG de fondo: anillos + conexiones -->
+      <svg class="radial-svg" viewBox="0 0 700 700" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="rg-center" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--accent-color)" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="var(--accent-color)" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="lg-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="var(--accent-color)" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="var(--accent-color)" stop-opacity="0.15"/>
+          </linearGradient>
+        </defs>
+        <circle cx="350" cy="350" r="290" fill="url(#rg-center)"/>
+        <circle cx="350" cy="350" r="260" fill="none" stroke="url(#lg-ring)" stroke-width="1.5" stroke-dasharray="4 8"/>
+        <circle cx="350" cy="350" r="180" fill="none" stroke="url(#lg-ring)" stroke-width="2"/>
+        <circle cx="350" cy="350" r="100" fill="none" stroke="url(#lg-ring)" stroke-width="1" stroke-dasharray="2 6"/>
+        <!-- Líneas radiales -->
+        <g stroke="var(--accent-color)" stroke-opacity="0.35" stroke-width="1.5">
+          <line x1="350" y1="350" x2="350" y2="90"/>
+          <line x1="350" y1="350" x2="575" y2="220"/>
+          <line x1="350" y1="350" x2="575" y2="480"/>
+          <line x1="350" y1="350" x2="350" y2="610"/>
+          <line x1="350" y1="350" x2="125" y2="480"/>
+          <line x1="350" y1="350" x2="125" y2="220"/>
+        </g>
+      </svg>
+
+      <!-- Núcleo -->
+      <div class="radial-center">
+        <div class="radial-center__ring"></div>
+        <div class="radial-center__inner">
+          <span class="radial-center__icon">🔍</span>
+          <span class="radial-center__label">AUDITORÍA</span>
+          <span class="radial-center__sublabel">ISO 9000</span>
+        </div>
+      </div>
+
+      <!-- Nodos orbitales -->
+      <button class="radial-node rn-1" data-modal="aud-def">
+        <span class="rn-num">01</span>
+        <span class="rn-icon">📋</span>
+        <span class="rn-title">Definición</span>
+      </button>
+      <button class="radial-node rn-2" data-modal="aud-obj">
+        <span class="rn-num">02</span>
+        <span class="rn-icon">🎯</span>
+        <span class="rn-title">Objetivo</span>
+      </button>
+      <button class="radial-node rn-3" data-modal="aud-tipos">
+        <span class="rn-num">03</span>
+        <span class="rn-icon">🔍</span>
+        <span class="rn-title">Tipos</span>
+      </button>
+      <button class="radial-node rn-4" data-modal="aud-nc">
+        <span class="rn-num">04</span>
+        <span class="rn-icon">⚠️</span>
+        <span class="rn-title">No Conformidad</span>
+      </button>
+      <button class="radial-node rn-5" data-modal="aud-ben">
+        <span class="rn-num">05</span>
+        <span class="rn-icon">✨</span>
+        <span class="rn-title">Beneficios</span>
+      </button>
+      <button class="radial-node rn-6" data-modal="aud-car">
+        <span class="rn-num">06</span>
+        <span class="rn-icon">🔑</span>
+        <span class="rn-title">Características</span>
+      </button>
+    </div>
+
+    <div class="super-info__legend">
+      <span class="legend-item"><span class="legend-dot" style="background:#00f0ff"></span> Conceptos clave</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#e91e63"></span> Haz clic para detalles</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#16a085"></span> Normas de referencia</span>
+    </div>
+  </div>
+
+  <!-- ================================================
+       SUPER INFOGRAFÍA 2: PARTES DE UNA AUDITORÍA
+       ================================================ -->
+  <div class="super-info super-info--flow">
+    <header class="super-info__head">
+      <span class="super-info__kicker">◆ Infografía 02 ◆</span>
+      <h3 class="super-info__title">Partes que Conforman una Auditoría</h3>
+      <p class="super-info__sub">Ciclo completo · 4 fases secuenciales</p>
+    </header>
+
+    <!-- Barra de progreso global -->
+    <div class="flow-progress">
+      <div class="flow-progress__bar" id="flowBar"></div>
+      <div class="flow-progress__marks">
+        <span class="fp-mark active" data-phase="1">01</span>
+        <span class="fp-mark" data-phase="2">02</span>
+        <span class="fp-mark" data-phase="3">03</span>
+        <span class="fp-mark" data-phase="4">04</span>
+      </div>
+    </div>
+
+    <!-- Las 4 fases -->
+    <div class="flow-cards">
+      <button class="flow-card fc-1" data-modal="flow-plan">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">01</span>
+        <span class="fc-icon">📝</span>
+        <h4 class="fc-title">Planificación</h4>
+        <p class="fc-desc">Definir alcance, criterios, equipo y programa de auditoría.</p>
+        <span class="fc-tag">Fase inicial</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-2" data-modal="flow-exec">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">02</span>
+        <span class="fc-icon">🔍</span>
+        <h4 class="fc-title">Ejecución</h4>
+        <p class="fc-desc">Recopilar evidencia objetiva en campo, entrevistas y documentos.</p>
+        <span class="fc-tag">Trabajo de campo</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-3" data-modal="flow-report">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">03</span>
+        <span class="fc-icon">📄</span>
+        <h4 class="fc-title">Informe</h4>
+        <p class="fc-desc">Documentar hallazgos, no conformidades y conclusiones.</p>
+        <span class="fc-tag">Documentación</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 60 30"><path d="M0 15 L45 15 M35 5 L45 15 L35 25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+
+      <button class="flow-card fc-4" data-modal="flow-follow">
+        <div class="fc-stripe"></div>
+        <span class="fc-num">04</span>
+        <span class="fc-icon">🔄</span>
+        <h4 class="fc-title">Seguimiento</h4>
+        <p class="fc-desc">Verificar acciones correctivas y evaluar su eficacia.</p>
+        <span class="fc-tag">Mejora continua</span>
+        <span class="fc-cta">Ver detalles →</span>
+      </button>
+    </div>
+
+    <!-- Resultado final -->
+    <div class="flow-result">
+      <span class="flow-result__icon">🏆</span>
+      <div>
+        <strong>Resultado:</strong> Sistema de gestión verificado y en mejora continua
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODALES DE LAS SUPER INFOGRAFÍAS ===== -->
+<div class="super-modal-source" id="aud-def">
+  <span class="modal-kicker">Concepto 01</span>
+  <h3 class="modal-title">📋 Definición de Auditoría</h3>
+  <p>Según ISO 9000: <em>"Proceso sistemático, independiente y documentado para obtener evidencias de la auditoría y evaluarlas de manera objetiva con el fin de determinar la extensión en que se cumplen los criterios de auditoría"</em>.</p>
+  <ul>
+    <li><strong>Sistemático:</strong> Sigue un método planificado y ordenado.</li>
+    <li><strong>Independiente:</strong> El auditor no debe auditar su propio trabajo.</li>
+    <li><strong>Documentado:</strong> Todo debe quedar registrado con evidencia.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-obj">
+  <span class="modal-kicker">Concepto 02</span>
+  <h3 class="modal-title">🎯 Objetivo de la Auditoría</h3>
+  <p>Determinar si el Sistema de Gestión de Calidad (SGC) es <strong>conforme</strong> con las disposiciones planificadas, los requisitos de la norma y los requisitos propios de la organización.</p>
+  <p>También verifica si el SGC está <strong>implementado y se mantiene de manera eficaz</strong>.</p>
+  <ul>
+    <li>Detectar áreas de mejora.</li>
+    <li>Prevenir fallos antes de que afecten al cliente.</li>
+    <li>Proporcionar información para la toma de decisiones.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-tipos">
+  <span class="modal-kicker">Concepto 03</span>
+  <h3 class="modal-title">🔍 Tipos de Auditoría</h3>
+  <ul>
+    <li><strong>1ª Parte — Interna:</strong> La realiza la propia organización para fines internos. Proporciona información a la dirección.</li>
+    <li><strong>2ª Parte — Externa:</strong> La realizan los clientes o personas en su nombre, cuando existe un contrato.</li>
+    <li><strong>3ª Parte — Certificación:</strong> La realiza un organismo independiente de certificación para otorgar el certificado ISO 9001.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-nc">
+  <span class="modal-kicker">Concepto 04</span>
+  <h3 class="modal-title">⚠️ No Conformidad</h3>
+  <p>Es una <strong>discrepancia</strong> entre lo que exige la norma de referencia y lo que define el manual de calidad, o entre éstos y la forma real de operar.</p>
+  <ul>
+    <li><strong>NC Mayor:</strong> Afecta la capacidad del sistema para cumplir requisitos.</li>
+    <li><strong>NC Menor:</strong> Es un fallo aislado que no compromete el sistema completo.</li>
+    <li><strong>Observación:</strong> No es NC, pero podría convertirse en una si no se atiende.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-ben">
+  <span class="modal-kicker">Concepto 05</span>
+  <h3 class="modal-title">✨ Beneficios de Auditar</h3>
+  <ul>
+    <li>Verificar que el sistema está implantado y cumple con los requisitos.</li>
+    <li>Establecer la eficacia y eficiencia del sistema.</li>
+    <li>Dar confianza a los clientes de que la organización se autoevalúa.</li>
+    <li>Facilitar la inscripción en un registro del sistema de calidad.</li>
+    <li>Cumplir con los requisitos de las normas internacionales.</li>
+    <li>Identificar oportunidades de mejora continua.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="aud-car">
+  <span class="modal-kicker">Concepto 06</span>
+  <h3 class="modal-title">🔑 Características del Auditor</h3>
+  <ul>
+    <li><strong>Independiente:</strong> No audita su propio trabajo.</li>
+    <li><strong>Competente:</strong> Tiene formación y experiencia específica.</li>
+    <li><strong>Objetivo:</strong> Basa sus conclusiones en evidencia.</li>
+    <li><strong>Ético:</strong> Actúa con integridad y confidencialidad.</li>
+    <li><strong>Firme:</strong> No permite que el auditado controle el proceso.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-plan">
+  <span class="modal-kicker">Fase 01</span>
+  <h3 class="modal-title">📝 Planificación</h3>
+  <p>Antes de auditar, se debe <strong>planificar todo el proceso</strong>.</p>
+  <ul>
+    <li>Definir el <strong>alcance</strong> y los <strong>criterios</strong> de auditoría.</li>
+    <li>Seleccionar el <strong>equipo auditor</strong> competente e independiente.</li>
+    <li>Elaborar el <strong>programa de auditoría</strong> con fechas y responsables.</li>
+    <li>Revisar la documentación previa del sistema de gestión.</li>
+    <li>Notificar al auditado (no son visitas sorpresa).</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-exec">
+  <span class="modal-kicker">Fase 02</span>
+  <h3 class="modal-title">🔍 Ejecución</h3>
+  <p>Es el <strong>trabajo de campo</strong> de la auditoría. Se recopila evidencia objetiva.</p>
+  <ul>
+    <li>Realizar <strong>entrevistas</strong> con el personal.</li>
+    <li><strong>Observar</strong> los procesos en operación.</li>
+    <li><strong>Revisar documentos</strong> y registros.</li>
+    <li>Verificar que los procedimientos estén en su lugar de aplicación.</li>
+    <li>Documentar <strong>evidencias</strong> y hallazgos.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-report">
+  <span class="modal-kicker">Fase 03</span>
+  <h3 class="modal-title">📄 Informe</h3>
+  <p>Se documentan formalmente los <strong>hallazgos de la auditoría</strong>.</p>
+  <ul>
+    <li>Identificar las <strong>no conformidades</strong> con su cláusula incumplida.</li>
+    <li>Describir cada hallazgo con <strong>evidencia objetiva</strong>.</li>
+    <li>Consensuar el informe con el auditado.</li>
+    <li>Presentar conclusiones a la <strong>alta dirección</strong>.</li>
+    <li>Entregar copia del informe al auditado.</li>
+  </ul>
+</div>
+
+<div class="super-modal-source" id="flow-follow">
+  <span class="modal-kicker">Fase 04</span>
+  <h3 class="modal-title">🔄 Seguimiento</h3>
+  <p>La auditoría <strong>no termina con el informe</strong>; hay que verificar que se tomen acciones.</p>
+  <ul>
+    <li>El auditado debe implementar <strong>acciones correctivas</strong>.</li>
+    <li>Se verifica la <strong>eficacia</strong> de las acciones tomadas.</li>
+    <li>Se documentan los resultados del seguimiento.</li>
+    <li>Se cierra el ciclo de <strong>mejora continua</strong>.</li>
+  </ul>
+</div>
+
+        <!-- CON: CONCLUSIÓN -->
+        <div class="tab-panel" id="con-conclusion">
+          <span class="content-label">Conclusión Individual</span>
+          <h2 class="content-title">Reflexión Estratégica</h2>
+          <div class="conclusion-box con-box">
+            <p>El caso de "American Fast Food" es un ejemplo de cómo una empresa puede <strong>fracasar en la implementación de un sistema de calidad</strong> por falta de liderazgo y visión estratégica. El responsable de calidad no comprende que la auditoría no es un trámite, sino una oportunidad para mejorar.</p>
+            <p>Desde mi perspectiva gerencial, los 6 hallazgos demuestran que la alta dirección no ha asumido su responsabilidad. La revisión por la dirección no se planifica, las auditorías internas no se realizan a intervalos planificados y no existe un procedimiento de acciones correctivas. Esto no es un problema técnico; es un <strong>problema de cultura organizacional</strong>.</p>
+            <p>La crítica al auditor también es válida: un auditor debe ser firme y no permitir que el auditado controle el proceso. Aceptar que personal sin formación se integre al equipo auditor es una señal de debilidad que compromete la credibilidad de la certificación.</p>
+          </div>
+        </div>
+
+        <!-- CON: BIBLIO -->
+        <div class="tab-panel" id="con-biblio">
+          <span class="content-label">Referencias</span>
+          <h2 class="content-title">Bibliografía</h2>
+          <ul class="bibliography">
+            <li>International Organization for Standardization. (2015). <em>ISO 9001:2015 Sistemas de gestión de la calidad — Requisitos</em>. ISO.</li>
+            <li>International Organization for Standardization. (2018). <em>ISO 19011:2018 Directrices para la auditoría de los sistemas de gestión</em>. ISO.</li>
+            <li>Instituto Politécnico Nacional. (2024). <em>Gestión de la Calidad en Sistemas Mecatrónicos: Práctica 7. Auditoría Parte I</em>. CECyT No. 2 "Miguel Bernard".</li>
+            <li>Centro de Registro y Certificación de Personas de la AEC. (s. f.). <em>Caso práctico: American Fast Food</em>.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ===== CONCLUSIÓN EN EQUIPO ===== -->
+<div class="team-conclusion-section" id="teamConclusion" style="display: none;">
+  <section class="section">
+    <div class="container container-narrow">
+      <span class="content-label">Conclusión en Equipo</span>
+      <h2 class="content-title">Síntesis: Madrigal + Concepción</h2>
+      
+      <div class="team-conclusion-box">
+        <p>Después de analizar el caso de "American Fast Food" desde nuestras respectivas perspectivas (técnica y gerencial), llegamos a la siguiente conclusión en equipo:</p>
+        
+        <p>La empresa <strong>no está lista para certificarse</strong> bajo la Norma ISO 9001. Los 6 hallazgos detectados demuestran que el sistema de gestión de calidad existe solo en el papel, pero no está implementado en la práctica. La empresa confía en la experiencia empírica de su personal, pero carece de los registros, procedimientos y mecanismos de verificación que exige la norma.</p>
+
+        <p>Desde el punto de vista <strong>técnico</strong>, falta documentación, control de proveedores, evaluación de la formación y un sistema de acciones correctivas. Desde el punto de vista <strong>gerencial</strong>, falta liderazgo, compromiso de la alta dirección y una cultura organizacional orientada a la mejora continua.</p>
+
+        <p>La auditoría, bien realizada, es una <strong>herramienta poderosa</strong> que permite identificar estas fallas y corregirlas. Pero si el auditor no es firme y el auditado no está comprometido, la auditoría se convierte en un trámite vacío. En este caso, ambos fallaron: el auditor fue demasiado permisivo y el responsable de calidad no comprendió la gravedad de la situación.</p>
+
+        <p>Nuestra recomendación como equipo es que "American Fast Food" <strong>no solicite la certificación hasta que haya implementado un sistema de gestión de calidad real</strong>, con procedimientos documentados, auditorías internas planificadas, evaluación de proveedores y un sistema de acciones correctivas. Solo así podrá demostrar que su compromiso con la calidad es genuino.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="mainFooter" style="display: none;">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p id="footerName">Alumno</p>
+      <p>3IV18</p>
+    </div>
+  </div>
+</footer>
+<!-- ===== MODAL OVERLAY (REQUERIDO PARA QUE FUNCIONEN LOS BOTONES) ===== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  function selectStudent(student) {
+    document.getElementById('selectionScreen').style.display = 'none';
+    document.getElementById('mainFooter').style.display = 'block';
+    document.getElementById('teamConclusion').style.display = 'block';
+    
+    if (student === 'madrigal') {
+      document.getElementById('view-madrigal').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Madrigal Mendoza Emiliano';
+    } else if (student === 'concepcion') {
+      document.getElementById('view-concepcion').style.display = 'block';
+      document.getElementById('footerName').innerText = 'Concepción López Santiago';
+    }
+    
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 100);
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.getAttribute('data-tab');
+      const parent = btn.closest('.tabs-wrapper').parentElement;
+      
+      parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      
+      btn.classList.add('active');
+      const panel = parent.querySelector(`#${tabId}`);
+      if (panel) panel.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
