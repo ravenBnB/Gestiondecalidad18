@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 8 | Diagramas de Proceso y KPI</title>
+  <meta name="description" content="Práctica 8: Diagramas de Proceso y KPI - Gestión de la Calidad en Sistemas Mecatrónicos">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="top-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Gestión de la Calidad en Sistemas Mecatrónicos</a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="cecyt2.html">CALIDAD CECYT 2</a>
+      <a href="practicas.html">PRACTICAS</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="page-eyebrow reveal">Práctica 8 · En Equipo</span>
+    <h1 class="page-title reveal reveal-delay-1">DIAGRAMAS <span class="subtitle-accent">Y KPI</span></h1>
+    <p class="page-subtitle reveal reveal-delay-2">
+      Diagramas de Proceso · Indicadores Clave de Desempeño
+    </p>
+  </div>
+  <div class="page-hero-shape"></div>
+</header>
+
+<main>
+  <section class="section practice-content">
+    <div class="container container-narrow">
+      
+      <div class="tabs-wrapper">
+        <div class="tabs-scroll">
+          <button class="tab-btn active" data-tab="intro">Introducción</button>
+          <button class="tab-btn" data-tab="marco">Marco Teórico</button>
+          <button class="tab-btn" data-tab="diagrama">Diagrama de Flujo</button>
+          <button class="tab-btn" data-tab="simbolos">Simbología</button>
+          <button class="tab-btn" data-tab="kpi">KPIs</button>
+          <button class="tab-btn" data-tab="comparativa">Gestión vs Control</button>
+          <button class="tab-btn" data-tab="conclusion">Conclusión</button>
+          <button class="tab-btn" data-tab="biblio">Bibliografía</button>
+        </div>
+      </div>
+
+      <!-- ===== INTRO ===== -->
+      <div class="tab-panel active" id="intro">
+        <div class="giant-number reveal">08</div>
+        <span class="content-label">Propósito</span>
+        <h2 class="content-title">Parámetros y KPIs en un Proceso Mecatrónico</h2>
+        <div class="content-body">
+          <p>Esta práctica tiene como objetivo <strong>identificar los parámetros de un proceso de gestión de calidad</strong> en los manuales de operación, procesos y procedimientos de la institución, así como reconocer las <strong>diferencias entre la gestión y el control de la calidad</strong>.</p>
+          <p>La alta dirección nos pide que seamos capaces de <strong>detectar e integrar hallazgos</strong> y <strong>definir KPIs</strong> en las etapas de un proceso mecatrónico, de acuerdo con la norma ISO 9001. Para ello, usaremos dos herramientas fundamentales: los <strong>diagramas de flujo</strong> (para visualizar el proceso) y los <strong>KPIs</strong> (para medirlo).</p>
+        </div>
+      </div>
+
+      <!-- ===== MARCO ===== -->
+      <div class="tab-panel" id="marco">
+        <span class="content-label">Marco Teórico</span>
+        <h2 class="content-title">Diagramas de Proceso</h2>
+        <div class="content-body">
+          <p>El uso de un diagrama como herramienta de trabajo permite <strong>representar gráficamente los procesos</strong> de una empresa y observar las actividades en conjunto, sus relaciones y cualquier incompatibilidad, cuello de botella o fuente de ineficiencias.</p>
+        </div>
+
+        <h3 class="sub-title">Ventajas de los Diagramas</h3>
+        <div class="audit-concept-grid reveal">
+          <div class="audit-concept-card">
+            <span class="audit-icon">👥</span>
+            <h4>Personal nuevo</h4>
+            <p>Muestra las funciones del personal de nuevo ingreso en la empresa o en el puesto.</p>
+          </div>
+          <div class="audit-concept-card">
+            <span class="audit-icon">✅</span>
+            <h4>Verificación</h4>
+            <p>Permite comparar el proceso real contra el proceso diseñado.</p>
+          </div>
+          <div class="audit-concept-card">
+            <span class="audit-icon">⚠️</span>
+            <h4>Detección de fallas</h4>
+            <p>Identifica actividades que reducen la calidad y la productividad.</p>
+          </div>
+          <div class="audit-concept-card">
+            <span class="audit-icon">💬</span>
+            <h4>Comunicación</h4>
+            <p>Facilitan la coordinación y la comunicación entre áreas.</p>
+          </div>
+          <div class="audit-concept-card">
+            <span class="audit-icon">🔧</span>
+            <h4>Mejora</h4>
+            <p>Facilitan el análisis de opciones de mejoramiento continuo.</p>
+          </div>
+          <div class="audit-concept-card">
+            <span class="audit-icon">📋</span>
+            <h4>Estandarización</h4>
+            <p>Permiten que todos lean lo mismo e igualen interpretaciones.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Aspectos Importantes</h3>
+        <ul class="feature-list">
+          <li>Es indispensable <strong>estandarizar la elaboración de diagramas</strong>.</li>
+          <li>Deben contener <strong>palabras y frases entendibles</strong> para cualquier persona.</li>
+          <li>Determinar los <strong>límites del proceso</strong>, sus productos e insumos.</li>
+          <li>Conservar el <strong>mismo nivel de detalle</strong> en todo el diagrama.</li>
+          <li>Verificar que el diagrama esté <strong>acorde a la realidad</strong>.</li>
+          <li>Especificar: <strong>fecha, versión y autores</strong> del diagrama.</li>
+          <li>Revisar y actualizar <strong>constantemente</strong> el diagrama.</li>
+        </ul>
+      </div>
+
+      <!-- ===== DIAGRAMA DE FLUJO ===== -->
+      <div class="tab-panel" id="diagrama">
+        <span class="content-label">Diagrama de Flujo</span>
+        <h2 class="content-title">Representación Gráfica del Proceso</h2>
+        <div class="content-body">
+          <p>Un <strong>diagrama de flujo</strong> es un esquema para representar gráficamente un algoritmo. Se basa en símbolos para representar operaciones específicas, es decir, es la <strong>representación gráfica de las operaciones</strong> que se realizan para resolver un problema, con el orden lógico en que deben realizarse.</p>
+          <p>Se les llama diagramas de flujo porque los símbolos se conectan por medio de <strong>flechas</strong> que indican la secuencia de operación. Los símbolos están <strong>normalizados</strong> para que cualquier persona pueda interpretarlos.</p>
+        </div>
+
+        <div class="callout callout-blue">
+          <span class="callout-icon">📊</span>
+          <div>
+            <strong>¿Dónde se usan?</strong>
+            <p>Principalmente en <strong>programación, economía y procesos industriales</strong>. Son importantes porque permiten visualizar el flujo de datos y analizar los procesos o procedimientos necesarios para cumplir un objetivo.</p>
+          </div>
+        </div>
+
+        <!-- ================= ESPACIO PARA TU IMAGEN ================= -->
+        <h3 class="sub-title" style="margin-top: 3rem;">Nuestro Diagrama: Proceso de Gestión de Calidad</h3>
+        <p class="content-lead">Diagrama de flujo elaborado por el equipo para representar el proceso de gestión de calidad en un sistema mecatrónico.</p>
+
+        <div class="diagram-image-wrap">
+          <img src="img/diagrama-gestion.png" alt="Diagrama de flujo del proceso de gestión de calidad" loading="lazy">
+          <span class="diagram-caption">📌 Diagrama de flujo · Proceso de Gestión de Calidad · Equipo Madrigal + Concepción</span>
+        </div>
+        <!-- ========================================================== -->
+
+        <div class="callout callout-pink" style="margin-top: 2rem;">
+          <span class="callout-icon">💡</span>
+          <div>
+            <strong>Observación del equipo:</strong>
+            <p>En el diagrama se pueden identificar los <strong>límites del proceso</strong>, las <strong>entradas</strong> (materias primas, información, recursos) y las <strong>salidas</strong> (producto terminado, registros, datos). También se detectan las <strong>decisiones críticas</strong> y los posibles <strong>cuellos de botella</strong> que afectan la calidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SIMBOLOGÍA ===== -->
+      <div class="tab-panel" id="simbolos">
+        <span class="content-label">Simbología</span>
+        <h2 class="content-title">Símbolos Normalizados del Diagrama de Flujo</h2>
+        <p class="content-lead">Haz clic en cada símbolo para conocer su función dentro del proceso.</p>
+
+        <div class="symbols-grid">
+          <button class="symbol-card" data-modal="sym-oval">
+            <div class="symbol-shape symbol-oval"></div>
+            <span class="symbol-name">Óvalo / Elipse</span>
+            <span class="symbol-cat">Inicio / Fin</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-rect">
+            <div class="symbol-shape symbol-rect"></div>
+            <span class="symbol-name">Rectángulo</span>
+            <span class="symbol-cat">Proceso</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-diamond">
+            <div class="symbol-shape symbol-diamond"></div>
+            <span class="symbol-name">Rombo</span>
+            <span class="symbol-cat">Decisión</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-parallelogram">
+            <div class="symbol-shape symbol-parallelogram"></div>
+            <span class="symbol-name">Paralelogramo</span>
+            <span class="symbol-cat">Entrada / Salida</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-document">
+            <div class="symbol-shape symbol-document"></div>
+            <span class="symbol-name">Documento</span>
+            <span class="symbol-cat">Registro</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-circle">
+            <div class="symbol-shape symbol-circle"></div>
+            <span class="symbol-name">Círculo</span>
+            <span class="symbol-cat">Conector</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-arrow">
+            <div class="symbol-shape symbol-arrow-shape">→</div>
+            <span class="symbol-name">Flecha</span>
+            <span class="symbol-cat">Flujo</span>
+          </button>
+          <button class="symbol-card" data-modal="sym-cylinder">
+            <div class="symbol-shape symbol-cylinder"></div>
+            <span class="symbol-name">Cilindro</span>
+            <span class="symbol-cat">Base de datos</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== KPI ===== -->
+      <div class="tab-panel" id="kpi">
+        <span class="content-label">Indicadores Clave</span>
+        <h2 class="content-title">Key Performance Indicators (KPI)</h2>
+        <div class="content-body">
+          <p>Los <strong>Key Performance Indicators (KPI)</strong> son instrumentos cruciales en la gestión empresarial moderna. Permiten a las organizaciones <strong>medir y monitorear el desempeño</strong> de sus áreas y procesos de forma cuantitativa, proporcionando una visión clara y objetiva del estado de la empresa.</p>
+          <p>Su relevancia radica en que facilitan la identificación de <strong>fortalezas, debilidades, oportunidades y amenazas</strong>. Son esenciales para la toma de decisiones estratégicas informadas.</p>
+        </div>
+
+        <!-- PIRÁMIDE KPI -->
+        <div class="super-info super-info--pyramid">
+          <header class="super-info__head">
+            <span class="super-info__kicker">◆ Objetivo de los KPI ◆</span>
+            <h3 class="super-info__title">La Pirámide de los Indicadores</h3>
+            <p class="super-info__sub">Gestión estratégica · Táctica · Operativa</p>
+          </header>
+
+          <div class="kpi-pyramid">
+            <div class="kpi-level level-estrategico">
+              <span class="kpi-level-tag">Estratégico</span>
+              <h4>Conocimiento</h4>
+              <p>Decisiones organizacionales · Largo plazo</p>
+            </div>
+            <div class="kpi-level level-tactico">
+              <span class="kpi-level-tag">Táctico</span>
+              <h4>Información</h4>
+              <p>Gestión de áreas · Mediano plazo</p>
+            </div>
+            <div class="kpi-level level-operativo">
+              <span class="kpi-level-tag">Operativo</span>
+              <h4>Datos</h4>
+              <p>Operación diaria · Corto plazo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CICLO KPI -->
+        <h3 class="sub-title" style="margin-top: 3rem;">Ciclo de Vida de un KPI</h3>
+        <div class="kpi-cycle-grid">
+          <div class="kpi-cycle-card">
+            <span class="kpi-cycle-num">01</span>
+            <span class="kpi-cycle-icon">🎯</span>
+            <h4>Definir y planificar</h4>
+            <p>Establecer qué se va a medir y por qué.</p>
+          </div>
+          <div class="kpi-cycle-card">
+            <span class="kpi-cycle-num">02</span>
+            <span class="kpi-cycle-icon">🚀</span>
+            <h4>Alinear y ejecutar</h4>
+            <p>Implementar los indicadores en las áreas clave.</p>
+          </div>
+          <div class="kpi-cycle-card">
+            <span class="kpi-cycle-num">03</span>
+            <span class="kpi-cycle-icon">📊</span>
+            <h4>Medir y analizar</h4>
+            <p>Recolectar datos y comparar contra metas.</p>
+          </div>
+          <div class="kpi-cycle-card">
+            <span class="kpi-cycle-num">04</span>
+            <span class="kpi-cycle-icon">🔄</span>
+            <h4>Revisar y refinar</h4>
+            <p>Ajustar y mejorar los indicadores.</p>
+          </div>
+        </div>
+
+        <!-- CLICHÉS -->
+        <h3 class="sub-title" style="margin-top: 3rem;">Clichés de los KPI</h3>
+        <p class="content-lead">Frases célebres que resumen la importancia de medir.</p>
+        <div class="cliches-grid">
+          <div class="cliche-card"><span>📌</span><p>Obtienes lo que mides</p></div>
+          <div class="cliche-card"><span>🎯</span><p>Lo que mides es lo que obtienes</p></div>
+          <div class="cliche-card"><span>🔒</span><p>Lo que no se puede medir no se puede controlar</p></div>
+          <div class="cliche-card"><span>📈</span><p>Lo que no se puede controlar no se puede mejorar</p></div>
+          <div class="cliche-card"><span>🗣️</span><p>Dime cómo seré medido y te diré cuál será mi desempeño</p></div>
+          <div class="cliche-card"><span>💩</span><p>Basura entra, basura sale</p></div>
+          <div class="cliche-card"><span>🎮</span><p>Si no lo mides, es solo un hobby</p></div>
+        </div>
+
+        <!-- CARACTERÍSTICAS KPI -->
+        <h3 class="sub-title" style="margin-top: 3rem;">Características de un KPI</h3>
+        <div class="data-summary">
+          <div class="ds-item"><span>Origen</span><strong>in-dicare</strong></div>
+          <div class="ds-item"><span>Función</span><strong>Señalar</strong></div>
+          <div class="ds-item"><span>Base</span><strong>2 datos</strong></div>
+          <div class="ds-item"><span>BSC</span><strong>25-35</strong></div>
+          <div class="ds-item"><span>OKR</span><strong>9-25</strong></div>
+        </div>
+
+        <ul class="feature-list">
+          <li>Proviene del latín <strong>in-dicare</strong> ("decir algo del interior").</li>
+          <li>Relación entre <strong>2 datos</strong> (normalmente métricas).</li>
+          <li>Asociados a <strong>factores clave</strong> del desempeño.</li>
+          <li>Según Parmenter, son <strong>medidas focalizadas</strong> en los aspectos más críticos del éxito organizacional.</li>
+          <li>Para BSC: entre <strong>25 y 35 medidas</strong> (1.5 por objetivo).</li>
+          <li>Para OKR: entre <strong>9 y 25 medidas</strong> (3 a 5 objetivos).</li>
+        </ul>
+      </div>
+
+      <!-- ===== GESTIÓN VS CONTROL ===== -->
+      <div class="tab-panel" id="comparativa">
+        <span class="content-label">Comparativa</span>
+        <h2 class="content-title">Gestión de la Calidad vs Control de la Calidad</h2>
+        <p class="content-lead">La diferencia clave entre estos dos conceptos que a veces se confunden.</p>
+
+        <div class="vs-layout">
+          <div class="vs-row">
+            <div class="vs-card vs-gestion">
+              <span class="vs-tag">Gestión de la Calidad</span>
+              <h4>🎯 Enfoque estratégico</h4>
+              <ul>
+                <li>Se enfoca en <strong>planificar, dirigir y mejorar</strong>.</li>
+                <li>Actúa <strong>antes y durante</strong> el proceso.</li>
+                <li>Involucra a <strong>toda la organización</strong>.</li>
+                <li>Busca la <strong>mejora continua</strong>.</li>
+                <li>Usa KPIs y indicadores estratégicos.</li>
+                <li>Es responsabilidad de la <strong>alta dirección</strong>.</li>
+              </ul>
+            </div>
+            <div class="vs-card vs-control">
+              <span class="vs-tag">Control de la Calidad</span>
+              <h4>🔬 Enfoque operativo</h4>
+              <ul>
+                <li>Se enfoca en <strong>verificar y corregir</strong>.</li>
+                <li>Actúa <strong>al final</strong> del proceso (inspección).</li>
+                <li>Involucra al <strong>personal operativo</strong>.</li>
+                <li>Busca la <strong>conformidad del producto</strong>.</li>
+                <li>Usa <strong>herramientas estadísticas</strong> (gráficas, histogramas).</li>
+                <li>Es responsabilidad del <strong>departamento de calidad</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-blue" style="margin-top: 2rem;">
+            <span class="callout-icon">💡</span>
+            <div>
+              <strong>En resumen:</strong>
+              <p>La <strong>gestión</strong> es "hacer las cosas bien" (planificar la calidad). El <strong>control</strong> es "verificar que se hicieron bien" (comprobar la calidad). Ambas son necesarias para un sistema de calidad completo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CONCLUSIÓN ===== -->
+      <div class="tab-panel" id="conclusion">
+        <span class="content-label">Conclusión en Equipo</span>
+        <h2 class="content-title">CONCLUSION</h2>
+        
+        <div class="team-conclusion-box">
+          <p>Como equipo, después de analizar los diagramas de proceso y los KPIs, llegamos a la siguiente reflexión:</p>
+
+          <p><strong></strong> Los diagramas de flujo son el <strong>mapa de navegación</strong> de cualquier proceso mecatrónico. Sin ellos, no podemos identificar dónde se generan los cuellos de botella ni dónde aplicar mejoras. La estandarización de la simbología es vital para que todos los ingenieros, operarios y directivos "lean" el mismo proceso de la misma forma.</p>
+
+          <p><strong></strong> Los KPIs son la <strong>brújula estratégica</strong> de la organización. Sin indicadores cuantitativos, la dirección navega a ciegas. La pirámide KPI (estratégico, táctico, operativo) nos muestra que cada nivel necesita distintos tipos de información para tomar decisiones.</p>
+
+          <p><strong>En conjunto:</strong> Los diagramas y los KPIs <strong>no son herramientas aisladas</strong>; se complementan. El diagrama nos dice <em>qué</em> se hace y <em>cómo</em>; los KPIs nos dicen <em>qué tan bien</em> se está haciendo. Juntos forman el sistema nervioso de una gestión de calidad efectiva, alineado con los requisitos de la norma ISO 9001.</p>
+
+          <p>Finalmente, entendimos que la diferencia entre <strong>gestión</strong> y <strong>control</strong> es fundamental: la primera planifica y dirige; el segundo verifica y corrige. Ambas son caras de la misma moneda y ninguna puede existir sin la otra.</p>
+        </div>
+      </div>
+
+      <!-- ===== BIBLIOGRAFÍA ===== -->
+      <div class="tab-panel" id="biblio">
+        <span class="content-label">Referencias</span>
+        <h2 class="content-title">Bibliografía</h2>
+        <ul class="bibliography">
+          <li>International Organization for Standardization. (2015). <em>ISO 9001:2015 Sistemas de gestión de la calidad — Requisitos</em>. ISO.</li>
+          <li>Parmenter, D. (2015). <em>Key Performance Indicators: Developing, Implementing, and Using Winning KPIs</em> (3rd ed.). Wiley.</li>
+          <li>Kaplan, R. S., & Norton, D. P. (1996). <em>The Balanced Scorecard: Translating Strategy into Action</em>. Harvard Business School Press.</li>
+          <li>Instituto Politécnico Nacional. (2024). <em>Gestión de la Calidad en Sistemas Mecatrónicos: Práctica 8. Diagramas de Proceso y KPI</em>. CECyT No. 2 "Miguel Bernard".</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== NAV ENTRE PRÁCTICAS ===== -->
+  <section class="practice-nav">
+    <a href="practica-7.html" class="practice-nav-btn back">
+      <span class="nav-arrow">←</span>
+      <span class="nav-text">
+        <small>Anterior</small>
+        <strong>Práctica 7: Auditoría Parte I</strong>
+      </span>
+    </a>
+    <a href="practicas.html" class="practice-nav-btn next">
+      <span class="nav-text">
+        <small>Todas</small>
+        <strong>Volver al índice</strong>
+      </span>
+      <span class="nav-arrow">→</span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-left">
+      <p class="footer-brand">Portafolio Digital</p>
+      <p>Gestión de la Calidad en Sistemas Mecatrónicos</p>
+    </div>
+    <div class="footer-right">
+      <p>Madrigal Mendoza Emiliano</p>
+      <p>Concepción López Santiago</p>
+      <p class="footer-group">3IV18</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
+
+<!-- ===== MODAL OVERLAY (para los símbolos interactivos) ===== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== CONTENIDO DE MODALES: SIMBOLOGÍA ===== -->
+<div class="modal-source" id="sym-oval">
+  <span class="modal-kicker">Símbolo 01</span>
+  <h3 class="modal-title">⬭ Óvalo / Elipse</h3>
+  <p><strong>Función:</strong> Marca el <strong>inicio y el fin</strong> de un diagrama de flujo.</p>
+  <p>Se coloca siempre al principio y al final del proceso. Suele llevar la palabra "Inicio" o "Fin" en su interior.</p>
+</div>
+
+<div class="modal-source" id="sym-rect">
+  <span class="modal-kicker">Símbolo 02</span>
+  <h3 class="modal-title">▭ Rectángulo</h3>
+  <p><strong>Función:</strong> Representa un <strong>proceso, acción o actividad</strong>.</p>
+  <p>Es el símbolo más utilizado. Dentro se escribe la acción a ejecutar (ej. "Inspeccionar pieza", "Calibrar sensor").</p>
+</div>
+
+<div class="modal-source" id="sym-diamond">
+  <span class="modal-kicker">Símbolo 03</span>
+  <h3 class="modal-title">◇ Rombo</h3>
+  <p><strong>Función:</strong> Representa una <strong>decisión o bifurcación</strong>.</p>
+  <p>Tiene una entrada y dos salidas (Sí/No). Se usa cuando el proceso debe elegir entre dos caminos según una condición.</p>
+</div>
+
+<div class="modal-source" id="sym-parallelogram">
+  <span class="modal-kicker">Símbolo 04</span>
+  <h3 class="modal-title">▱ Paralelogramo</h3>
+  <p><strong>Función:</strong> Representa la <strong>entrada o salida de datos</strong>.</p>
+  <p>Se usa para indicar que el proceso recibe información (input) o la entrega (output). Ej. "Leer sensor", "Imprimir reporte".</p>
+</div>
+
+<div class="modal-source" id="sym-document">
+  <span class="modal-kicker">Símbolo 05</span>
+  <h3 class="modal-title">📄 Documento</h3>
+  <p><strong>Función:</strong> Representa un <strong>documento o registro</strong> generado en el proceso.</p>
+  <p>Ej. "Registrar inspección", "Archivar reporte", "Emitir certificado".</p>
+</div>
+
+<div class="modal-source" id="sym-circle">
+  <span class="modal-kicker">Símbolo 06</span>
+  <h3 class="modal-title">◯ Círculo / Conector</h3>
+  <p><strong>Función:</strong> Es un <strong>conector</strong> que une partes del diagrama cuando el flujo continúa en otra página o sección.</p>
+  <p>Suele contener una letra o número para identificar la conexión.</p>
+</div>
+
+<div class="modal-source" id="sym-arrow">
+  <span class="modal-kicker">Símbolo 07</span>
+  <h3 class="modal-title">→ Flecha</h3>
+  <p><strong>Función:</strong> Indica la <strong>dirección del flujo</strong> del proceso.</p>
+  <p>Conecta los símbolos y muestra el orden lógico en el que se ejecutan las operaciones.</p>
+</div>
+
+<div class="modal-source" id="sym-cylinder">
+  <span class="modal-kicker">Símbolo 08</span>
+  <h3 class="modal-title">🗄️ Cilindro</h3>
+  <p><strong>Función:</strong> Representa una <strong>base de datos o almacenamiento</strong>.</p>
+  <p>Se usa cuando el proceso guarda o consulta información en un sistema o repositorio.</p>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.getAttribute('data-tab');
+      const parent = btn.closest('.tabs-wrapper').parentElement;
+      
+      parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      
+      btn.classList.add('active');
+      const panel = parent.querySelector(`#${tabId}`);
+      if (panel) panel.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
