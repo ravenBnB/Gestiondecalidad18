@@ -2121,3 +2121,152 @@ img { max-width: 100%; display: block; }
   .radial-center__label { font-size: 0.7rem; }
   .radial-center__sublabel { font-size: 0.5rem; }
 }
+/* ============================================================
+   PÁGINA ISO 9001: COMPONENTES ESPECÍFICOS
+   ============================================================ */
+
+/* Grid HLS */
+.hls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.hls-item {
+  background: var(--black-deep);
+  border: 1px solid var(--border);
+  padding: 1rem 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: all 0.3s;
+}
+
+.hls-item.active-hls {
+  background: rgba(34, 114, 255, 0.1);
+  border-color: var(--neon);
+  color: var(--neon-bright);
+  box-shadow: 0 0 15px var(--neon-glow);
+}
+
+/* Tarjetas de Cláusulas */
+.clausula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.clausula-card {
+  background: var(--black-soft);
+  border-left: 4px solid var(--neon);
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.clausula-card:hover {
+  transform: translateX(5px);
+  background: var(--black-deep);
+}
+
+.clausula-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.clausula-card ul {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.clausula-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Acordeones (Términos y Sub-cláusulas) */
+.iso-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.iso-accordion details {
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.iso-accordion details[open] {
+  border-color: var(--neon);
+  box-shadow: 0 0 20px var(--neon-glow);
+}
+
+.iso-accordion summary {
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: var(--black-deep);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.iso-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.iso-accordion summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--neon);
+  transition: transform 0.3s;
+}
+
+.iso-accordion details[open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.iso-accordion summary:hover {
+  background: rgba(34, 114, 255, 0.1);
+}
+
+.acc-content {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--black-soft);
+}
+
+.acc-content p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.acc-content p:last-child {
+  margin-bottom: 0;
+}
+
+.acc-content strong {
+  color: var(--neon-bright);
+}
